@@ -11,6 +11,9 @@ import reverse from "../array/reverse";
 /* boolean */
 import invert from "../boolean/invert";
 
+/* function */
+import processors from "../function/processors";
+
 type Action = (value : any) => any;
 type ActionCreater = (...args : any[]) => Action;
 
@@ -25,6 +28,9 @@ const CHAINABLE : (string | ActionCreater)[] = [
     
     /* boolean */
     "invert", () => invert,
+    
+    /* function */
+    "processors", processors,
 ];
 
 class Chain

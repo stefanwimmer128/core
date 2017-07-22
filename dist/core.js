@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 39);
+/******/ 	return __webpack_require__(__webpack_require__.s = 40);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -90,7 +90,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 var primitiveTypes = {};
 
-var _regeneratorRuntime = __webpack_require__(40);
+var _regeneratorRuntime = __webpack_require__(41);
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
   return typeof obj;
@@ -11542,8 +11542,8 @@ module.exports = __webpack_require__(7) ? function(object, key, value){
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject       = __webpack_require__(6)
-  , IE8_DOM_DEFINE = __webpack_require__(47)
-  , toPrimitive    = __webpack_require__(48)
+  , IE8_DOM_DEFINE = __webpack_require__(48)
+  , toPrimitive    = __webpack_require__(49)
   , dP             = Object.defineProperty;
 
 exports.f = __webpack_require__(7) ? Object.defineProperty : function defineProperty(O, P, Attributes){
@@ -11842,7 +11842,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 exports.__esModule = true;
 
-var _from = __webpack_require__(42);
+var _from = __webpack_require__(43);
 
 var _from2 = _interopRequireDefault(_from);
 
@@ -11973,7 +11973,7 @@ module.exports = function(bitmap, value){
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(55)
+var IObject = __webpack_require__(56)
   , defined = __webpack_require__(16);
 module.exports = function(it){
   return IObject(defined(it));
@@ -12237,7 +12237,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 "use strict";
 
-var $at  = __webpack_require__(44)(true);
+var $at  = __webpack_require__(45)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
 __webpack_require__(27)(String, 'String', function(iterated){
@@ -12260,15 +12260,15 @@ __webpack_require__(27)(String, 'String', function(iterated){
 
 "use strict";
 
-var LIBRARY        = __webpack_require__(45)
+var LIBRARY        = __webpack_require__(46)
   , $export        = __webpack_require__(17)
-  , redefine       = __webpack_require__(49)
+  , redefine       = __webpack_require__(50)
   , hide           = __webpack_require__(4)
   , has            = __webpack_require__(10)
   , Iterators      = __webpack_require__(8)
-  , $iterCreate    = __webpack_require__(50)
+  , $iterCreate    = __webpack_require__(51)
   , setToStringTag = __webpack_require__(36)
-  , getPrototypeOf = __webpack_require__(59)
+  , getPrototypeOf = __webpack_require__(60)
   , ITERATOR       = __webpack_require__(1)('iterator')
   , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
   , FF_ITERATOR    = '@@iterator'
@@ -12335,7 +12335,7 @@ module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
-var aFunction = __webpack_require__(46);
+var aFunction = __webpack_require__(47);
 module.exports = function(fn, that, length){
   aFunction(fn);
   if(that === undefined)return fn;
@@ -12456,7 +12456,7 @@ module.exports = function(it){
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof   = __webpack_require__(64)
+var classof   = __webpack_require__(65)
   , ITERATOR  = __webpack_require__(1)('iterator')
   , Iterators = __webpack_require__(8);
 module.exports = __webpack_require__(3).getIteratorMethod = function(it){
@@ -12470,8 +12470,90 @@ module.exports = __webpack_require__(3).getIteratorMethod = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(14), __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("babel-runtime/helpers/toConsumableArray"), require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.toConsumableArray, global.flowRuntime);
+        global.processors = mod.exports;
+    }
+})(this, function (exports, _toConsumableArray2, _flowRuntime) {
+    "use strict";
+
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = processors;
+
+    var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
+
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    function processors() {
+        var preProcessor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function (args) {
+            return args;
+        };
+        var postProcessor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (value) {
+            return value;
+        };
+
+        var _preProcessorType = _flowRuntime2.default.function(_flowRuntime2.default.param("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any())));
+
+        var _postProcessorType = _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any()));
+
+        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
+
+        _flowRuntime2.default.param("preProcessor", _preProcessorType).assert(preProcessor);
+
+        _flowRuntime2.default.param("postProcessor", _postProcessorType).assert(postProcessor);
+
+        return _returnType.assert(_flowRuntime2.default.annotate(function (fn) {
+            var _fnType = _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()));
+
+            var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+
+            _flowRuntime2.default.param("fn", _fnType).assert(fn);
+
+            return _returnType2.assert(_flowRuntime2.default.annotate(function () {
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                    args[_key] = arguments[_key];
+                }
+
+                var _argsType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+
+                var _returnType3 = _flowRuntime2.default.return(_flowRuntime2.default.any());
+
+                _flowRuntime2.default.rest("args", _argsType).assert(args);
+
+                return _returnType3.assert(postProcessor(fn.apply(undefined, (0, _toConsumableArray3.default)(preProcessor(args)))));
+            }, _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))));
+        }, _flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any()))))));
+    }
+
+    _flowRuntime2.default.annotate(processors, _flowRuntime2.default.function(_flowRuntime2.default.param("preProcessor", _flowRuntime2.default.function(_flowRuntime2.default.param("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any())))), _flowRuntime2.default.param("postProcessor", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())))))));
+});
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(11), __webpack_require__(22), __webpack_require__(13), __webpack_require__(23), __webpack_require__(9), __webpack_require__(24), __webpack_require__(25), __webpack_require__(66), __webpack_require__(67)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(11), __webpack_require__(22), __webpack_require__(13), __webpack_require__(23), __webpack_require__(9), __webpack_require__(24), __webpack_require__(25), __webpack_require__(39), __webpack_require__(67)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -12516,7 +12598,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     };
   }
 
-  var VERSION = exports.VERSION = "1.0.0-rc.4";
+  var VERSION = exports.VERSION = "1.0.0-rc.5";
 
   /* array */
   exports.filter = _filter3.default;
@@ -12532,7 +12614,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {// This method of obtaining a reference to the global object needs to be
@@ -12553,7 +12635,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(41);
+module.exports = __webpack_require__(42);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -12570,7 +12652,7 @@ if (hadRuntime) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -13313,21 +13395,21 @@ if (hadRuntime) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
 
 /***/ }),
-/* 42 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(43), __esModule: true };
-
-/***/ }),
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(26);
-__webpack_require__(60);
-module.exports = __webpack_require__(3).Array.from;
+module.exports = { "default": __webpack_require__(44), __esModule: true };
 
 /***/ }),
 /* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(26);
+__webpack_require__(61);
+module.exports = __webpack_require__(3).Array.from;
+
+/***/ }),
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(15)
@@ -13349,13 +13431,13 @@ module.exports = function(TO_STRING){
 };
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 module.exports = true;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 module.exports = function(it){
@@ -13364,7 +13446,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = !__webpack_require__(7) && !__webpack_require__(29)(function(){
@@ -13372,7 +13454,7 @@ module.exports = !__webpack_require__(7) && !__webpack_require__(29)(function(){
 });
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -13389,18 +13471,18 @@ module.exports = function(it, S){
 };
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(4);
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var create         = __webpack_require__(51)
+var create         = __webpack_require__(52)
   , descriptor     = __webpack_require__(19)
   , setToStringTag = __webpack_require__(36)
   , IteratorPrototype = {};
@@ -13414,12 +13496,12 @@ module.exports = function(Constructor, NAME, next){
 };
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject    = __webpack_require__(6)
-  , dPs         = __webpack_require__(52)
+  , dPs         = __webpack_require__(53)
   , enumBugKeys = __webpack_require__(35)
   , IE_PROTO    = __webpack_require__(21)('IE_PROTO')
   , Empty       = function(){ /* empty */ }
@@ -13434,7 +13516,7 @@ var createDict = function(){
     , gt     = '>'
     , iframeDocument;
   iframe.style.display = 'none';
-  __webpack_require__(58).appendChild(iframe);
+  __webpack_require__(59).appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
@@ -13461,12 +13543,12 @@ module.exports = Object.create || function create(O, Properties){
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP       = __webpack_require__(5)
   , anObject = __webpack_require__(6)
-  , getKeys  = __webpack_require__(53);
+  , getKeys  = __webpack_require__(54);
 
 module.exports = __webpack_require__(7) ? Object.defineProperties : function defineProperties(O, Properties){
   anObject(O);
@@ -13479,11 +13561,11 @@ module.exports = __webpack_require__(7) ? Object.defineProperties : function def
 };
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys       = __webpack_require__(54)
+var $keys       = __webpack_require__(55)
   , enumBugKeys = __webpack_require__(35);
 
 module.exports = Object.keys || function keys(O){
@@ -13491,12 +13573,12 @@ module.exports = Object.keys || function keys(O){
 };
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var has          = __webpack_require__(10)
   , toIObject    = __webpack_require__(20)
-  , arrayIndexOf = __webpack_require__(56)(false)
+  , arrayIndexOf = __webpack_require__(57)(false)
   , IE_PROTO     = __webpack_require__(21)('IE_PROTO');
 
 module.exports = function(object, names){
@@ -13513,7 +13595,7 @@ module.exports = function(object, names){
 };
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
@@ -13523,14 +13605,14 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 };
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(20)
   , toLength  = __webpack_require__(32)
-  , toIndex   = __webpack_require__(57);
+  , toIndex   = __webpack_require__(58);
 module.exports = function(IS_INCLUDES){
   return function($this, el, fromIndex){
     var O      = toIObject($this)
@@ -13549,7 +13631,7 @@ module.exports = function(IS_INCLUDES){
 };
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(15)
@@ -13561,13 +13643,13 @@ module.exports = function(index, length){
 };
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(2).document && document.documentElement;
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
@@ -13585,7 +13667,7 @@ module.exports = Object.getPrototypeOf || function(O){
 };
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13593,13 +13675,13 @@ module.exports = Object.getPrototypeOf || function(O){
 var ctx            = __webpack_require__(28)
   , $export        = __webpack_require__(17)
   , toObject       = __webpack_require__(37)
-  , call           = __webpack_require__(61)
-  , isArrayIter    = __webpack_require__(62)
+  , call           = __webpack_require__(62)
+  , isArrayIter    = __webpack_require__(63)
   , toLength       = __webpack_require__(32)
-  , createProperty = __webpack_require__(63)
+  , createProperty = __webpack_require__(64)
   , getIterFn      = __webpack_require__(38);
 
-$export($export.S + $export.F * !__webpack_require__(65)(function(iter){ Array.from(iter); }), 'Array', {
+$export($export.S + $export.F * !__webpack_require__(66)(function(iter){ Array.from(iter); }), 'Array', {
   // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
   from: function from(arrayLike/*, mapfn = undefined, thisArg = undefined*/){
     var O       = toObject(arrayLike)
@@ -13629,7 +13711,7 @@ $export($export.S + $export.F * !__webpack_require__(65)(function(iter){ Array.f
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // call something on iterator step with safe closing on error
@@ -13646,7 +13728,7 @@ module.exports = function(iterator, fn, value, entries){
 };
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
@@ -13659,7 +13741,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13673,7 +13755,7 @@ module.exports = function(object, index, value){
 };
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
@@ -13701,7 +13783,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ITERATOR     = __webpack_require__(1)('iterator')
@@ -13727,107 +13809,25 @@ module.exports = function(exec, skipClosing){
 };
 
 /***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
-    if (true) {
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(14), __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-    } else if (typeof exports !== "undefined") {
-        factory(exports, require("babel-runtime/helpers/toConsumableArray"), require("flow-runtime"));
-    } else {
-        var mod = {
-            exports: {}
-        };
-        factory(mod.exports, global.toConsumableArray, global.flowRuntime);
-        global.processors = mod.exports;
-    }
-})(this, function (exports, _toConsumableArray2, _flowRuntime) {
-    "use strict";
-
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.default = processors;
-
-    var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
-
-    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
-
-    function _interopRequireDefault(obj) {
-        return obj && obj.__esModule ? obj : {
-            default: obj
-        };
-    }
-
-    function processors() {
-        var preProcessor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function (args) {
-            return args;
-        };
-        var postProcessor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (value) {
-            return value;
-        };
-
-        var _preProcessorType = _flowRuntime2.default.function(_flowRuntime2.default.param("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any())));
-
-        var _postProcessorType = _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any()));
-
-        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
-
-        _flowRuntime2.default.param("preProcessor", _preProcessorType).assert(preProcessor);
-
-        _flowRuntime2.default.param("postProcessor", _postProcessorType).assert(postProcessor);
-
-        return _returnType.assert(_flowRuntime2.default.annotate(function (fn) {
-            var _fnType = _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()));
-
-            var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
-
-            _flowRuntime2.default.param("fn", _fnType).assert(fn);
-
-            return _returnType2.assert(_flowRuntime2.default.annotate(function () {
-                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                    args[_key] = arguments[_key];
-                }
-
-                var _argsType = _flowRuntime2.default.array(_flowRuntime2.default.any());
-
-                var _returnType3 = _flowRuntime2.default.return(_flowRuntime2.default.any());
-
-                _flowRuntime2.default.rest("args", _argsType).assert(args);
-
-                return _returnType3.assert(postProcessor(fn.apply(undefined, (0, _toConsumableArray3.default)(preProcessor(args)))));
-            }, _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))));
-        }, _flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any()))))));
-    }
-
-    _flowRuntime2.default.annotate(processors, _flowRuntime2.default.function(_flowRuntime2.default.param("preProcessor", _flowRuntime2.default.function(_flowRuntime2.default.param("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any())))), _flowRuntime2.default.param("postProcessor", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())))))));
-});
-
-
-/***/ }),
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
     if (true) {
-        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(14), __webpack_require__(68), __webpack_require__(75), __webpack_require__(76), __webpack_require__(11), __webpack_require__(22), __webpack_require__(13), __webpack_require__(23), __webpack_require__(9), __webpack_require__(24), __webpack_require__(25), __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(14), __webpack_require__(68), __webpack_require__(75), __webpack_require__(76), __webpack_require__(11), __webpack_require__(22), __webpack_require__(13), __webpack_require__(23), __webpack_require__(9), __webpack_require__(24), __webpack_require__(25), __webpack_require__(39), __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
     } else if (typeof exports !== "undefined") {
-        factory(exports, require("babel-runtime/helpers/toConsumableArray"), require("babel-runtime/core-js/get-iterator"), require("babel-runtime/helpers/classCallCheck"), require("babel-runtime/helpers/createClass"), require("../array/filter"), require("../array/find"), require("../array/map"), require("../array/mapKey"), require("../array/reduce"), require("../array/reverse"), require("../boolean/invert"), require("flow-runtime"));
+        factory(exports, require("babel-runtime/helpers/toConsumableArray"), require("babel-runtime/core-js/get-iterator"), require("babel-runtime/helpers/classCallCheck"), require("babel-runtime/helpers/createClass"), require("../array/filter"), require("../array/find"), require("../array/map"), require("../array/mapKey"), require("../array/reduce"), require("../array/reverse"), require("../boolean/invert"), require("../function/processors"), require("flow-runtime"));
     } else {
         var mod = {
             exports: {}
         };
-        factory(mod.exports, global.toConsumableArray, global.getIterator, global.classCallCheck, global.createClass, global.filter, global.find, global.map, global.mapKey, global.reduce, global.reverse, global.invert, global.flowRuntime);
+        factory(mod.exports, global.toConsumableArray, global.getIterator, global.classCallCheck, global.createClass, global.filter, global.find, global.map, global.mapKey, global.reduce, global.reverse, global.invert, global.processors, global.flowRuntime);
         global.chain = mod.exports;
     }
-})(this, function (exports, _toConsumableArray2, _getIterator2, _classCallCheck2, _createClass2, _filter, _find, _map, _mapKey, _reduce, _reverse, _invert, _flowRuntime) {
+})(this, function (exports, _toConsumableArray2, _getIterator2, _classCallCheck2, _createClass2, _filter, _find, _map, _mapKey, _reduce, _reverse, _invert, _processors, _flowRuntime) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -13857,6 +13857,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
     var _invert2 = _interopRequireDefault(_invert);
 
+    var _processors2 = _interopRequireDefault(_processors);
+
     var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
     function _interopRequireDefault(obj) {
@@ -13865,11 +13867,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         };
     }
 
+    /* function */
+    var Action = _flowRuntime2.default.type("Action", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+
     /* boolean */
 
 
     /* array */
-    var Action = _flowRuntime2.default.type("Action", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+
 
     var ActionCreater = _flowRuntime2.default.type("ActionCreater", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(Action)));
 
@@ -13882,7 +13887,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     /* boolean */
     "invert", function () {
         return _invert2.default;
-    }]);
+    },
+
+    /* function */
+    "processors", _processors2.default]);
 
     var Chain = function () {
         function Chain(initialValue) {

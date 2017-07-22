@@ -1,6 +1,6 @@
 {
   "name": "@stefanwimmer128/core",
-  "version": "1.0.0-rc.4",
+  "version": "1.0.0-rc.5",
   "description": "stefanwimmer128 core",
   "main": "js/core.js",
   "scripts": {

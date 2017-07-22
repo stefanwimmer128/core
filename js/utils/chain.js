@@ -1,16 +1,16 @@
 (function (global, factory) {
     if (typeof define === "function" && define.amd) {
-        define(["exports", "babel-runtime/helpers/toConsumableArray", "babel-runtime/core-js/get-iterator", "babel-runtime/helpers/classCallCheck", "babel-runtime/helpers/createClass", "../array/filter", "../array/find", "../array/map", "../array/mapKey", "../array/reduce", "../array/reverse", "../boolean/invert", "flow-runtime"], factory);
+        define(["exports", "babel-runtime/helpers/toConsumableArray", "babel-runtime/core-js/get-iterator", "babel-runtime/helpers/classCallCheck", "babel-runtime/helpers/createClass", "../array/filter", "../array/find", "../array/map", "../array/mapKey", "../array/reduce", "../array/reverse", "../boolean/invert", "../function/processors", "flow-runtime"], factory);
     } else if (typeof exports !== "undefined") {
-        factory(exports, require("babel-runtime/helpers/toConsumableArray"), require("babel-runtime/core-js/get-iterator"), require("babel-runtime/helpers/classCallCheck"), require("babel-runtime/helpers/createClass"), require("../array/filter"), require("../array/find"), require("../array/map"), require("../array/mapKey"), require("../array/reduce"), require("../array/reverse"), require("../boolean/invert"), require("flow-runtime"));
+        factory(exports, require("babel-runtime/helpers/toConsumableArray"), require("babel-runtime/core-js/get-iterator"), require("babel-runtime/helpers/classCallCheck"), require("babel-runtime/helpers/createClass"), require("../array/filter"), require("../array/find"), require("../array/map"), require("../array/mapKey"), require("../array/reduce"), require("../array/reverse"), require("../boolean/invert"), require("../function/processors"), require("flow-runtime"));
     } else {
         var mod = {
             exports: {}
         };
-        factory(mod.exports, global.toConsumableArray, global.getIterator, global.classCallCheck, global.createClass, global.filter, global.find, global.map, global.mapKey, global.reduce, global.reverse, global.invert, global.flowRuntime);
+        factory(mod.exports, global.toConsumableArray, global.getIterator, global.classCallCheck, global.createClass, global.filter, global.find, global.map, global.mapKey, global.reduce, global.reverse, global.invert, global.processors, global.flowRuntime);
         global.chain = mod.exports;
     }
-})(this, function (exports, _toConsumableArray2, _getIterator2, _classCallCheck2, _createClass2, _filter, _find, _map, _mapKey, _reduce, _reverse, _invert, _flowRuntime) {
+})(this, function (exports, _toConsumableArray2, _getIterator2, _classCallCheck2, _createClass2, _filter, _find, _map, _mapKey, _reduce, _reverse, _invert, _processors, _flowRuntime) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -40,6 +40,8 @@
 
     var _invert2 = _interopRequireDefault(_invert);
 
+    var _processors2 = _interopRequireDefault(_processors);
+
     var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
     function _interopRequireDefault(obj) {
@@ -48,11 +50,14 @@
         };
     }
 
+    /* function */
+    var Action = _flowRuntime2.default.type("Action", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+
     /* boolean */
 
 
     /* array */
-    var Action = _flowRuntime2.default.type("Action", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+
 
     var ActionCreater = _flowRuntime2.default.type("ActionCreater", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(Action)));
 
@@ -65,7 +70,10 @@
     /* boolean */
     "invert", function () {
         return _invert2.default;
-    }]);
+    },
+
+    /* function */
+    "processors", _processors2.default]);
 
     var Chain = function () {
         function Chain(initialValue) {
