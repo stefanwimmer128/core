@@ -3,11 +3,11 @@
 import reduce from "./reduce";
 
 export default function map(
-    mapper : (t : any, i : number, array : Array<any>) => any,
-) : (array : Array<any>) => Array<any>
+    mapper : (t : any, i : number, array : any[]) => any,
+) : (array : any[]) => any[]
 {
     return reduce(
-        (r : Array<any>, t : any, i : number, array : Array<any>) : Array<any> =>
+        (r : any[], t : any, i : number, array : any[]) : any[] =>
             r.concat(mapper(t, i, array)),
         [],
     );

@@ -53,7 +53,7 @@
             var _retType = _flowRuntime2.default.any(),
                 ret = _retType.assert(start);
 
-            for (var _iType = _flowRuntime2.default.number(), _i = _iType.assert(0); _i < array.length; _i++) {
+            for (var _i = 0; _i < array.length; _i++) {
                 ret = _retType.assert(reducer(ret, array[_i], _i, array));
             }return _returnType2.assert(ret);
         }, _flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.param("start", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any()))));

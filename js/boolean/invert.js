@@ -1,22 +1,24 @@
 (function (global, factory) {
     if (typeof define === "function" && define.amd) {
-        define(["exports", "flow-runtime"], factory);
+        define(["exports", "babel-runtime/helpers/toConsumableArray", "flow-runtime"], factory);
     } else if (typeof exports !== "undefined") {
-        factory(exports, require("flow-runtime"));
+        factory(exports, require("babel-runtime/helpers/toConsumableArray"), require("flow-runtime"));
     } else {
         var mod = {
             exports: {}
         };
-        factory(mod.exports, global.flowRuntime);
+        factory(mod.exports, global.toConsumableArray, global.flowRuntime);
         global.invert = mod.exports;
     }
-})(this, function (exports, _flowRuntime) {
+})(this, function (exports, _toConsumableArray2, _flowRuntime) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
     exports.default = invert;
+
+    var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
     var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
@@ -44,7 +46,7 @@
 
             _flowRuntime2.default.rest("args", _argsType).assert(args);
 
-            return _returnType2.assert(!boolean.apply(undefined, args));
+            return _returnType2.assert(!boolean.apply(undefined, (0, _toConsumableArray3.default)(args)));
         }, _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))));else return _returnType.assert(!boolean);
     }
 

@@ -12,9 +12,9 @@ import reverse from "../array/reverse";
 import invert from "../boolean/invert";
 
 type Action = (value : any) => any;
-type ActionCreater = (...args : Array<any>) => Action;
+type ActionCreater = (...args : any[]) => Action;
 
-const CHAINABLE : Array<string | ActionCreater> = [
+const CHAINABLE : (string | ActionCreater)[] = [
     /* array */
     "filter", filter,
     "find", find,
@@ -33,10 +33,6 @@ class Chain
     {
         this.actions = [];
         this.initialValue = initialValue;
-        
-        for (let i : number = 0; i < CHAINABLE.length; i += 2)
-            this[CHAINABLE[i]] = (...args : Array<any>) : Chain =>
-                this.tap((CHAINABLE[i + 1] : ActionCreater)(...args));
     }
     
     tap(action : Action) : Chain
@@ -56,6 +52,12 @@ class Chain
         return value;
     }
 }
+
+for (let i = 0; i < CHAINABLE.length; i += 2)
+    Chain.prototype[CHAINABLE[i]] = function (...args : any[]) : Chain
+    {
+        return this.tap((CHAINABLE[i + 1] : ActionCreater)(...args));
+    };
 
 export default function chain(initialValue : any) : Chain
 {
