@@ -13,5 +13,8 @@ export reverse from "./array/reverse";
 /* boolean */
 export invert from "./boolean/invert";
 
+/* function */
+export processors from "./function/processors";
+
 /* utils */
 export chain from "./utils/chain";
