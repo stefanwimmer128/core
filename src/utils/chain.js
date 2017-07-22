@@ -27,32 +27,37 @@ const CHAINABLE : Array<string | ActionCreater> = [
     "invert", () => invert,
 ];
 
-export default function chain(initialValue : any) : Object
+class Chain
 {
-    return (function chain(actions : Array<Action>) : Object
+    constructor(initialValue : any)
     {
-        const ret : Object = {
-            tap: (action : Action) : Object =>
-                chain([
-                    ...actions,
-                    action,
-                ]),
-            
-            value: () : any =>
-            {
-                let value = initialValue;
-                
-                for (const action of actions)
-                    value = action(value);
-                
-                return value;
-            },
-        };
+        this.actions = [];
+        this.initialValue = initialValue;
         
-        for (let i = 0; i < CHAINABLE.length; i += 2)
-            ret[CHAINABLE[i]] = (...args : Array<any>) : Object =>
-                ret.tap((CHAINABLE[i + 1] : ActionCreater)(...args));
+        for (let i : number = 0; i < CHAINABLE.length; i += 2)
+            this[CHAINABLE[i]] = (...args : Array<any>) : Chain =>
+                this.tap((CHAINABLE[i + 1] : ActionCreater)(...args));
+    }
+    
+    tap(action : Action) : Chain
+    {
+        this.actions.push(action);
         
-        return ret;
-    })([]);
+        return this;
+    }
+    
+    value() : any
+    {
+        let value = this.initialValue;
+        
+        for (const action of this.actions)
+                value = action(value);
+        
+        return value;
+    }
+}
+
+export default function chain(initialValue : any) : Chain
+{
+    return new Chain(initialValue);
 }

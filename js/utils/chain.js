@@ -1,103 +1,144 @@
-"use strict";
+(function (global, factory) {
+    if (typeof define === "function" && define.amd) {
+        define(["exports", "../array/filter", "../array/find", "../array/map", "../array/mapKey", "../array/reduce", "../array/reverse", "../boolean/invert", "flow-runtime"], factory);
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("../array/filter"), require("../array/find"), require("../array/map"), require("../array/mapKey"), require("../array/reduce"), require("../array/reverse"), require("../boolean/invert"), require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.filter, global.find, global.map, global.mapKey, global.reduce, global.reverse, global.invert, global.flowRuntime);
+        global.chain = mod.exports;
+    }
+})(this, function (exports, _filter, _find, _map, _mapKey, _reduce, _reverse, _invert, _flowRuntime) {
+    "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = chain;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = chain;
 
-var _filter = require("../array/filter");
+    var _filter2 = _interopRequireDefault(_filter);
 
-var _filter2 = _interopRequireDefault(_filter);
+    var _find2 = _interopRequireDefault(_find);
 
-var _find = require("../array/find");
+    var _map2 = _interopRequireDefault(_map);
 
-var _find2 = _interopRequireDefault(_find);
+    var _mapKey2 = _interopRequireDefault(_mapKey);
 
-var _map = require("../array/map");
+    var _reduce2 = _interopRequireDefault(_reduce);
 
-var _map2 = _interopRequireDefault(_map);
+    var _reverse2 = _interopRequireDefault(_reverse);
 
-var _mapKey = require("../array/mapKey");
+    var _invert2 = _interopRequireDefault(_invert);
 
-var _mapKey2 = _interopRequireDefault(_mapKey);
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
-var _reduce = require("../array/reduce");
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
 
-var _reduce2 = _interopRequireDefault(_reduce);
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
+    }
 
-var _reverse = require("../array/reverse");
+    var _createClass = function () {
+        function defineProperties(target, props) {
+            for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || false;
+                descriptor.configurable = true;
+                if ("value" in descriptor) descriptor.writable = true;
+                Object.defineProperty(target, descriptor.key, descriptor);
+            }
+        }
 
-var _reverse2 = _interopRequireDefault(_reverse);
+        return function (Constructor, protoProps, staticProps) {
+            if (protoProps) defineProperties(Constructor.prototype, protoProps);
+            if (staticProps) defineProperties(Constructor, staticProps);
+            return Constructor;
+        };
+    }();
 
-var _invert = require("../boolean/invert");
+    var Action = _flowRuntime2.default.type("Action", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
 
-var _invert2 = _interopRequireDefault(_invert);
+    var ActionCreater = _flowRuntime2.default.type("ActionCreater", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(Action)));
 
-var _flowRuntime = require("flow-runtime");
+    var CHAINABLE = _flowRuntime2.default.array(_flowRuntime2.default.union(_flowRuntime2.default.string(), ActionCreater)).assert([
+    /* array */
+    "filter", _filter2.default, "find", _find2.default, "map", _map2.default, "mapKey", _mapKey2.default, "reduce", _reduce2.default, "reverse", function () {
+        return _reverse2.default;
+    },
 
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+    /* boolean */
+    "invert", function () {
+        return _invert2.default;
+    }]);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+    var Chain = function () {
+        function Chain(initialValue) {
+            var _this = this;
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+            _classCallCheck(this, Chain);
 
-/* array */
+            var _initialValueType = _flowRuntime2.default.any();
 
+            _flowRuntime2.default.param("initialValue", _initialValueType).assert(initialValue);
 
-/* boolean */
+            this.actions = [];
+            this.initialValue = initialValue;
 
+            var _loop = function _loop(i, _iType2) {
+                _this[CHAINABLE[i]] = _flowRuntime2.default.annotate(function () {
+                    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                    }
 
-var Action = _flowRuntime2.default.type("Action", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+                    var _argsType = _flowRuntime2.default.array(_flowRuntime2.default.any());
 
-var ActionCreater = _flowRuntime2.default.type("ActionCreater", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(Action)));
+                    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain));
 
-var CHAINABLE = _flowRuntime2.default.array(_flowRuntime2.default.union(_flowRuntime2.default.string(), ActionCreater)).assert([
-/* array */
-"filter", _filter2.default, "find", _find2.default, "map", _map2.default, "mapKey", _mapKey2.default, "reduce", _reduce2.default, "reverse", function () {
-    return _reverse2.default;
-},
+                    _flowRuntime2.default.rest("args", _argsType).assert(args);
 
-/* boolean */
-"invert", function () {
-    return _invert2.default;
-}]);
+                    return _returnType.assert(_this.tap(ActionCreater.assert(CHAINABLE[i + 1]).apply(undefined, args)));
+                }, _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain))));
+            };
 
-function chain(initialValue) {
-    var _initialValueType = _flowRuntime2.default.any();
+            for (var _iType2 = _flowRuntime2.default.number(), i = _iType2.assert(0); i < CHAINABLE.length; i += _iType2.assert(2)) {
+                _loop(i, _iType2);
+            }
+        }
 
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.object());
-
-    _flowRuntime2.default.param("initialValue", _initialValueType).assert(initialValue);
-
-    return _returnType.assert(_flowRuntime2.default.annotate(function chain(actions) {
-        var _actionsType = _flowRuntime2.default.array(Action);
-
-        var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.object());
-
-        _flowRuntime2.default.param("actions", _actionsType).assert(actions);
-
-        var ret = _flowRuntime2.default.object().assert({
-            tap: _flowRuntime2.default.annotate(function (action) {
+        _createClass(Chain, [{
+            key: "tap",
+            value: function tap(action) {
                 var _actionType = Action;
 
-                var _returnType3 = _flowRuntime2.default.return(_flowRuntime2.default.object());
+                var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain));
 
                 _flowRuntime2.default.param("action", _actionType).assert(action);
 
-                return _returnType3.assert(chain([].concat(_toConsumableArray(actions), [action])));
-            }, _flowRuntime2.default.function(_flowRuntime2.default.param("action", Action), _flowRuntime2.default.return(_flowRuntime2.default.object()))),
+                this.actions.push(action);
 
-            value: _flowRuntime2.default.annotate(function () {
-                var _returnType4 = _flowRuntime2.default.return(_flowRuntime2.default.any());
+                return _returnType2.assert(this);
+            }
+        }, {
+            key: "value",
+            value: function value() {
+                var _returnType3 = _flowRuntime2.default.return(_flowRuntime2.default.any());
 
-                var value = initialValue;
+                var value = this.initialValue;
 
                 var _iteratorNormalCompletion = true;
                 var _didIteratorError = false;
                 var _iteratorError = undefined;
 
                 try {
-                    for (var _iterator = actions[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    for (var _iterator = this.actions[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                         var action = _step.value;
 
                         value = action(value);
@@ -117,31 +158,23 @@ function chain(initialValue) {
                     }
                 }
 
-                return _returnType4.assert(value);
-            }, _flowRuntime2.default.function(_flowRuntime2.default.return(_flowRuntime2.default.any())))
-        });
+                return _returnType3.assert(value);
+            }
+        }]);
 
-        var _loop = function _loop(i) {
-            ret[CHAINABLE[i]] = _flowRuntime2.default.annotate(function () {
-                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                    args[_key] = arguments[_key];
-                }
+        return Chain;
+    }();
 
-                var _argsType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+    function chain(initialValue) {
+        var _initialValueType2 = _flowRuntime2.default.any();
 
-                var _returnType5 = _flowRuntime2.default.return(_flowRuntime2.default.object());
+        var _returnType4 = _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain));
 
-                _flowRuntime2.default.rest("args", _argsType).assert(args);
+        _flowRuntime2.default.param("initialValue", _initialValueType2).assert(initialValue);
 
-                return _returnType5.assert(ret.tap(ActionCreater.assert(CHAINABLE[i + 1]).apply(undefined, args)));
-            }, _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.object())));
-        };
+        return _returnType4.assert(new Chain(initialValue));
+    }
 
-        for (var i = 0; i < CHAINABLE.length; i += 2) {
-            _loop(i);
-        }return _returnType2.assert(ret);
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param("actions", _flowRuntime2.default.array(Action)), _flowRuntime2.default.return(_flowRuntime2.default.object())))([]));
-}
-
-_flowRuntime2.default.annotate(chain, _flowRuntime2.default.function(_flowRuntime2.default.param("initialValue", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.object())));
+    _flowRuntime2.default.annotate(chain, _flowRuntime2.default.function(_flowRuntime2.default.param("initialValue", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain))));
+});
 //# sourceMappingURL=chain.js.map

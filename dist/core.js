@@ -11496,103 +11496,137 @@ return globalContext$2;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.flowRuntime);
+        global.reduce = mod.exports;
+    }
+})(this, function (exports, _flowRuntime) {
+    "use strict";
 
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = reduce;
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    function reduce(reducer, start) {
+        var _reducerType = _flowRuntime2.default.function(_flowRuntime2.default.param("r", _flowRuntime2.default.any()), _flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()));
+
+        var _startType = _flowRuntime2.default.any();
+
+        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+
+        _flowRuntime2.default.param("reducer", _reducerType).assert(reducer);
+
+        _flowRuntime2.default.param("start", _startType).assert(start);
+
+        return _returnType.assert(_flowRuntime2.default.annotate(function (array) {
+            var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+
+            var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.any());
+
+            _flowRuntime2.default.param("array", _arrayType).assert(array);
+
+            var _retType = _flowRuntime2.default.any(),
+                ret = _retType.assert(start);
+
+            for (var _iType = _flowRuntime2.default.number(), _i = _iType.assert(0); _i < array.length; _i++) {
+                ret = _retType.assert(reducer(ret, array[_i], _i, array));
+            }return _returnType2.assert(ret);
+        }, _flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))));
+    }
+
+    _flowRuntime2.default.annotate(reduce, _flowRuntime2.default.function(_flowRuntime2.default.param("reducer", _flowRuntime2.default.function(_flowRuntime2.default.param("r", _flowRuntime2.default.any()), _flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.param("start", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
 });
-exports.default = reduce;
-
-var _flowRuntime = __webpack_require__(0);
-
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function reduce(reducer, start) {
-    var _reducerType = _flowRuntime2.default.function(_flowRuntime2.default.param("r", _flowRuntime2.default.any()), _flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()));
-
-    var _startType = _flowRuntime2.default.any();
-
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any())));
-
-    _flowRuntime2.default.param("reducer", _reducerType).assert(reducer);
-
-    _flowRuntime2.default.param("start", _startType).assert(start);
-
-    return _returnType.assert(_flowRuntime2.default.annotate(function (array) {
-        var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
-
-        var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.any());
-
-        _flowRuntime2.default.param("array", _arrayType).assert(array);
-
-        var _retType = _flowRuntime2.default.any(),
-            ret = _retType.assert(start);
-
-        for (var _iType = _flowRuntime2.default.number(), _i = _iType.assert(0); _i < array.length; _i++) {
-            ret = _retType.assert(reducer(ret, array[_i], _i, array));
-        }return _returnType2.assert(ret);
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))));
-}
-
-_flowRuntime2.default.annotate(reduce, _flowRuntime2.default.function(_flowRuntime2.default.param("reducer", _flowRuntime2.default.function(_flowRuntime2.default.param("r", _flowRuntime2.default.any()), _flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.param("start", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
 
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(1), __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("./reduce"), require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.reduce, global.flowRuntime);
+        global.filter = mod.exports;
+    }
+})(this, function (exports, _reduce, _flowRuntime) {
+    "use strict";
 
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = filter;
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
+    var _reduce2 = _interopRequireDefault(_reduce);
+
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    function filter(filter) {
+        var _filterType = _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()));
+
+        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))));
+
+        _flowRuntime2.default.param("filter", _filterType).assert(filter);
+
+        return _returnType.assert((0, _reduce2.default)(_flowRuntime2.default.annotate(function (r, t, i, array) {
+            var _rType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+
+            var _tType = _flowRuntime2.default.any();
+
+            var _iType = _flowRuntime2.default.number();
+
+            var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+
+            var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()));
+
+            _flowRuntime2.default.param("r", _rType).assert(r);
+
+            _flowRuntime2.default.param("t", _tType).assert(t);
+
+            _flowRuntime2.default.param("i", _iType).assert(i);
+
+            _flowRuntime2.default.param("array", _arrayType).assert(array);
+
+            return _returnType2.assert(filter(t, i, array) ? r.concat([t]) : r);
+        }, _flowRuntime2.default.function(_flowRuntime2.default.param("r", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any())))), []));
+    }
+
+    _flowRuntime2.default.annotate(filter, _flowRuntime2.default.function(_flowRuntime2.default.param("filter", _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))))));
 });
-exports.default = filter;
-
-var _reduce = __webpack_require__(1);
-
-var _reduce2 = _interopRequireDefault(_reduce);
-
-var _flowRuntime = __webpack_require__(0);
-
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function filter(filter) {
-    var _filterType = _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()));
-
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))));
-
-    _flowRuntime2.default.param("filter", _filterType).assert(filter);
-
-    return _returnType.assert((0, _reduce2.default)(_flowRuntime2.default.annotate(function (r, t, i, array) {
-        var _rType = _flowRuntime2.default.array(_flowRuntime2.default.any());
-
-        var _tType = _flowRuntime2.default.any();
-
-        var _iType = _flowRuntime2.default.number();
-
-        var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
-
-        var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()));
-
-        _flowRuntime2.default.param("r", _rType).assert(r);
-
-        _flowRuntime2.default.param("t", _tType).assert(t);
-
-        _flowRuntime2.default.param("i", _iType).assert(i);
-
-        _flowRuntime2.default.param("array", _arrayType).assert(array);
-
-        return _returnType2.assert(filter(t, i, array) ? r.concat([t]) : r);
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param("r", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any())))), []));
-}
-
-_flowRuntime2.default.annotate(filter, _flowRuntime2.default.function(_flowRuntime2.default.param("filter", _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))))));
 
 
 /***/ }),
@@ -11626,292 +11660,374 @@ module.exports = g;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(1), __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("./reduce"), require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.reduce, global.flowRuntime);
+        global.map = mod.exports;
+    }
+})(this, function (exports, _reduce, _flowRuntime) {
+    "use strict";
 
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = map;
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
+    var _reduce2 = _interopRequireDefault(_reduce);
+
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    function map(mapper) {
+        var _mapperType = _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()));
+
+        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))));
+
+        _flowRuntime2.default.param("mapper", _mapperType).assert(mapper);
+
+        return _returnType.assert((0, _reduce2.default)(_flowRuntime2.default.annotate(function (r, t, i, array) {
+            var _rType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+
+            var _tType = _flowRuntime2.default.any();
+
+            var _iType = _flowRuntime2.default.number();
+
+            var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+
+            var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()));
+
+            _flowRuntime2.default.param("r", _rType).assert(r);
+
+            _flowRuntime2.default.param("t", _tType).assert(t);
+
+            _flowRuntime2.default.param("i", _iType).assert(i);
+
+            _flowRuntime2.default.param("array", _arrayType).assert(array);
+
+            return _returnType2.assert(r.concat(mapper(t, i, array)));
+        }, _flowRuntime2.default.function(_flowRuntime2.default.param("r", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any())))), []));
+    }
+
+    _flowRuntime2.default.annotate(map, _flowRuntime2.default.function(_flowRuntime2.default.param("mapper", _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))))));
 });
-exports.default = map;
-
-var _reduce = __webpack_require__(1);
-
-var _reduce2 = _interopRequireDefault(_reduce);
-
-var _flowRuntime = __webpack_require__(0);
-
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function map(mapper) {
-    var _mapperType = _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()));
-
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))));
-
-    _flowRuntime2.default.param("mapper", _mapperType).assert(mapper);
-
-    return _returnType.assert((0, _reduce2.default)(_flowRuntime2.default.annotate(function (r, t, i, array) {
-        var _rType = _flowRuntime2.default.array(_flowRuntime2.default.any());
-
-        var _tType = _flowRuntime2.default.any();
-
-        var _iType = _flowRuntime2.default.number();
-
-        var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
-
-        var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()));
-
-        _flowRuntime2.default.param("r", _rType).assert(r);
-
-        _flowRuntime2.default.param("t", _tType).assert(t);
-
-        _flowRuntime2.default.param("i", _iType).assert(i);
-
-        _flowRuntime2.default.param("array", _arrayType).assert(array);
-
-        return _returnType2.assert(r.concat(mapper(t, i, array)));
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param("r", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any())))), []));
-}
-
-_flowRuntime2.default.annotate(map, _flowRuntime2.default.function(_flowRuntime2.default.param("mapper", _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))))));
 
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(2), __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("./filter"), require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.filter, global.flowRuntime);
+        global.find = mod.exports;
+    }
+})(this, function (exports, _filter, _flowRuntime) {
+    "use strict";
 
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = find;
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
+    var _filter2 = _interopRequireDefault(_filter);
+
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    function find(finder) {
+        var _finderType = _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()));
+
+        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+
+        _flowRuntime2.default.param("finder", _finderType).assert(finder);
+
+        return _returnType.assert(_flowRuntime2.default.annotate(function (array) {
+            var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+
+            var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.any());
+
+            _flowRuntime2.default.param("array", _arrayType).assert(array);
+
+            return _returnType2.assert((0, _filter2.default)(finder)(array)[0]);
+        }, _flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))));
+    }
+
+    _flowRuntime2.default.annotate(find, _flowRuntime2.default.function(_flowRuntime2.default.param("finder", _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
 });
-exports.default = find;
-
-var _filter = __webpack_require__(2);
-
-var _filter2 = _interopRequireDefault(_filter);
-
-var _flowRuntime = __webpack_require__(0);
-
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function find(finder) {
-    var _finderType = _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()));
-
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any())));
-
-    _flowRuntime2.default.param("finder", _finderType).assert(finder);
-
-    return _returnType.assert(_flowRuntime2.default.annotate(function (array) {
-        var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
-
-        var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.any());
-
-        _flowRuntime2.default.param("array", _arrayType).assert(array);
-
-        return _returnType2.assert((0, _filter2.default)(finder)(array)[0]);
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))));
-}
-
-_flowRuntime2.default.annotate(find, _flowRuntime2.default.function(_flowRuntime2.default.param("finder", _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
 
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.flowRuntime);
+        global.reverse = mod.exports;
+    }
+})(this, function (exports, _flowRuntime) {
+    "use strict";
 
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = reverse;
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = mapKey;
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
-var _map = __webpack_require__(4);
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
 
-var _map2 = _interopRequireDefault(_map);
+    function reverse(array) {
+        var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
 
-var _flowRuntime = __webpack_require__(0);
-
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function mapKey(key) {
-    var _keyType = _flowRuntime2.default.string();
-
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.object())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))));
-
-    _flowRuntime2.default.param("key", _keyType).assert(key);
-
-    return _returnType.assert((0, _map2.default)(_flowRuntime2.default.annotate(function (t, i, array) {
-        var _tType = _flowRuntime2.default.object();
-
-        var _iType = _flowRuntime2.default.number();
-
-        var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.object());
-
-        var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.any());
-
-        _flowRuntime2.default.param("t", _tType).assert(t);
-
-        _flowRuntime2.default.param("i", _iType).assert(i);
+        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()));
 
         _flowRuntime2.default.param("array", _arrayType).assert(array);
 
-        return _returnType2.assert(t[key]);
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.object()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.object())), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
-}
+        var ret = [];
 
-_flowRuntime2.default.annotate(mapKey, _flowRuntime2.default.function(_flowRuntime2.default.param("key", _flowRuntime2.default.string()), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.object())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))))));
+        for (var i = array.length - 1; i >= 0; i--) {
+            ret.push(array[i]);
+        }return _returnType.assert(ret);
+    }
+
+    _flowRuntime2.default.annotate(reverse, _flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))));
+});
 
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.flowRuntime);
+        global.invert = mod.exports;
+    }
+})(this, function (exports, _flowRuntime) {
+    "use strict";
 
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = invert;
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    function invert(boolean) {
+        var _booleanType = _flowRuntime2.default.union(_flowRuntime2.default.boolean(), _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean())));
+
+        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.union(_flowRuntime2.default.boolean(), _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))));
+
+        _flowRuntime2.default.param("boolean", _booleanType).assert(boolean);
+
+        if (typeof boolean === "function") return _returnType.assert(_flowRuntime2.default.annotate(function () {
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+            }
+
+            var _argsType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+
+            var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.boolean());
+
+            _flowRuntime2.default.rest("args", _argsType).assert(args);
+
+            return _returnType2.assert(!boolean.apply(undefined, args));
+        }, _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))));else return _returnType.assert(!boolean);
+    }
+
+    _flowRuntime2.default.annotate(invert, _flowRuntime2.default.function(_flowRuntime2.default.param("boolean", _flowRuntime2.default.union(_flowRuntime2.default.boolean(), _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean())))), _flowRuntime2.default.return(_flowRuntime2.default.union(_flowRuntime2.default.boolean(), _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))))));
 });
-exports.default = reverse;
-
-var _flowRuntime = __webpack_require__(0);
-
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function reverse(array) {
-    var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
-
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()));
-
-    _flowRuntime2.default.param("array", _arrayType).assert(array);
-
-    var ret = [];
-
-    for (var i = array.length - 1; i >= 0; i--) {
-        ret.push(array[i]);
-    }return _returnType.assert(ret);
-}
-
-_flowRuntime2.default.annotate(reverse, _flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))));
 
 
 /***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(4), __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("./map"), require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.map, global.flowRuntime);
+        global.mapKey = mod.exports;
+    }
+})(this, function (exports, _map, _flowRuntime) {
+    "use strict";
 
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = mapKey;
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
+    var _map2 = _interopRequireDefault(_map);
+
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
+
+    function mapKey(key) {
+        var _keyType = _flowRuntime2.default.string();
+
+        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.object())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))));
+
+        _flowRuntime2.default.param("key", _keyType).assert(key);
+
+        return _returnType.assert((0, _map2.default)(_flowRuntime2.default.annotate(function (t, i, array) {
+            var _tType = _flowRuntime2.default.object();
+
+            var _iType = _flowRuntime2.default.number();
+
+            var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.object());
+
+            var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.any());
+
+            _flowRuntime2.default.param("t", _tType).assert(t);
+
+            _flowRuntime2.default.param("i", _iType).assert(i);
+
+            _flowRuntime2.default.param("array", _arrayType).assert(array);
+
+            return _returnType2.assert(t[key]);
+        }, _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.object()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.object())), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
+    }
+
+    _flowRuntime2.default.annotate(mapKey, _flowRuntime2.default.function(_flowRuntime2.default.param("key", _flowRuntime2.default.string()), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.object())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))))));
 });
-exports.default = invert;
-
-var _flowRuntime = __webpack_require__(0);
-
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function invert(boolean) {
-    var _booleanType = _flowRuntime2.default.union(_flowRuntime2.default.boolean(), _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean())));
-
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.union(_flowRuntime2.default.boolean(), _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))));
-
-    _flowRuntime2.default.param("boolean", _booleanType).assert(boolean);
-
-    if (typeof boolean === "function") return _returnType.assert(_flowRuntime2.default.annotate(function () {
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        var _argsType = _flowRuntime2.default.array(_flowRuntime2.default.any());
-
-        var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.boolean());
-
-        _flowRuntime2.default.rest("args", _argsType).assert(args);
-
-        return _returnType2.assert(!boolean.apply(undefined, args));
-    }, _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))));else return _returnType.assert(!boolean);
-}
-
-_flowRuntime2.default.annotate(invert, _flowRuntime2.default.function(_flowRuntime2.default.param("boolean", _flowRuntime2.default.union(_flowRuntime2.default.boolean(), _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean())))), _flowRuntime2.default.return(_flowRuntime2.default.union(_flowRuntime2.default.boolean(), _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))))));
 
 
 /***/ }),
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(2), __webpack_require__(5), __webpack_require__(4), __webpack_require__(8), __webpack_require__(1), __webpack_require__(6), __webpack_require__(7), __webpack_require__(12)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof exports !== "undefined") {
+    factory(exports, require("./array/filter"), require("./array/find"), require("./array/map"), require("./array/mapKey"), require("./array/reduce"), require("./array/reverse"), require("./boolean/invert"), require("./utils/chain"));
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports, global.filter, global.find, global.map, global.mapKey, global.reduce, global.reverse, global.invert, global.chain);
+    global.core = mod.exports;
+  }
+})(this, function (exports, _filter2, _find2, _map2, _mapKey2, _reduce2, _reverse2, _invert2, _chain2) {
+  "use strict";
 
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.chain = exports.invert = exports.reverse = exports.reduce = exports.mapKey = exports.map = exports.find = exports.filter = exports.VERSION = undefined;
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+  var _filter3 = _interopRequireDefault(_filter2);
+
+  var _find3 = _interopRequireDefault(_find2);
+
+  var _map3 = _interopRequireDefault(_map2);
+
+  var _mapKey3 = _interopRequireDefault(_mapKey2);
+
+  var _reduce3 = _interopRequireDefault(_reduce2);
+
+  var _reverse3 = _interopRequireDefault(_reverse2);
+
+  var _invert3 = _interopRequireDefault(_invert2);
+
+  var _chain3 = _interopRequireDefault(_chain2);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
+
+  var VERSION = exports.VERSION = "1.0.0-rc.2";
+
+  /* array */
+  exports.filter = _filter3.default;
+  exports.find = _find3.default;
+  exports.map = _map3.default;
+  exports.mapKey = _mapKey3.default;
+  exports.reduce = _reduce3.default;
+  exports.reverse = _reverse3.default;
+  exports.invert = _invert3.default;
+  exports.chain = _chain3.default;
 });
-exports.chain = exports.invert = exports.reverse = exports.reduce = exports.mapKey = exports.map = exports.find = exports.filter = exports.VERSION = undefined;
-
-var _filter2 = __webpack_require__(2);
-
-var _filter3 = _interopRequireDefault(_filter2);
-
-var _find2 = __webpack_require__(5);
-
-var _find3 = _interopRequireDefault(_find2);
-
-var _map2 = __webpack_require__(4);
-
-var _map3 = _interopRequireDefault(_map2);
-
-var _mapKey2 = __webpack_require__(6);
-
-var _mapKey3 = _interopRequireDefault(_mapKey2);
-
-var _reduce2 = __webpack_require__(1);
-
-var _reduce3 = _interopRequireDefault(_reduce2);
-
-var _reverse2 = __webpack_require__(7);
-
-var _reverse3 = _interopRequireDefault(_reverse2);
-
-var _invert2 = __webpack_require__(8);
-
-var _invert3 = _interopRequireDefault(_invert2);
-
-var _chain2 = __webpack_require__(12);
-
-var _chain3 = _interopRequireDefault(_chain2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var VERSION = exports.VERSION = "1.0.0-rc.2";
-
-/* array */
-exports.filter = _filter3.default;
-exports.find = _find3.default;
-exports.map = _map3.default;
-exports.mapKey = _mapKey3.default;
-exports.reduce = _reduce3.default;
-exports.reverse = _reverse3.default;
-
-/* boolean */
-
-exports.invert = _invert3.default;
-
-/* utils */
-
-exports.chain = _chain3.default;
 
 
 /***/ }),
@@ -12699,107 +12815,150 @@ if (hadRuntime) {
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (global, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports, __webpack_require__(2), __webpack_require__(5), __webpack_require__(4), __webpack_require__(8), __webpack_require__(1), __webpack_require__(6), __webpack_require__(7), __webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("../array/filter"), require("../array/find"), require("../array/map"), require("../array/mapKey"), require("../array/reduce"), require("../array/reverse"), require("../boolean/invert"), require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.filter, global.find, global.map, global.mapKey, global.reduce, global.reverse, global.invert, global.flowRuntime);
+        global.chain = mod.exports;
+    }
+})(this, function (exports, _filter, _find, _map, _mapKey, _reduce, _reverse, _invert, _flowRuntime) {
+    "use strict";
 
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+    exports.default = chain;
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = chain;
+    var _filter2 = _interopRequireDefault(_filter);
 
-var _filter = __webpack_require__(2);
+    var _find2 = _interopRequireDefault(_find);
 
-var _filter2 = _interopRequireDefault(_filter);
+    var _map2 = _interopRequireDefault(_map);
 
-var _find = __webpack_require__(5);
+    var _mapKey2 = _interopRequireDefault(_mapKey);
 
-var _find2 = _interopRequireDefault(_find);
+    var _reduce2 = _interopRequireDefault(_reduce);
 
-var _map = __webpack_require__(4);
+    var _reverse2 = _interopRequireDefault(_reverse);
 
-var _map2 = _interopRequireDefault(_map);
+    var _invert2 = _interopRequireDefault(_invert);
 
-var _mapKey = __webpack_require__(6);
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
-var _mapKey2 = _interopRequireDefault(_mapKey);
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
 
-var _reduce = __webpack_require__(1);
+    function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+            throw new TypeError("Cannot call a class as a function");
+        }
+    }
 
-var _reduce2 = _interopRequireDefault(_reduce);
+    var _createClass = function () {
+        function defineProperties(target, props) {
+            for (var i = 0; i < props.length; i++) {
+                var descriptor = props[i];
+                descriptor.enumerable = descriptor.enumerable || false;
+                descriptor.configurable = true;
+                if ("value" in descriptor) descriptor.writable = true;
+                Object.defineProperty(target, descriptor.key, descriptor);
+            }
+        }
 
-var _reverse = __webpack_require__(7);
+        return function (Constructor, protoProps, staticProps) {
+            if (protoProps) defineProperties(Constructor.prototype, protoProps);
+            if (staticProps) defineProperties(Constructor, staticProps);
+            return Constructor;
+        };
+    }();
 
-var _reverse2 = _interopRequireDefault(_reverse);
+    var Action = _flowRuntime2.default.type("Action", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
 
-var _invert = __webpack_require__(8);
+    var ActionCreater = _flowRuntime2.default.type("ActionCreater", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(Action)));
 
-var _invert2 = _interopRequireDefault(_invert);
+    var CHAINABLE = _flowRuntime2.default.array(_flowRuntime2.default.union(_flowRuntime2.default.string(), ActionCreater)).assert([
+    /* array */
+    "filter", _filter2.default, "find", _find2.default, "map", _map2.default, "mapKey", _mapKey2.default, "reduce", _reduce2.default, "reverse", function () {
+        return _reverse2.default;
+    },
 
-var _flowRuntime = __webpack_require__(0);
+    /* boolean */
+    "invert", function () {
+        return _invert2.default;
+    }]);
 
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+    var Chain = function () {
+        function Chain(initialValue) {
+            var _this = this;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+            _classCallCheck(this, Chain);
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+            var _initialValueType = _flowRuntime2.default.any();
 
-/* array */
+            _flowRuntime2.default.param("initialValue", _initialValueType).assert(initialValue);
 
+            this.actions = [];
+            this.initialValue = initialValue;
 
-/* boolean */
+            var _loop = function _loop(i, _iType2) {
+                _this[CHAINABLE[i]] = _flowRuntime2.default.annotate(function () {
+                    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                    }
 
+                    var _argsType = _flowRuntime2.default.array(_flowRuntime2.default.any());
 
-var Action = _flowRuntime2.default.type("Action", _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+                    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain));
 
-var ActionCreater = _flowRuntime2.default.type("ActionCreater", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(Action)));
+                    _flowRuntime2.default.rest("args", _argsType).assert(args);
 
-var CHAINABLE = _flowRuntime2.default.array(_flowRuntime2.default.union(_flowRuntime2.default.string(), ActionCreater)).assert([
-/* array */
-"filter", _filter2.default, "find", _find2.default, "map", _map2.default, "mapKey", _mapKey2.default, "reduce", _reduce2.default, "reverse", function () {
-    return _reverse2.default;
-},
+                    return _returnType.assert(_this.tap(ActionCreater.assert(CHAINABLE[i + 1]).apply(undefined, args)));
+                }, _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain))));
+            };
 
-/* boolean */
-"invert", function () {
-    return _invert2.default;
-}]);
+            for (var _iType2 = _flowRuntime2.default.number(), i = _iType2.assert(0); i < CHAINABLE.length; i += _iType2.assert(2)) {
+                _loop(i, _iType2);
+            }
+        }
 
-function chain(initialValue) {
-    var _initialValueType = _flowRuntime2.default.any();
-
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.object());
-
-    _flowRuntime2.default.param("initialValue", _initialValueType).assert(initialValue);
-
-    return _returnType.assert(_flowRuntime2.default.annotate(function chain(actions) {
-        var _actionsType = _flowRuntime2.default.array(Action);
-
-        var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.object());
-
-        _flowRuntime2.default.param("actions", _actionsType).assert(actions);
-
-        var ret = _flowRuntime2.default.object().assert({
-            tap: _flowRuntime2.default.annotate(function (action) {
+        _createClass(Chain, [{
+            key: "tap",
+            value: function tap(action) {
                 var _actionType = Action;
 
-                var _returnType3 = _flowRuntime2.default.return(_flowRuntime2.default.object());
+                var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain));
 
                 _flowRuntime2.default.param("action", _actionType).assert(action);
 
-                return _returnType3.assert(chain([].concat(_toConsumableArray(actions), [action])));
-            }, _flowRuntime2.default.function(_flowRuntime2.default.param("action", Action), _flowRuntime2.default.return(_flowRuntime2.default.object()))),
+                this.actions.push(action);
 
-            value: _flowRuntime2.default.annotate(function () {
-                var _returnType4 = _flowRuntime2.default.return(_flowRuntime2.default.any());
+                return _returnType2.assert(this);
+            }
+        }, {
+            key: "value",
+            value: function value() {
+                var _returnType3 = _flowRuntime2.default.return(_flowRuntime2.default.any());
 
-                var value = initialValue;
+                var value = this.initialValue;
 
                 var _iteratorNormalCompletion = true;
                 var _didIteratorError = false;
                 var _iteratorError = undefined;
 
                 try {
-                    for (var _iterator = actions[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    for (var _iterator = this.actions[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                         var action = _step.value;
 
                         value = action(value);
@@ -12819,33 +12978,25 @@ function chain(initialValue) {
                     }
                 }
 
-                return _returnType4.assert(value);
-            }, _flowRuntime2.default.function(_flowRuntime2.default.return(_flowRuntime2.default.any())))
-        });
+                return _returnType3.assert(value);
+            }
+        }]);
 
-        var _loop = function _loop(i) {
-            ret[CHAINABLE[i]] = _flowRuntime2.default.annotate(function () {
-                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                    args[_key] = arguments[_key];
-                }
+        return Chain;
+    }();
 
-                var _argsType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+    function chain(initialValue) {
+        var _initialValueType2 = _flowRuntime2.default.any();
 
-                var _returnType5 = _flowRuntime2.default.return(_flowRuntime2.default.object());
+        var _returnType4 = _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain));
 
-                _flowRuntime2.default.rest("args", _argsType).assert(args);
+        _flowRuntime2.default.param("initialValue", _initialValueType2).assert(initialValue);
 
-                return _returnType5.assert(ret.tap(ActionCreater.assert(CHAINABLE[i + 1]).apply(undefined, args)));
-            }, _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.object())));
-        };
+        return _returnType4.assert(new Chain(initialValue));
+    }
 
-        for (var i = 0; i < CHAINABLE.length; i += 2) {
-            _loop(i);
-        }return _returnType2.assert(ret);
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param("actions", _flowRuntime2.default.array(Action)), _flowRuntime2.default.return(_flowRuntime2.default.object())))([]));
-}
-
-_flowRuntime2.default.annotate(chain, _flowRuntime2.default.function(_flowRuntime2.default.param("initialValue", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.object())));
+    _flowRuntime2.default.annotate(chain, _flowRuntime2.default.function(_flowRuntime2.default.param("initialValue", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain))));
+});
 
 
 /***/ })

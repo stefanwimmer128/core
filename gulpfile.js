@@ -1,5 +1,3 @@
-/* @flow */
-
 import del from "del";
 import gulp from "gulp";
 import babel from "gulp-babel";
@@ -22,7 +20,7 @@ gulp.task("build", () =>
                         assert: true,
                     },
                 ],
-                "transform-class-properties",
+                "transform-es2015-modules-umd",
                 "transform-export-extensions",
             ],
             presets: [
