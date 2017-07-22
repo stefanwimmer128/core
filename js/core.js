@@ -40,7 +40,7 @@
     };
   }
 
-  var VERSION = exports.VERSION = "1.0.0-rc.2";
+  var VERSION = exports.VERSION = "1.0.0-rc.3";
 
   /* array */
   exports.filter = _filter3.default;
