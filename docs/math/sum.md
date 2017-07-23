@@ -18,7 +18,7 @@ Sum up numbers.
 core.sum(1, 2, 3, 4); /* 10 */
 ```
 
-### Using `#chain`
+### Using [`#chain`](../utils/chain.md)
 
 In `#chain` this function is called `#add`.
 
