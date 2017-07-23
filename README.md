@@ -1,8 +1,6 @@
 # @stefanwimmer128/core
 
-## stefanwimmer128 core
-
-### Installation
+## Installation
 
 ``` bash
 yarn add @stefanwimmer128/core
@@ -10,9 +8,9 @@ yarn add @stefanwimmer128/core
 npm install @stefanwimmer128/core
 ```
 
-### Usage
+## Usage
 
-stefanwimmer128 core can be used with CommonJS, AMD and in the Browser.
+@stefanwimmer128/core can be used with CommonJS, AMD and in the Browser.
 
 ``` javascript
 /* CommonJS */
@@ -40,11 +38,11 @@ It is possible to import single function by importing the respected file from th
 var chain = require("core/js/utils/chain");
 ```
 
-### API Documentation
+## API Documentation
 
-[Try stefanwimmer128 core](https://npm.runkit.com/@stefanwimmer128/core)
+[Try @stefanwimmer128/core](https://npm.runkit.com/@stefanwimmer128/core)
 
-stefanwimmer128 core exports the following functions:
+@stefanwimmer128/core exports the following functions:
 
 - Array operations
   - [#each](docs/array/each.md) - Cycle through each element in an arra
@@ -65,7 +63,7 @@ These functions are curried, so usage looks like this:
 
 ``` javascript
 const map = core.map(t => t + 1);
-map([ 0, 1, 2, 3, ]); /* [ 1, 2, 3, 4, ] */
+map([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, 4 ] */
 ```
 
 More examples on each functions can be found in their respected API documentation.
