@@ -33,20 +33,21 @@ core.chain(0).tap(function (value)
 }).value(); /* 1 */
 ```
 
-Compatible functions:
+## Chainable functions
+
 - Array operations
-  - [`#filter`](../array/filter.md)
-  - [`#find`](../array/find.md)
-  - [`#flatten`](../array/flatten.md)
-  - [`#map`](../array/map.md)
-  - [`#mapKey`](../array/mapKey.md)
-  - [`#reduce`](../array/reduce.md)
-  - [`#reverse`](../array/reverse.md)
+    - [`#filter`](../array/filter.md)
+    - [`#find`](../array/find.md)
+    - [`#flatten`](../array/flatten.md)
+    - [`#map`](../array/map.md)
+    - [`#mapKey`](../array/mapKey.md)
+    - [`#reduce`](../array/reduce.md)
+    - [`#reverse`](../array/reverse.md)
 - Boolean operations
-  - [`#invert`](../boolean/invert.md)
+    - [`#invert`](../boolean/invert.md)
 - Math operations
-  - [`#sum`](../math/sum.md) as `#add`
+    - [`#sum`](../math/sum.md) as `#add`
 - Object operations
-  - [`#extend`](../object/extend.md)
+    - [`#extend`](../object/extend.md)
 - Function operations
-  - [`#processors`](../function/processors.md)
+    - [`#processors`](../function/processors.md)

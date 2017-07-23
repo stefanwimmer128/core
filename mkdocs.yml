@@ -20,4 +20,5 @@ pages:
         - "#extend": object/extend.md
     - Utils:
         - "#chain": utils/chain.md
+repo_url: https://github.com/stefanwimmer128/core
 theme: readthedocs

@@ -3,6 +3,7 @@
   "version": "1.0.0-rc.10",
   "main": "js/core.js",
   "scripts": {
+    "docs": "mkdocs build; cd site; git commit -a -m .; git push",
     "gulp": "babel-node \"$(which gulp)\""
   },
   "repository": {

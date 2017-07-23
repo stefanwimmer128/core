@@ -45,24 +45,24 @@ var chain = require("core/js/utils/chain");
 @stefanwimmer128/core exports the following functions:
 
 - Array operations
-  - [`#each`](array/each.md) - Cycle through each element in an array
-  - [`#filter`](array/filter.md) - Filter elements in array
-  - [`#find`](array/find.md) - Find element in array
-  - [`#flatten`](array/flatten.md) - Flatten array
-  - [`#map`](array/map.md) - Map through elements in array
-  - [`#mapKey`](array/mapKey.md) - Map elements to key
-  - [`#reduce`](array/reduce.md) - Process array
-  - [`#reverse`](array/reverse.md) - Reverse array
+    - [`#each`](array/each.md) - Cycle through each element in an array
+    - [`#filter`](array/filter.md) - Filter elements in array
+    - [`#find`](array/find.md) - Find element in array
+    - [`#flatten`](array/flatten.md) - Flatten array
+    - [`#map`](array/map.md) - Map through elements in array
+    - [`#mapKey`](array/mapKey.md) - Map elements to key
+    - [`#reduce`](array/reduce.md) - Process array
+    - [`#reverse`](array/reverse.md) - Reverse array
 - Boolean operations
-  - [`#invert`](boolean/invert.md) - Invert boolean value or wrap function to return inverted boolea value
+    - [`#invert`](boolean/invert.md) - Invert boolean value or wrap function to return inverted boolea value
 - Function operations
-  - [`#processors`](function/processors.md) - Wrap function to preprocess arguments and postprocess return value
+    - [`#processors`](function/processors.md) - Wrap function to preprocess arguments and postprocess return value
 - Math operations
-  - [`#sum`](math/sum.md) - Sum up numbers
+    - [`#sum`](math/sum.md) - Sum up numbers
 - Object operations
-  - [`#extend`](object/extend.md) - Extend object
+    - [`#extend`](object/extend.md) - Extend object
 - Utils
-  - [`#chain`](utils/chain.md) - Allows to use above functions in a chained structure
+    - [`#chain`](utils/chain.md) - Allows to use above functions in a chained structure
 
 These functions are curried, so usage looks like this:
 
