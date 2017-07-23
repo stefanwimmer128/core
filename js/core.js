@@ -51,7 +51,7 @@ var _chain3 = _interopRequireDefault(_chain2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VERSION = exports.VERSION = "1.0.0-rc.8";
+var VERSION = exports.VERSION = "1.0.0-rc.9";
 
 /* array */
 exports.filter = _filter3.default;

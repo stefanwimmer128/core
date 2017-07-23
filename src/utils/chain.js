@@ -15,21 +15,27 @@ import invert from "../boolean/invert";
 /* function */
 import processors from "../function/processors";
 
+/* object */
+import extend from "../object/extend";
+
 const CHAINABLE = {
     /* array */
-    "filter": filter,
-    "find": find,
-    "flatten": () => flatten,
-    "map": map,
-    "mapKey": mapKey,
-    "reduce": reduce,
-    "reverse": () => reverse,
+    filter,
+    find,
+    flatten: () => flatten,
+    map,
+    mapKey,
+    reduce,
+    reverse: () => reverse,
     
     /* boolean */
-    "invert": () => invert,
+    invert: () => invert,
     
     /* function */
-    "processors": processors,
+    processors,
+    
+    /* object */
+    extend,
 };
 
 class Chain

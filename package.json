@@ -1,6 +1,6 @@
 {
   "name": "@stefanwimmer128/core",
-  "version": "1.0.0-rc.8",
+  "version": "1.0.0-rc.9",
   "main": "js/core.js",
   "scripts": {
     "gulp": "babel-node \"$(which gulp)\""

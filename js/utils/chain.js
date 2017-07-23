@@ -58,40 +58,50 @@ var _processors = require("../function/processors");
 
 var _processors2 = _interopRequireDefault(_processors);
 
+var _extend = require("../object/extend");
+
+var _extend2 = _interopRequireDefault(_extend);
+
 var _flowRuntime = require("flow-runtime");
 
 var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/* function */
+/* object */
 
 
-/* array */
+/* boolean */
 var CHAINABLE = {
     /* array */
-    "filter": _filter2.default,
-    "find": _find2.default,
-    "flatten": function flatten() {
+    filter: _filter2.default,
+    find: _find2.default,
+    flatten: function flatten() {
         return _flatten3.default;
     },
-    "map": _map2.default,
-    "mapKey": _mapKey2.default,
-    "reduce": _reduce2.default,
-    "reverse": function reverse() {
+    map: _map2.default,
+    mapKey: _mapKey2.default,
+    reduce: _reduce2.default,
+    reverse: function reverse() {
         return _reverse3.default;
     },
 
     /* boolean */
-    "invert": function invert() {
+    invert: function invert() {
         return _invert3.default;
     },
 
     /* function */
-    "processors": _processors2.default
+    processors: _processors2.default,
+
+    /* object */
+    extend: _extend2.default
 };
 
-/* boolean */
+/* function */
+
+
+/* array */
 
 var Chain = function () {
     function Chain(initialValue) {
