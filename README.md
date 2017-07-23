@@ -16,7 +16,7 @@ stefanwimmer128 core can be used with CommonJS, AMD and in the Browser.
 
 ``` javascript
 /* CommonJS */
-var core = require("core");
+var core = require("@stefanwimmer128/core");
 ```
 
 ``` javascript
