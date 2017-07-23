@@ -1,4 +1,4 @@
-# core#reduce API documentation
+# `#reduce` API documentation
 
 ## Syntax
 

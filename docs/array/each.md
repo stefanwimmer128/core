@@ -1,4 +1,4 @@
-# core#each API documentation
+# `#each` API documentation
 
 ## Syntax
 

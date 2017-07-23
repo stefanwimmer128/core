@@ -1,4 +1,4 @@
-# core#invert API documentation
+# `#invert` API documentation
 
 ## Syntax
 

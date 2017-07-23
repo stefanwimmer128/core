@@ -1,4 +1,4 @@
-# core#sum API documentation
+# `#sum` API documentation
 
 ## Syntax
 

@@ -1,4 +1,4 @@
-# core#flatten API documentation
+# `#flatten` API documentation
 
 ## Syntax
 

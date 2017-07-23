@@ -1,4 +1,4 @@
-# core#chain API Documentation
+# `#chain` API Documentation
 
 ## Syntax
 

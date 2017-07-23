@@ -1,4 +1,4 @@
-# core#reverse API documentation
+# `#reverse` API documentation
 
 ## Syntax
 

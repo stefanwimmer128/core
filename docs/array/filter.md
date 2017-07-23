@@ -1,4 +1,4 @@
-# core#filter API documentation
+# `#filter` API documentation
 
 ## Syntax
 

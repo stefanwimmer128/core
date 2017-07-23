@@ -1,4 +1,4 @@
-# core#processors API documentation
+# `#processors` API documentation
 
 ## Syntax
 

@@ -1,4 +1,4 @@
-# core#map API documentation
+# `#map` API documentation
 
 ## Syntax
 

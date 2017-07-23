@@ -1,4 +1,4 @@
-# core#find API documentation
+# `#find` API documentation
 
 ## Syntax
 

@@ -1,4 +1,4 @@
-# core#mapKey API documentation
+# `#mapKey` API documentation
 
 ## Syntax
 

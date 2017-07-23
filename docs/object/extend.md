@@ -1,4 +1,4 @@
-# core#extend API documentation
+# `#extend` API documentation
 
 ## Syntax
 
