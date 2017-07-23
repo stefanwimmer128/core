@@ -52,12 +52,12 @@ stefanwimmer128 core exports the following functions:
   - [#find](docs/array/find.md) - Find element in array
   - [#map](docs/array/map.md) - Map through elements in array
   - [#mapKey](docs/array/mapKey.md) - Map elements to key
-  - #reduce - Process array
-  - #reverse - Reverse array
+  - [#reduce](docs/array/reduce.md) - Process array
+  - [#reverse](docs/array/reverse.md) - Reverse array
 - Boolean operations
-  - #invert - Invert boolean value or wrap function to return inverted boolea value
+  - [#invert](docs/boolean/invert.md) - Invert boolean value or wrap function to return inverted boolea value
 - Function operations
-  - #processors - Wrap function to preprocess arguments and postprocess return value
+  - [#processors](docs/function/processors.md) - Wrap function to preprocess arguments and postprocess return value
 - Utils
   - [#chain](docs/utils/chain.md) - Allows to use above functions in a chained structure
 
