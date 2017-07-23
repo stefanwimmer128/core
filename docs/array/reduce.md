@@ -17,7 +17,7 @@ core.reduce(function (r, t, i, tArray) {}, start)(tArray, start);
 
 ## Usage
 
-See `Array.prototype.reduce`.
+See `Array.prototype.reduce`. Process array.
 
 ``` javascript
 core.reduce(function (r, t, i, tArray)

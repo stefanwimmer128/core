@@ -13,6 +13,8 @@ core.invert(boolean);
 
 ## Usage
 
+Invert boolean value or wrap function to return inverted boolea value.
+
 ``` javascript
 core.invert(true); /* false */
 

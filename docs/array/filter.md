@@ -15,7 +15,7 @@ core.filter(function (t, i, tArray) {})(tArray);
 
 ## Usage
 
-See `Array.prototype.filter`.
+See `Array.prototype.filter`. Filter elements in array.
 
 ``` javascript
 core.filter(function (t, i, tArray)

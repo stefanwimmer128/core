@@ -12,6 +12,8 @@ core.reverse(array);
 
 ## Usage
 
+See `Array.prototype.reverse`. Reverse array.
+
 ``` javascript
 core.reverse([ 0, 1, 2, 3 ]); /* [ 3, 2, 1, 0 ] */
 ```

@@ -15,7 +15,7 @@ core.map(function (t, i, tArray) {})(tArray);
 
 ## Usage
 
-See `Array.prototype.map`.
+See `Array.prototype.map`. Map through elements in array.
 
 ``` javascript
 core.each(function (t, i, tArray)

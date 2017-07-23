@@ -38,29 +38,29 @@ It is possible to import single function by importing the respected file from th
 var chain = require("core/js/utils/chain");
 ```
 
-## API Documentation
+## API documentation
 
 [Try @stefanwimmer128/core](https://npm.runkit.com/@stefanwimmer128/core)
 
 @stefanwimmer128/core exports the following functions:
 
 - Array operations
-  - [#each](docs/array/each.md) - Cycle through each element in an arra
-  - [#filter](docs/array/filter.md) - Filter elements in array
-  - [#find](docs/array/find.md) - Find element in array
-  - [#flatten](docs/array/flatten.md) - Flatten array
-  - [#map](docs/array/map.md) - Map through elements in array
-  - [#mapKey](docs/array/mapKey.md) - Map elements to key
-  - [#reduce](docs/array/reduce.md) - Process array
-  - [#reverse](docs/array/reverse.md) - Reverse array
+  - [`#each`](docs/array/each.md) - Cycle through each element in an array
+  - [`#filter`](docs/array/filter.md) - Filter elements in array
+  - [`#find`](docs/array/find.md) - Find element in array
+  - [`#flatten`](docs/array/flatten.md) - Flatten array
+  - [`#map`](docs/array/map.md) - Map through elements in array
+  - [`#mapKey`](docs/array/mapKey.md) - Map elements to key
+  - [`#reduce`](docs/array/reduce.md) - Process array
+  - [`#reverse`](docs/array/reverse.md) - Reverse array
 - Boolean operations
-  - [#invert](docs/boolean/invert.md) - Invert boolean value or wrap function to return inverted boolea value
+  - [`#invert`](docs/boolean/invert.md) - Invert boolean value or wrap function to return inverted boolea value
 - Function operations
-  - [#processors](docs/function/processors.md) - Wrap function to preprocess arguments and postprocess return value
+  - [`#processors`](docs/function/processors.md) - Wrap function to preprocess arguments and postprocess return value
 - Object operations
-  - [#extend](docs/object/extend.md) - Extend object
+  - [`#extend`](docs/object/extend.md) - Extend object
 - Utils
-  - [#chain](docs/utils/chain.md) - Allows to use above functions in a chained structure
+  - [`#chain`](docs/utils/chain.md) - Allows to use above functions in a chained structure
 
 These functions are curried, so usage looks like this:
 

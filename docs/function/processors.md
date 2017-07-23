@@ -22,6 +22,8 @@ core.processors(function (args)
 
 ## Usage
 
+Wrap function to preprocess arguments and postprocess return value.
+
 ``` javascript
 core.processors(core.map(function (t)
 {

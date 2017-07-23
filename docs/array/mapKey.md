@@ -13,6 +13,8 @@ core.mapKey(key)(objArray);
 
 ## Usage
 
+See [`#map`](map.md). Map elements to key.
+
 ``` javascript
 core.mapKey("id")([
     { id: 0 },

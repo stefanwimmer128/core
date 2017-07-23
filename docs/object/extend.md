@@ -13,7 +13,7 @@ core.extend(source)(target);
 
 ## Usage
 
-See `Object.assign`. `source` &rarr; `target`
+See `Object.assign`. Extend object: `source` &rarr; `target`.
 
 ``` javascript
 core.extend({

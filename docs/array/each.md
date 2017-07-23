@@ -15,7 +15,7 @@ core.each(function (t, i, tArray) {})(tArray);
 
 ## Usage
 
-See `Array.prototype.each`.
+See `Array.prototype.each`. Cycle through each element in an array.
 
 ``` javascript
 core.each(function (t, i, tArray)

@@ -15,7 +15,7 @@ core.find(function (t, i, tArray) {})(tArray);
 
 ## Usage
 
-See `Array.prototype.find`.
+See `Array.prototype.find`. Find element in array.
 
 ``` javascript
 core.find(function (t, i, tArray)
