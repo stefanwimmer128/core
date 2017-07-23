@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/stefanwimmer128/core/issues"
   },
-  "homepage": "https://github.com/stefanwimmer128/core#readme",
+  "homepage": "https://stefanwimmer128.github.io/core",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-plugin-flow-runtime": "^0.11.1",

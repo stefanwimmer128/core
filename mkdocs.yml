@@ -1,0 +1,23 @@
+site_name: "@stefanwimmer128/core"
+pages:
+    - Home: index.md
+    - Array operations:
+        - "#each": array/each.md
+        - "#filter": array/filter.md
+        - "#find": array/find.md
+        - "#flatten": array/flatten.md
+        - "#map": array/map.md
+        - "#mapKey": array/mapKey.md
+        - "#reduce": array/reduce.md
+        - "#reverse": array/reverse.md
+    - Boolean operations:
+        - "#invert": boolean/invert.md
+    - Function operations:
+        - "#processors": function/processors.md
+    - Math operations:
+        - "#sum": math/sum.md
+    - Object operations:
+        - "#extend": object/extend.md
+    - Utils:
+        - "#chain": utils/chain.md
+theme: readthedocs
