@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>#chain - @stefanwimmer128/core</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "#chain";
+    var mkdocs_page_input_path = "utils/chain.md";
+    var mkdocs_page_url = "/utils/chain/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> @stefanwimmer128/core</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Array operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../array/each/">#each</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/filter/">#filter</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/find/">#find</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/flatten/">#flatten</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/map/">#map</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/mapKey/">#mapKey</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/reduce/">#reduce</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/reverse/">#reverse</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Boolean operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../boolean/invert/">#invert</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Function operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../function/processors/">#processors</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Math operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../math/sum/">#sum</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Object operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../object/extend/">#extend</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Utils</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">#chain</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#chain-api-documentation">#chain API Documentation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#syntax">Syntax</a></li>
+        
+            <li><a class="toctree-l4" href="#usage">Usage</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">@stefanwimmer128/core</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Utils &raquo;</li>
+        
+      
+    
+    <li>#chain</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="chain-api-documentation"><code>#chain</code> API Documentation</h1>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="javascript">core.chain(initialValue);
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>initialValue</td>
+<td>any</td>
+<td>Initial value for chain to process</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage</h2>
+<p>Allows to use above functions in a chained structure. Chain functions together to process <code>initialValue</code> in order. Execution only on <code>#value</code> call.</p>
+<pre><code class="javascript">core.chain([ 0, 1, 2, 3, ]).map(function (t)
+{
+    return t + 1;
+}).reduce(function (t, t)
+{
+    return r + t;
+}).value(); /* 10 */
+</code></pre>
+
+<p>To manually tap into the chain use the <code>#tap</code> function.</p>
+<pre><code class="javascript">core.chain(0).tap(function (value)
+{
+    return value + 1;
+}).value(); /* 1 */
+</code></pre>
+
+<p>Compatible functions:
+- Array operations
+  - <a href="../../array/filter/"><code>#filter</code></a>
+  - <a href="../../array/find/"><code>#find</code></a>
+  - <a href="../../array/flatten/"><code>#flatten</code></a>
+  - <a href="../../array/map/"><code>#map</code></a>
+  - <a href="../../array/mapKey/"><code>#mapKey</code></a>
+  - <a href="../../array/reduce/"><code>#reduce</code></a>
+  - <a href="../../array/reverse/"><code>#reverse</code></a>
+- Boolean operations
+  - <a href="../../boolean/invert/"><code>#invert</code></a>
+- Math operations
+  - <a href="../../math/sum/"><code>#sum</code></a> as <code>#add</code>
+- Object operations
+  - <a href="../../object/extend/"><code>#extend</code></a>
+- Function operations
+  - <a href="../../function/processors/"><code>#processors</code></a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../object/extend/" class="btn btn-neutral" title="#extend"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../object/extend/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

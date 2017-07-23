@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>#processors - @stefanwimmer128/core</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "#processors";
+    var mkdocs_page_input_path = "function/processors.md";
+    var mkdocs_page_url = "/function/processors/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> @stefanwimmer128/core</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Array operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../array/each/">#each</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/filter/">#filter</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/find/">#find</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/flatten/">#flatten</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/map/">#map</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/mapKey/">#mapKey</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/reduce/">#reduce</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../array/reverse/">#reverse</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Boolean operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../boolean/invert/">#invert</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Function operations</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">#processors</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#processors-api-documentation">#processors API documentation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#syntax">Syntax</a></li>
+        
+            <li><a class="toctree-l4" href="#usage">Usage</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Math operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../math/sum/">#sum</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Object operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../object/extend/">#extend</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Utils</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../utils/chain/">#chain</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">@stefanwimmer128/core</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Function operations &raquo;</li>
+        
+      
+    
+    <li>#processors</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="processors-api-documentation"><code>#processors</code> API documentation</h1>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="javascript">core.processors(function (args)
+{
+    return args;
+}, function (value)
+{
+    return value;
+})(someFunction);
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>function (args) { return args; }</td>
+<td>-</td>
+<td>Pre processor - Handeling arguments (No processing on undefined/null)</td>
+</tr>
+<tr>
+<td>args</td>
+<td>any[]</td>
+<td>Arguments to pass to <code>someFunction</code></td>
+</tr>
+<tr>
+<td>function (value) { return value; }</td>
+<td>-</td>
+<td>Post processor - Handeling return value (No processing on undefined/null)</td>
+</tr>
+<tr>
+<td>value</td>
+<td>any</td>
+<td>Return value from <code>someFunction</code></td>
+</tr>
+<tr>
+<td>someFunction</td>
+<td>function</td>
+<td>Function to wrap processors around</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage</h2>
+<p>Wrap function to preprocess arguments and postprocess return value.</p>
+<pre><code class="javascript">core.processors(core.map(function (t)
+{
+    return t + 1; /* Adds 1 to every argument */
+}), function (value) /* 3 */
+{
+    return value + 1; /* 4 */
+})(function (a, b)
+{
+    return a + b;
+})(0, 1); /* 4 */
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../math/sum/" class="btn btn-neutral float-right" title="#sum">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../boolean/invert/" class="btn btn-neutral" title="#invert"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../boolean/invert/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../math/sum/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

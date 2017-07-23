@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>#reverse - @stefanwimmer128/core</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "#reverse";
+    var mkdocs_page_input_path = "array/reverse.md";
+    var mkdocs_page_url = "/array/reverse/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> @stefanwimmer128/core</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Array operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../each/">#each</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../filter/">#filter</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../find/">#find</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../flatten/">#flatten</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../map/">#map</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mapKey/">#mapKey</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../reduce/">#reduce</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">#reverse</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#reverse-api-documentation">#reverse API documentation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#syntax">Syntax</a></li>
+        
+            <li><a class="toctree-l4" href="#usage">Usage</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Boolean operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../boolean/invert/">#invert</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Function operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../function/processors/">#processors</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Math operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../math/sum/">#sum</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Object operations</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../object/extend/">#extend</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Utils</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../utils/chain/">#chain</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">@stefanwimmer128/core</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Array operations &raquo;</li>
+        
+      
+    
+    <li>#reverse</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="reverse-api-documentation"><code>#reverse</code> API documentation</h1>
+<h2 id="syntax">Syntax</h2>
+<pre><code class="javascript">core.reverse(array);
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>array</td>
+<td>any[]</td>
+<td>Array to reverse</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage</h2>
+<p>See <code>Array.prototype.reverse</code>. Reverse array.</p>
+<pre><code class="javascript">core.reverse([ 0, 1, 2, 3 ]); /* [ 3, 2, 1, 0 ] */
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../boolean/invert/" class="btn btn-neutral float-right" title="#invert">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../reduce/" class="btn btn-neutral" title="#reduce"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../reduce/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../boolean/invert/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

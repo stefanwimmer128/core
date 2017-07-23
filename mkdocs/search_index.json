@@ -1,0 +1,294 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "@stefanwimmer128/core\n\n\nInstallation\n\n\nyarn add @stefanwimmer128/core\n# or:\nnpm install @stefanwimmer128/core\n\n\n\n\nUsage\n\n\n@stefanwimmer128/core can be used with CommonJS, AMD and in the Browser.\n\n\n/* CommonJS */\nvar core = require(\n@stefanwimmer128/core\n);\n\n\n\n\n/* AMD */\nrequire([ \npath/to/core.js\n ], function (core)\n{\n    # use core here\n});\n\n\n\n\nscript src=\npath/to/core.js\n/script\n\n\n\n\n\nThe builds in the \ndist/\n folder are bundled with all major dependencies like \nbabel-runtime\n and \nflow-runtime\n.\n\n\nIt is possible to import single function by importing the respected file from the \njs/\n folder. Required dependency functions will be loaded using respected module loader.\n\n\n/* CommonJS */\nvar chain = require(\ncore/js/utils/chain\n);\n\n\n\n\nAPI documentation\n\n\nTry @stefanwimmer128/core\n\n\n@stefanwimmer128/core exports the following functions:\n\n\n\n\nArray operations\n\n\n#each\n - Cycle through each element in an array\n\n\n#filter\n - Filter elements in array\n\n\n#find\n - Find element in array\n\n\n#flatten\n - Flatten array\n\n\n#map\n - Map through elements in array\n\n\n#mapKey\n - Map elements to key\n\n\n#reduce\n - Process array\n\n\n#reverse\n - Reverse array\n\n\nBoolean operations\n\n\n#invert\n - Invert boolean value or wrap function to return inverted boolea value\n\n\nFunction operations\n\n\n#processors\n - Wrap function to preprocess arguments and postprocess return value\n\n\nMath operations\n\n\n#sum\n - Sum up numbers\n\n\nObject operations\n\n\n#extend\n - Extend object\n\n\nUtils\n\n\n#chain\n - Allows to use above functions in a chained structure\n\n\n\n\nThese functions are curried, so usage looks like this:\n\n\nconst map = core.map(t =\n t + 1);\nmap([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, 4 ] */\n\n\n\n\nMore examples on each functions can be found in their respected API documentation.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#stefanwimmer128core", 
+            "text": "", 
+            "title": "@stefanwimmer128/core"
+        }, 
+        {
+            "location": "/#installation", 
+            "text": "yarn add @stefanwimmer128/core\n# or:\nnpm install @stefanwimmer128/core", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/#usage", 
+            "text": "@stefanwimmer128/core can be used with CommonJS, AMD and in the Browser.  /* CommonJS */\nvar core = require( @stefanwimmer128/core );  /* AMD */\nrequire([  path/to/core.js  ], function (core)\n{\n    # use core here\n});  script src= path/to/core.js /script   The builds in the  dist/  folder are bundled with all major dependencies like  babel-runtime  and  flow-runtime .  It is possible to import single function by importing the respected file from the  js/  folder. Required dependency functions will be loaded using respected module loader.  /* CommonJS */\nvar chain = require( core/js/utils/chain );", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/#api-documentation", 
+            "text": "Try @stefanwimmer128/core  @stefanwimmer128/core exports the following functions:   Array operations  #each  - Cycle through each element in an array  #filter  - Filter elements in array  #find  - Find element in array  #flatten  - Flatten array  #map  - Map through elements in array  #mapKey  - Map elements to key  #reduce  - Process array  #reverse  - Reverse array  Boolean operations  #invert  - Invert boolean value or wrap function to return inverted boolea value  Function operations  #processors  - Wrap function to preprocess arguments and postprocess return value  Math operations  #sum  - Sum up numbers  Object operations  #extend  - Extend object  Utils  #chain  - Allows to use above functions in a chained structure   These functions are curried, so usage looks like this:  const map = core.map(t =  t + 1);\nmap([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, 4 ] */  More examples on each functions can be found in their respected API documentation.", 
+            "title": "API documentation"
+        }, 
+        {
+            "location": "/array/each/", 
+            "text": "#each\n API documentation\n\n\nSyntax\n\n\ncore.each(function (t, i, tArray) {})(tArray);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, tArray) {}\n\n\n-\n\n\nFunction to execute for each element in array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.each\n. Cycle through each element in an array.\n\n\ncore.each(function (t, i, tArray)\n{\n    console.log(\n[\n + i + \n] \n + t);\n})([ 0, 1, 2, 3 ]);", 
+            "title": "#each"
+        }, 
+        {
+            "location": "/array/each/#each-api-documentation", 
+            "text": "", 
+            "title": "#each API documentation"
+        }, 
+        {
+            "location": "/array/each/#syntax", 
+            "text": "core.each(function (t, i, tArray) {})(tArray);     Parameter  Type  Description      function (t, i, tArray) {}  -  Function to execute for each element in array    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/each/#usage", 
+            "text": "See  Array.prototype.each . Cycle through each element in an array.  core.each(function (t, i, tArray)\n{\n    console.log( [  + i +  ]   + t);\n})([ 0, 1, 2, 3 ]);", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/array/filter/", 
+            "text": "#filter\n API documentation\n\n\nSyntax\n\n\ncore.filter(function (t, i, tArray) {})(tArray);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, tArray) {}\n\n\nboolean\n\n\nFunction to filter elements of array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.filter\n. Filter elements in array.\n\n\ncore.filter(function (t, i, tArray)\n{\n    return t \n 1;\n})([ 0, 1, 2, 3 ]); /* [ 2, 3 ] */", 
+            "title": "#filter"
+        }, 
+        {
+            "location": "/array/filter/#filter-api-documentation", 
+            "text": "", 
+            "title": "#filter API documentation"
+        }, 
+        {
+            "location": "/array/filter/#syntax", 
+            "text": "core.filter(function (t, i, tArray) {})(tArray);     Parameter  Type  Description      function (t, i, tArray) {}  boolean  Function to filter elements of array    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/filter/#usage", 
+            "text": "See  Array.prototype.filter . Filter elements in array.  core.filter(function (t, i, tArray)\n{\n    return t   1;\n})([ 0, 1, 2, 3 ]); /* [ 2, 3 ] */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/array/find/", 
+            "text": "#find\n API documentation\n\n\nSyntax\n\n\ncore.find(function (t, i, tArray) {})(tArray);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, tArray) {}\n\n\nboolean\n\n\nFunction to find element of array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.find\n. Find element in array.\n\n\ncore.find(function (t, i, tArray)\n{\n    return t \n 1;\n})([ 0, 1, 2, 3 ]); /* 2 */", 
+            "title": "#find"
+        }, 
+        {
+            "location": "/array/find/#find-api-documentation", 
+            "text": "", 
+            "title": "#find API documentation"
+        }, 
+        {
+            "location": "/array/find/#syntax", 
+            "text": "core.find(function (t, i, tArray) {})(tArray);     Parameter  Type  Description      function (t, i, tArray) {}  boolean  Function to find element of array    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/find/#usage", 
+            "text": "See  Array.prototype.find . Find element in array.  core.find(function (t, i, tArray)\n{\n    return t   1;\n})([ 0, 1, 2, 3 ]); /* 2 */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/array/flatten/", 
+            "text": "#flatten\n API documentation\n\n\nSyntax\n\n\ncore.flatten(array);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\narray\n\n\nany[]\n\n\nArray to flatten\n\n\n\n\n\n\n\n\nUsage\n\n\nFlatten array.\n\n\ncore.flatten([ 0, 1, [ 2, 3 ], [ [ 4, 5 ], [ 6, 7 ] ] ]); /* [ 0, 1, 2, 3, [ 4, 5 ], [ 6, 7] ] */", 
+            "title": "#flatten"
+        }, 
+        {
+            "location": "/array/flatten/#flatten-api-documentation", 
+            "text": "", 
+            "title": "#flatten API documentation"
+        }, 
+        {
+            "location": "/array/flatten/#syntax", 
+            "text": "core.flatten(array);     Parameter  Type  Description      array  any[]  Array to flatten", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/flatten/#usage", 
+            "text": "Flatten array.  core.flatten([ 0, 1, [ 2, 3 ], [ [ 4, 5 ], [ 6, 7 ] ] ]); /* [ 0, 1, 2, 3, [ 4, 5 ], [ 6, 7] ] */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/array/map/", 
+            "text": "#map\n API documentation\n\n\nSyntax\n\n\ncore.map(function (t, i, tArray) {})(tArray);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, tArray) {}\n\n\nboolean\n\n\nFunction to map elements of array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.map\n. Map through elements in array.\n\n\ncore.each(function (t, i, tArray)\n{\n    return t + 1;\n})([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, 4 ] */", 
+            "title": "#map"
+        }, 
+        {
+            "location": "/array/map/#map-api-documentation", 
+            "text": "", 
+            "title": "#map API documentation"
+        }, 
+        {
+            "location": "/array/map/#syntax", 
+            "text": "core.map(function (t, i, tArray) {})(tArray);     Parameter  Type  Description      function (t, i, tArray) {}  boolean  Function to map elements of array    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/map/#usage", 
+            "text": "See  Array.prototype.map . Map through elements in array.  core.each(function (t, i, tArray)\n{\n    return t + 1;\n})([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, 4 ] */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/array/mapKey/", 
+            "text": "#mapKey\n API documentation\n\n\nSyntax\n\n\ncore.mapKey(key)(objArray);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nkey\n\n\nstring\n\n\nKey elements should be mapped to\n\n\n\n\n\n\nobjArray\n\n\nObject[]\n\n\nArray of objects to be mapped\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \n#map\n. Map elements to key.\n\n\ncore.mapKey(\nid\n)([\n    { id: 0 },\n    { id: 1 },\n    { id: 2 },\n    { id: 3 }\n]); /* [ 0, 1, 2, 3 ] */", 
+            "title": "#mapKey"
+        }, 
+        {
+            "location": "/array/mapKey/#mapkey-api-documentation", 
+            "text": "", 
+            "title": "#mapKey API documentation"
+        }, 
+        {
+            "location": "/array/mapKey/#syntax", 
+            "text": "core.mapKey(key)(objArray);     Parameter  Type  Description      key  string  Key elements should be mapped to    objArray  Object[]  Array of objects to be mapped", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/mapKey/#usage", 
+            "text": "See  #map . Map elements to key.  core.mapKey( id )([\n    { id: 0 },\n    { id: 1 },\n    { id: 2 },\n    { id: 3 }\n]); /* [ 0, 1, 2, 3 ] */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/array/reduce/", 
+            "text": "#reduce\n API documentation\n\n\nSyntax\n\n\ncore.reduce(function (r, t, i, tArray) {}, start)(tArray, start);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (r, t, i, tArray) {}\n\n\nboolean\n\n\nFunction to process array with\n\n\n\n\n\n\nr\n\n\nany\n\n\nProcessing value\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\nstart\n\n\nany?\n\n\nStarting value\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.reduce\n. Process array.\n\n\ncore.reduce(function (r, t, i, tArray)\n{\n    return r + t;\n}, 0)([ 1, 2, 3, 4 ]); /* 10 */", 
+            "title": "#reduce"
+        }, 
+        {
+            "location": "/array/reduce/#reduce-api-documentation", 
+            "text": "", 
+            "title": "#reduce API documentation"
+        }, 
+        {
+            "location": "/array/reduce/#syntax", 
+            "text": "core.reduce(function (r, t, i, tArray) {}, start)(tArray, start);     Parameter  Type  Description      function (r, t, i, tArray) {}  boolean  Function to process array with    r  any  Processing value    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array    start  any?  Starting value", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/reduce/#usage", 
+            "text": "See  Array.prototype.reduce . Process array.  core.reduce(function (r, t, i, tArray)\n{\n    return r + t;\n}, 0)([ 1, 2, 3, 4 ]); /* 10 */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/array/reverse/", 
+            "text": "#reverse\n API documentation\n\n\nSyntax\n\n\ncore.reverse(array);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\narray\n\n\nany[]\n\n\nArray to reverse\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.reverse\n. Reverse array.\n\n\ncore.reverse([ 0, 1, 2, 3 ]); /* [ 3, 2, 1, 0 ] */", 
+            "title": "#reverse"
+        }, 
+        {
+            "location": "/array/reverse/#reverse-api-documentation", 
+            "text": "", 
+            "title": "#reverse API documentation"
+        }, 
+        {
+            "location": "/array/reverse/#syntax", 
+            "text": "core.reverse(array);     Parameter  Type  Description      array  any[]  Array to reverse", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/reverse/#usage", 
+            "text": "See  Array.prototype.reverse . Reverse array.  core.reverse([ 0, 1, 2, 3 ]); /* [ 3, 2, 1, 0 ] */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/boolean/invert/", 
+            "text": "#invert\n API documentation\n\n\nSyntax\n\n\ncore.invert(boolean);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nboolean\n\n\nboolean\n\n\nBoolean to invert\n\n\n\n\n\n\nboolean\n\n\nfunction\n\n\nFunction to wrap to invert return value\n\n\n\n\n\n\n\n\nUsage\n\n\nInvert boolean value or wrap function to return inverted boolea value.\n\n\ncore.invert(true); /* false */\n\ncore.invert(function ()\n{\n    return false;\n})(); /* true */", 
+            "title": "#invert"
+        }, 
+        {
+            "location": "/boolean/invert/#invert-api-documentation", 
+            "text": "", 
+            "title": "#invert API documentation"
+        }, 
+        {
+            "location": "/boolean/invert/#syntax", 
+            "text": "core.invert(boolean);     Parameter  Type  Description      boolean  boolean  Boolean to invert    boolean  function  Function to wrap to invert return value", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/boolean/invert/#usage", 
+            "text": "Invert boolean value or wrap function to return inverted boolea value.  core.invert(true); /* false */\n\ncore.invert(function ()\n{\n    return false;\n})(); /* true */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/function/processors/", 
+            "text": "#processors\n API documentation\n\n\nSyntax\n\n\ncore.processors(function (args)\n{\n    return args;\n}, function (value)\n{\n    return value;\n})(someFunction);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (args) { return args; }\n\n\n-\n\n\nPre processor - Handeling arguments (No processing on undefined/null)\n\n\n\n\n\n\nargs\n\n\nany[]\n\n\nArguments to pass to \nsomeFunction\n\n\n\n\n\n\nfunction (value) { return value; }\n\n\n-\n\n\nPost processor - Handeling return value (No processing on undefined/null)\n\n\n\n\n\n\nvalue\n\n\nany\n\n\nReturn value from \nsomeFunction\n\n\n\n\n\n\nsomeFunction\n\n\nfunction\n\n\nFunction to wrap processors around\n\n\n\n\n\n\n\n\nUsage\n\n\nWrap function to preprocess arguments and postprocess return value.\n\n\ncore.processors(core.map(function (t)\n{\n    return t + 1; /* Adds 1 to every argument */\n}), function (value) /* 3 */\n{\n    return value + 1; /* 4 */\n})(function (a, b)\n{\n    return a + b;\n})(0, 1); /* 4 */", 
+            "title": "#processors"
+        }, 
+        {
+            "location": "/function/processors/#processors-api-documentation", 
+            "text": "", 
+            "title": "#processors API documentation"
+        }, 
+        {
+            "location": "/function/processors/#syntax", 
+            "text": "core.processors(function (args)\n{\n    return args;\n}, function (value)\n{\n    return value;\n})(someFunction);     Parameter  Type  Description      function (args) { return args; }  -  Pre processor - Handeling arguments (No processing on undefined/null)    args  any[]  Arguments to pass to  someFunction    function (value) { return value; }  -  Post processor - Handeling return value (No processing on undefined/null)    value  any  Return value from  someFunction    someFunction  function  Function to wrap processors around", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/function/processors/#usage", 
+            "text": "Wrap function to preprocess arguments and postprocess return value.  core.processors(core.map(function (t)\n{\n    return t + 1; /* Adds 1 to every argument */\n}), function (value) /* 3 */\n{\n    return value + 1; /* 4 */\n})(function (a, b)\n{\n    return a + b;\n})(0, 1); /* 4 */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/math/sum/", 
+            "text": "#sum\n API documentation\n\n\nSyntax\n\n\ncore.sum(...numbers);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nnumbers\n\n\nnumber[]\n\n\nNumbers to sum up\n\n\n\n\n\n\n\n\nUsage\n\n\nSum up numbers.\n\n\ncore.sum(1, 2, 3, 4); /* 10 */\n\n\n\n\nUsing \n#chain\n\n\nIn \n#chain\n this function is called \n#add\n.\n\n\ncore.chain(1).add(2, 3).add(4).value(); /* 10 */", 
+            "title": "#sum"
+        }, 
+        {
+            "location": "/math/sum/#sum-api-documentation", 
+            "text": "", 
+            "title": "#sum API documentation"
+        }, 
+        {
+            "location": "/math/sum/#syntax", 
+            "text": "core.sum(...numbers);     Parameter  Type  Description      numbers  number[]  Numbers to sum up", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/math/sum/#usage", 
+            "text": "Sum up numbers.  core.sum(1, 2, 3, 4); /* 10 */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/math/sum/#using-chain", 
+            "text": "In  #chain  this function is called  #add .  core.chain(1).add(2, 3).add(4).value(); /* 10 */", 
+            "title": "Using #chain"
+        }, 
+        {
+            "location": "/object/extend/", 
+            "text": "#extend\n API documentation\n\n\nSyntax\n\n\ncore.extend(source)(target);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nsource\n\n\nObject\n\n\nSource object\n\n\n\n\n\n\ntarget\n\n\nObject\n\n\nTarget object\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nObject.assign\n. Extend object: \nsource\n \n \ntarget\n.\n\n\ncore.extend({\n    a: 0,\n    b: null,\n    c: 2,\n})({\n    b: 1,\n    d: 3,\n}); /* {\n    a: 0,\n    b: 1,\n    c: 2,\n    d: 3,\n} */", 
+            "title": "#extend"
+        }, 
+        {
+            "location": "/object/extend/#extend-api-documentation", 
+            "text": "", 
+            "title": "#extend API documentation"
+        }, 
+        {
+            "location": "/object/extend/#syntax", 
+            "text": "core.extend(source)(target);     Parameter  Type  Description      source  Object  Source object    target  Object  Target object", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/object/extend/#usage", 
+            "text": "See  Object.assign . Extend object:  source     target .  core.extend({\n    a: 0,\n    b: null,\n    c: 2,\n})({\n    b: 1,\n    d: 3,\n}); /* {\n    a: 0,\n    b: 1,\n    c: 2,\n    d: 3,\n} */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/utils/chain/", 
+            "text": "#chain\n API Documentation\n\n\nSyntax\n\n\ncore.chain(initialValue);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ninitialValue\n\n\nany\n\n\nInitial value for chain to process\n\n\n\n\n\n\n\n\nUsage\n\n\nAllows to use above functions in a chained structure. Chain functions together to process \ninitialValue\n in order. Execution only on \n#value\n call.\n\n\ncore.chain([ 0, 1, 2, 3, ]).map(function (t)\n{\n    return t + 1;\n}).reduce(function (t, t)\n{\n    return r + t;\n}).value(); /* 10 */\n\n\n\n\nTo manually tap into the chain use the \n#tap\n function.\n\n\ncore.chain(0).tap(function (value)\n{\n    return value + 1;\n}).value(); /* 1 */\n\n\n\n\nCompatible functions:\n- Array operations\n  - \n#filter\n\n  - \n#find\n\n  - \n#flatten\n\n  - \n#map\n\n  - \n#mapKey\n\n  - \n#reduce\n\n  - \n#reverse\n\n- Boolean operations\n  - \n#invert\n\n- Math operations\n  - \n#sum\n as \n#add\n\n- Object operations\n  - \n#extend\n\n- Function operations\n  - \n#processors", 
+            "title": "#chain"
+        }, 
+        {
+            "location": "/utils/chain/#chain-api-documentation", 
+            "text": "", 
+            "title": "#chain API Documentation"
+        }, 
+        {
+            "location": "/utils/chain/#syntax", 
+            "text": "core.chain(initialValue);     Parameter  Type  Description      initialValue  any  Initial value for chain to process", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/utils/chain/#usage", 
+            "text": "Allows to use above functions in a chained structure. Chain functions together to process  initialValue  in order. Execution only on  #value  call.  core.chain([ 0, 1, 2, 3, ]).map(function (t)\n{\n    return t + 1;\n}).reduce(function (t, t)\n{\n    return r + t;\n}).value(); /* 10 */  To manually tap into the chain use the  #tap  function.  core.chain(0).tap(function (value)\n{\n    return value + 1;\n}).value(); /* 1 */  Compatible functions:\n- Array operations\n  -  #filter \n  -  #find \n  -  #flatten \n  -  #map \n  -  #mapKey \n  -  #reduce \n  -  #reverse \n- Boolean operations\n  -  #invert \n- Math operations\n  -  #sum  as  #add \n- Object operations\n  -  #extend \n- Function operations\n  -  #processors", 
+            "title": "Usage"
+        }
+    ]
+}
