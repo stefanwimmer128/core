@@ -17,12 +17,8 @@ var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function processors() {
-    var preProcessor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function (args) {
-        return args;
-    };
-    var postProcessor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (value) {
-        return value;
-    };
+    var preProcessor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+    var postProcessor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
     var _preProcessorType = _flowRuntime2.default.function(_flowRuntime2.default.param("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any())));
 
@@ -33,6 +29,14 @@ function processors() {
     _flowRuntime2.default.param("preProcessor", _preProcessorType).assert(preProcessor);
 
     _flowRuntime2.default.param("postProcessor", _postProcessorType).assert(postProcessor);
+
+    if (preProcessor === null) preProcessor = _preProcessorType.assert(function (args) {
+        return args;
+    });
+
+    if (postProcessor === null) postProcessor = _postProcessorType.assert(function (value) {
+        return value;
+    });
 
     return _returnType.assert(_flowRuntime2.default.annotate(function (fn) {
         var _fnType = _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()));

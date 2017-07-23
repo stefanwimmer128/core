@@ -1,10 +1,15 @@
 /* @flow */
+
 import filter from "./filter";
+import processors from "../function/processors";
 
 export default function find(
     finder : (t : any, i : number, array : any[]) => boolean,
 ) : (array : any[]) => any
 {
-    return (array : any[]) : any =>
-        filter(finder)(array)[0];
+    return processors(
+        null,
+        (value : any[]) : any =>
+            value[0],
+    )(filter(finder));
 }

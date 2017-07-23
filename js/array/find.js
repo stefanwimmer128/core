@@ -9,6 +9,10 @@ var _filter = require("./filter");
 
 var _filter2 = _interopRequireDefault(_filter);
 
+var _processors = require("../function/processors");
+
+var _processors2 = _interopRequireDefault(_processors);
+
 var _flowRuntime = require("flow-runtime");
 
 var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
@@ -22,15 +26,15 @@ function find(finder) {
 
     _flowRuntime2.default.param("finder", _finderType).assert(finder);
 
-    return _returnType.assert(_flowRuntime2.default.annotate(function (array) {
-        var _arrayType = _flowRuntime2.default.array(_flowRuntime2.default.any());
+    return _returnType.assert((0, _processors2.default)(null, _flowRuntime2.default.annotate(function (value) {
+        var _valueType = _flowRuntime2.default.array(_flowRuntime2.default.any());
 
         var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.any());
 
-        _flowRuntime2.default.param("array", _arrayType).assert(array);
+        _flowRuntime2.default.param("value", _valueType).assert(value);
 
-        return _returnType2.assert((0, _filter2.default)(finder)(array)[0]);
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))));
+        return _returnType2.assert(value[0]);
+    }, _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))))((0, _filter2.default)(finder)));
 }
 
 _flowRuntime2.default.annotate(find, _flowRuntime2.default.function(_flowRuntime2.default.param("finder", _flowRuntime2.default.function(_flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.boolean()))), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
