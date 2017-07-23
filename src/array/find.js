@@ -10,6 +10,6 @@ export default function find(
     return (processors(
         null,
         (value : any[]) : any =>
-            value[0],
+            value.length > 0 ? value[0] : undefined,
     )(filter(finder)) : (array : any[]) => any);
 }

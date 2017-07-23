@@ -1,6 +1,7 @@
 import del from "del";
 import gulp from "gulp";
 import babel from "gulp-babel";
+import mocha from "gulp-mocha";
 import rename from "gulp-rename";
 import replace from "gulp-replace";
 import sourcemaps from "gulp-sourcemaps";
@@ -75,4 +76,16 @@ gulp.task("minify", () =>
         .pipe(gulp.dest("dist/")),
 );
 
-gulp.task("default", gulp.series("clean", "build", "dist", "minify"));
+gulp.task("test", () =>
+    gulp.src("js/**/*.test.js", {
+        read: false,
+    })
+        .pipe(mocha({
+            reporter: "spec",
+        }))
+        .on("error", () =>
+            process.exit(1),
+        ),
+);
+
+gulp.task("default", gulp.series("clean", "build", "test", "dist", "minify"));

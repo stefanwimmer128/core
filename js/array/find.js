@@ -33,7 +33,7 @@ function find(finder) {
 
         _flowRuntime2.default.param("value", _valueType).assert(value);
 
-        return _returnType2.assert(value[0]);
+        return _returnType2.assert(value.length > 0 ? value[0] : undefined);
     }, _flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))))((0, _filter2.default)(finder))));
 }
 
