@@ -80,9 +80,7 @@ gulp.task("test", () =>
     gulp.src("js/**/*.test.js", {
         read: false,
     })
-        .pipe(mocha({
-            reporter: "spec",
-        }))
+        .pipe(mocha())
         .on("error", () =>
             process.exit(1),
         ),
