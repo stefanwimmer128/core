@@ -20,7 +20,6 @@ gulp.task("build", () =>
                         assert: true,
                     },
                 ],
-                "transform-es2015-modules-umd",
                 "transform-export-extensions",
                 "transform-runtime",
             ],
