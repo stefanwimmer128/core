@@ -48,6 +48,7 @@ var chain = require("core/js/utils/chain");
   - [#each](docs/array/each.md) - Cycle through each element in an arra
   - [#filter](docs/array/filter.md) - Filter elements in array
   - [#find](docs/array/find.md) - Find element in array
+  - [#flatten](docs/array/flatten.md) - Flatten array
   - [#map](docs/array/map.md) - Map through elements in array
   - [#mapKey](docs/array/mapKey.md) - Map elements to key
   - [#reduce](docs/array/reduce.md) - Process array

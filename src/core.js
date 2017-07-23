@@ -5,6 +5,7 @@ export const VERSION = "${VERSION}";
 /* array */
 export filter from "./array/filter";
 export find from "./array/find";
+export flatten from "./array/flatten";
 export map from "./array/map";
 export mapKey from "./array/mapKey";
 export reduce from "./array/reduce";

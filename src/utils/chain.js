@@ -3,6 +3,7 @@
 /* array */
 import filter from "../array/filter";
 import find from "../array/find";
+import flatten from "../array/flatten";
 import map from "../array/map";
 import mapKey from "../array/mapKey";
 import reduce from "../array/reduce";
@@ -14,24 +15,22 @@ import invert from "../boolean/invert";
 /* function */
 import processors from "../function/processors";
 
-type Action = (value : any) => any;
-type ActionCreater = (...args : any[]) => Action;
-
-const CHAINABLE : (string | ActionCreater)[] = [
+const CHAINABLE = {
     /* array */
-    "filter", filter,
-    "find", find,
-    "map", map,
-    "mapKey", mapKey,
-    "reduce", reduce,
-    "reverse", () => reverse,
+    "filter": filter,
+    "find": find,
+    "flatten": () => flatten,
+    "map": map,
+    "mapKey": mapKey,
+    "reduce": reduce,
+    "reverse": () => reverse,
     
     /* boolean */
-    "invert", () => invert,
+    "invert": () => invert,
     
     /* function */
-    "processors", processors,
-];
+    "processors": processors,
+};
 
 class Chain
 {
@@ -41,7 +40,7 @@ class Chain
         this.initialValue = initialValue;
     }
     
-    tap(action : Action) : Chain
+    tap(action : (value : any) => any) : Chain
     {
         this.actions.push(action);
         
@@ -59,10 +58,10 @@ class Chain
     }
 }
 
-for (let i = 0; i < CHAINABLE.length; i += 2)
-    Chain.prototype[CHAINABLE[i]] = function (...args : any[]) : Chain
+for (const chainable in CHAINABLE)
+    Chain.prototype[chainable] = function (...args : any[]) : Chain
     {
-        return this.tap((CHAINABLE[i + 1] : ActionCreater)(...args));
+        return this.tap(CHAINABLE[chainable](...args));
     };
 
 export default function chain(initialValue : any) : Chain

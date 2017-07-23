@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.chain = exports.processors = exports.invert = exports.reverse = exports.reduce = exports.mapKey = exports.map = exports.find = exports.filter = exports.VERSION = undefined;
+exports.chain = exports.processors = exports.invert = exports.reverse = exports.reduce = exports.mapKey = exports.map = exports.flatten = exports.find = exports.filter = exports.VERSION = undefined;
 
 var _filter2 = require("./array/filter");
 
@@ -12,6 +12,10 @@ var _filter3 = _interopRequireDefault(_filter2);
 var _find2 = require("./array/find");
 
 var _find3 = _interopRequireDefault(_find2);
+
+var _flatten2 = require("./array/flatten");
+
+var _flatten3 = _interopRequireDefault(_flatten2);
 
 var _map2 = require("./array/map");
 
@@ -43,11 +47,12 @@ var _chain3 = _interopRequireDefault(_chain2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VERSION = exports.VERSION = "1.0.0-rc.6";
+var VERSION = exports.VERSION = "1.0.0-rc.7";
 
 /* array */
 exports.filter = _filter3.default;
 exports.find = _find3.default;
+exports.flatten = _flatten3.default;
 exports.map = _map3.default;
 exports.mapKey = _mapKey3.default;
 exports.reduce = _reduce3.default;
