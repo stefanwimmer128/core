@@ -1,7 +1,7 @@
 /* @flow */
 
 export default function reverse(
-    array : any[]
+    array : any[],
 ) : any[]
 {
     const ret = [];

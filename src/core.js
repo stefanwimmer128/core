@@ -17,5 +17,8 @@ export invert from "./boolean/invert";
 /* function */
 export processors from "./function/processors";
 
+/* object */
+export extend from "./object/extend";
+
 /* utils */
 export chain from "./utils/chain";

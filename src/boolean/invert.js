@@ -1,7 +1,7 @@
 /* @flow */
 
 export default function invert(
-    boolean : boolean | (...args : any[]) => boolean
+    boolean : boolean | (...args : any[]) => boolean,
 ) : boolean | (...args : any[]) => boolean
 {
     if (typeof boolean === "function")

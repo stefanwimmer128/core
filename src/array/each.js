@@ -1,7 +1,7 @@
 /* @flow */
 
 export default function each(
-    each : (t : any, i : number, array : any[]) => any
+    each : (t : any, i : number, array : any[]) => any,
 ) : (array : any[]) => void
 {
     return (array : any[]) : void =>

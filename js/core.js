@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.chain = exports.processors = exports.invert = exports.reverse = exports.reduce = exports.mapKey = exports.map = exports.flatten = exports.find = exports.filter = exports.VERSION = undefined;
+exports.chain = exports.extend = exports.processors = exports.invert = exports.reverse = exports.reduce = exports.mapKey = exports.map = exports.flatten = exports.find = exports.filter = exports.VERSION = undefined;
 
 var _filter2 = require("./array/filter");
 
@@ -41,6 +41,10 @@ var _processors2 = require("./function/processors");
 
 var _processors3 = _interopRequireDefault(_processors2);
 
+var _extend2 = require("./object/extend");
+
+var _extend3 = _interopRequireDefault(_extend2);
+
 var _chain2 = require("./utils/chain");
 
 var _chain3 = _interopRequireDefault(_chain2);
@@ -65,6 +69,10 @@ exports.invert = _invert3.default;
 /* function */
 
 exports.processors = _processors3.default;
+
+/* object */
+
+exports.extend = _extend3.default;
 
 /* utils */
 
