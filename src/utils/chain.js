@@ -15,6 +15,9 @@ import invert from "../boolean/invert";
 /* function */
 import processors from "../function/processors";
 
+/* math */
+import sum from "../math/sum";
+
 /* object */
 import extend from "../object/extend";
 
@@ -33,6 +36,10 @@ const CHAINABLE = {
     
     /* function */
     processors,
+    
+    /* math */
+    add: (...numbers : number[]) =>
+        sum.bind(null, ...numbers),
     
     /* object */
     extend,

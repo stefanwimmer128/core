@@ -4,10 +4,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _toConsumableArray2 = require("babel-runtime/helpers/toConsumableArray");
-
-var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
-
 var _getIterator2 = require("babel-runtime/core-js/get-iterator");
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
@@ -19,6 +15,10 @@ var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 var _createClass2 = require("babel-runtime/helpers/createClass");
 
 var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _toConsumableArray2 = require("babel-runtime/helpers/toConsumableArray");
+
+var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
 exports.default = chain;
 
@@ -58,6 +58,10 @@ var _processors = require("../function/processors");
 
 var _processors2 = _interopRequireDefault(_processors);
 
+var _sum = require("../math/sum");
+
+var _sum2 = _interopRequireDefault(_sum);
+
 var _extend = require("../object/extend");
 
 var _extend2 = _interopRequireDefault(_extend);
@@ -71,7 +75,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* object */
 
 
-/* boolean */
+/* function */
+
+
+/* array */
 var CHAINABLE = {
     /* array */
     filter: _filter2.default,
@@ -94,14 +101,27 @@ var CHAINABLE = {
     /* function */
     processors: _processors2.default,
 
+    /* math */
+    add: _flowRuntime2.default.annotate(function () {
+        for (var _len = arguments.length, numbers = Array(_len), _key = 0; _key < _len; _key++) {
+            numbers[_key] = arguments[_key];
+        }
+
+        var _numbersType = _flowRuntime2.default.array(_flowRuntime2.default.number());
+
+        _flowRuntime2.default.rest("numbers", _numbersType).assert(numbers);
+
+        return _sum2.default.bind.apply(_sum2.default, [null].concat((0, _toConsumableArray3.default)(numbers)));
+    }, _flowRuntime2.default.function(_flowRuntime2.default.rest("numbers", _flowRuntime2.default.array(_flowRuntime2.default.number())))),
+
     /* object */
     extend: _extend2.default
 };
 
-/* function */
+/* math */
 
 
-/* array */
+/* boolean */
 
 var Chain = function () {
     function Chain(initialValue) {
@@ -172,8 +192,8 @@ var _loop = function _loop(chainable) {
 
         var _returnType3 = _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain));
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
+        for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+            args[_key2] = arguments[_key2];
         }
 
         _flowRuntime2.default.rest("args", _argsType).assert(args);

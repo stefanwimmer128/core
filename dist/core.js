@@ -11498,7 +11498,7 @@ return globalContext$2;
 
 var store      = __webpack_require__(34)('wks')
   , uid        = __webpack_require__(35)
-  , Symbol     = __webpack_require__(2).Symbol
+  , Symbol     = __webpack_require__(3).Symbol
   , USE_SYMBOL = typeof Symbol == 'function';
 
 var $exports = module.exports = function(name){
@@ -11510,22 +11510,6 @@ $exports.store = store;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-var global = module.exports = typeof window != 'undefined' && window.Math == Math
-  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
-if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-var core = module.exports = {version: '2.4.0'};
-if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11577,6 +11561,22 @@ function reduce(reducer, _start) {
 
 _flowRuntime2.default.annotate(reduce, _flowRuntime2.default.function(_flowRuntime2.default.param("reducer", _flowRuntime2.default.function(_flowRuntime2.default.param("r", _flowRuntime2.default.any()), _flowRuntime2.default.param("t", _flowRuntime2.default.any()), _flowRuntime2.default.param("i", _flowRuntime2.default.number()), _flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.param("_start", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("array", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.param("start", _flowRuntime2.default.any(), true), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
 
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+var core = module.exports = {version: '2.4.0'};
+if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ }),
 /* 5 */
@@ -11641,8 +11641,8 @@ module.exports = {};
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global    = __webpack_require__(2)
-  , core      = __webpack_require__(3)
+var global    = __webpack_require__(3)
+  , core      = __webpack_require__(4)
   , ctx       = __webpack_require__(28)
   , hide      = __webpack_require__(5)
   , PROTOTYPE = 'prototype';
@@ -11724,7 +11724,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = filter;
 
-var _reduce = __webpack_require__(4);
+var _reduce = __webpack_require__(2);
 
 var _reduce2 = _interopRequireDefault(_reduce);
 
@@ -11983,7 +11983,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = map;
 
-var _reduce = __webpack_require__(4);
+var _reduce = __webpack_require__(2);
 
 var _reduce2 = _interopRequireDefault(_reduce);
 
@@ -12202,7 +12202,7 @@ module.exports = function(fn, that, length){
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(18)
-  , document = __webpack_require__(2).document
+  , document = __webpack_require__(3).document
   // in old IE typeof document.createElement is 'object'
   , is = isObject(document) && isObject(document.createElement);
 module.exports = function(it){
@@ -12256,7 +12256,7 @@ module.exports = function(it){
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(2)
+var global = __webpack_require__(3)
   , SHARED = '__core-js_shared__'
   , store  = global[SHARED] || (global[SHARED] = {});
 module.exports = function(key){
@@ -12301,7 +12301,7 @@ module.exports = function(it, tag, stat){
 var classof   = __webpack_require__(67)
   , ITERATOR  = __webpack_require__(1)('iterator')
   , Iterators = __webpack_require__(9);
-module.exports = __webpack_require__(3).getIteratorMethod = function(it){
+module.exports = __webpack_require__(4).getIteratorMethod = function(it){
   if(it != undefined)return it[ITERATOR]
     || it['@@iterator']
     || Iterators[classof(it)];
@@ -12319,7 +12319,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = flatten;
 
-var _reduce = __webpack_require__(4);
+var _reduce = __webpack_require__(2);
 
 var _reduce2 = _interopRequireDefault(_reduce);
 
@@ -12570,7 +12570,7 @@ var _mapKey2 = __webpack_require__(40);
 
 var _mapKey3 = _interopRequireDefault(_mapKey2);
 
-var _reduce2 = __webpack_require__(4);
+var _reduce2 = __webpack_require__(2);
 
 var _reduce3 = _interopRequireDefault(_reduce2);
 
@@ -13417,7 +13417,7 @@ module.exports = { "default": __webpack_require__(48), __esModule: true };
 
 __webpack_require__(26);
 __webpack_require__(63);
-module.exports = __webpack_require__(3).Array.from;
+module.exports = __webpack_require__(4).Array.from;
 
 /***/ }),
 /* 49 */
@@ -13635,7 +13635,7 @@ module.exports = function(index, length){
 /* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(2).document && document.documentElement;
+module.exports = __webpack_require__(3).document && document.documentElement;
 
 /***/ }),
 /* 62 */
@@ -13808,7 +13808,7 @@ module.exports = { "default": __webpack_require__(70), __esModule: true };
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(71);
-module.exports = __webpack_require__(3).Object.assign;
+module.exports = __webpack_require__(4).Object.assign;
 
 /***/ }),
 /* 71 */
@@ -13881,10 +13881,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _toConsumableArray2 = __webpack_require__(15);
-
-var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
-
 var _getIterator2 = __webpack_require__(76);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
@@ -13896,6 +13892,10 @@ var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 var _createClass2 = __webpack_require__(84);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _toConsumableArray2 = __webpack_require__(15);
+
+var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
 exports.default = chain;
 
@@ -13919,7 +13919,7 @@ var _mapKey = __webpack_require__(40);
 
 var _mapKey2 = _interopRequireDefault(_mapKey);
 
-var _reduce = __webpack_require__(4);
+var _reduce = __webpack_require__(2);
 
 var _reduce2 = _interopRequireDefault(_reduce);
 
@@ -13935,6 +13935,10 @@ var _processors = __webpack_require__(14);
 
 var _processors2 = _interopRequireDefault(_processors);
 
+var _sum = __webpack_require__(88);
+
+var _sum2 = _interopRequireDefault(_sum);
+
 var _extend = __webpack_require__(43);
 
 var _extend2 = _interopRequireDefault(_extend);
@@ -13948,7 +13952,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* object */
 
 
-/* boolean */
+/* function */
+
+
+/* array */
 var CHAINABLE = {
     /* array */
     filter: _filter2.default,
@@ -13971,14 +13978,27 @@ var CHAINABLE = {
     /* function */
     processors: _processors2.default,
 
+    /* math */
+    add: _flowRuntime2.default.annotate(function () {
+        for (var _len = arguments.length, numbers = Array(_len), _key = 0; _key < _len; _key++) {
+            numbers[_key] = arguments[_key];
+        }
+
+        var _numbersType = _flowRuntime2.default.array(_flowRuntime2.default.number());
+
+        _flowRuntime2.default.rest("numbers", _numbersType).assert(numbers);
+
+        return _sum2.default.bind.apply(_sum2.default, [null].concat((0, _toConsumableArray3.default)(numbers)));
+    }, _flowRuntime2.default.function(_flowRuntime2.default.rest("numbers", _flowRuntime2.default.array(_flowRuntime2.default.number())))),
+
     /* object */
     extend: _extend2.default
 };
 
-/* function */
+/* math */
 
 
-/* array */
+/* boolean */
 
 var Chain = function () {
     function Chain(initialValue) {
@@ -14049,8 +14069,8 @@ var _loop = function _loop(chainable) {
 
         var _returnType3 = _flowRuntime2.default.return(_flowRuntime2.default.ref(Chain));
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
+        for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+            args[_key2] = arguments[_key2];
         }
 
         _flowRuntime2.default.rest("args", _argsType).assert(args);
@@ -14093,7 +14113,7 @@ module.exports = __webpack_require__(82);
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(79);
-var global        = __webpack_require__(2)
+var global        = __webpack_require__(3)
   , hide          = __webpack_require__(5)
   , Iterators     = __webpack_require__(9)
   , TO_STRING_TAG = __webpack_require__(1)('toStringTag');
@@ -14166,7 +14186,7 @@ module.exports = function(done, value){
 
 var anObject = __webpack_require__(7)
   , get      = __webpack_require__(38);
-module.exports = __webpack_require__(3).getIterator = function(it){
+module.exports = __webpack_require__(4).getIterator = function(it){
   var iterFn = get(it);
   if(typeof iterFn != 'function')throw TypeError(it + ' is not iterable!');
   return anObject(iterFn.call(it));
@@ -14231,7 +14251,7 @@ module.exports = { "default": __webpack_require__(86), __esModule: true };
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(87);
-var $Object = __webpack_require__(3).Object;
+var $Object = __webpack_require__(4).Object;
 module.exports = function defineProperty(it, key, desc){
   return $Object.defineProperty(it, key, desc);
 };
@@ -14243,6 +14263,47 @@ module.exports = function defineProperty(it, key, desc){
 var $export = __webpack_require__(10);
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
 $export($export.S + $export.F * !__webpack_require__(8), 'Object', {defineProperty: __webpack_require__(6).f});
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = sum;
+
+var _reduce = __webpack_require__(2);
+
+var _reduce2 = _interopRequireDefault(_reduce);
+
+var _flowRuntime = __webpack_require__(0);
+
+var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function sum() {
+    var _numbersType = _flowRuntime2.default.array(_flowRuntime2.default.number());
+
+    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.number());
+
+    for (var _len = arguments.length, numbers = Array(_len), _key = 0; _key < _len; _key++) {
+        numbers[_key] = arguments[_key];
+    }
+
+    _flowRuntime2.default.rest("numbers", _numbersType).assert(numbers);
+
+    return _returnType.assert((0, _reduce2.default)(function (r, t) {
+        return r + t;
+    }, 0)(numbers));
+}
+
+_flowRuntime2.default.annotate(sum, _flowRuntime2.default.function(_flowRuntime2.default.rest("numbers", _flowRuntime2.default.array(_flowRuntime2.default.number())), _flowRuntime2.default.return(_flowRuntime2.default.number())));
+
 
 /***/ })
 /******/ ]);

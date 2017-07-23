@@ -12,7 +12,7 @@ core.chain(initialValue);
 
 ## Usage
 
-Allows to use above functions in a chained structure. Chain functions together to process `initialValue` in order. Execution only on `.value()` call.
+Allows to use above functions in a chained structure. Chain functions together to process `initialValue` in order. Execution only on `#value` call.
 
 ``` javascript
 core.chain([ 0, 1, 2, 3, ]).map(function (t)
@@ -24,7 +24,7 @@ core.chain([ 0, 1, 2, 3, ]).map(function (t)
 }).value(); /* 10 */
 ```
 
-To manually tap into the chain use the `.tap()` function.
+To manually tap into the chain use the `#tap` function.
 
 ``` javascript
 core.chain(0).tap(function (value)
@@ -33,4 +33,20 @@ core.chain(0).tap(function (value)
 }).value(); /* 1 */
 ```
 
-Compatible functions: [`#filter`](../array/filter.md) [`#find`](../array/find.md) [`#flatten`](../array/flatten.md) [`#map`](../array/map.md) [`#mapKey`](../array/mapKey.md) [`#reduce`](../array/reduce.md) [`#reverse`](../array/reverse.md) [`#invert`](../boolean/invert.md) [`#extend`](../object/extend.md) [`#processors`](../function/processors.md)
+Compatible functions:
+- Array operations
+  - [`#filter`](../array/filter.md)
+  - [`#find`](../array/find.md)
+  - [`#flatten`](../array/flatten.md)
+  - [`#map`](../array/map.md)
+  - [`#mapKey`](../array/mapKey.md)
+  - [`#reduce`](../array/reduce.md)
+  - [`#reverse`](../array/reverse.md)
+- Boolean operations
+  - [`#invert`](../boolean/invert.md)
+- Math operations
+  - [`#sum`](../math/sum.md) as `#add`
+- Object operations
+  - [`#extend`](../object/extend.md)
+- Function operations
+  - [`#processors`](../function/processors.md)

@@ -57,6 +57,8 @@ var chain = require("core/js/utils/chain");
   - [`#invert`](docs/boolean/invert.md) - Invert boolean value or wrap function to return inverted boolea value
 - Function operations
   - [`#processors`](docs/function/processors.md) - Wrap function to preprocess arguments and postprocess return value
+- Math operations
+  - [`#sum`](docs/math/sum.md) - Sum up numbers
 - Object operations
   - [`#extend`](docs/object/extend.md) - Extend object
 - Utils
