@@ -70,5 +70,3 @@ These functions are curried, so usage looks like this:
 const map = core.map(t => t + 1);
 map([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, 4 ] */
 ```
-
-More examples on each functions can be found in their respected API documentation.
