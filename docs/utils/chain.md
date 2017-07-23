@@ -23,3 +23,5 @@ core.chain([ 0, 1, 2, 3, ]).map(function (t)
     return r + t;
 }).value(); /* 10 */
 ```
+
+Compatible functions: [#filter](../array/filter.md) [#find](../array/find.md) [#map](../array/map.md) [#mapKey](../array/mapKey.md) [#reduce](../array/reduce.md) [#reverse](../array/reverse.md) [#invert](../boolean/invert.md) [#processors](../function/processors.md)
