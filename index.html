@@ -205,29 +205,38 @@ npm install @stefanwimmer128/core
 </code></pre>
 
 <h2 id="usage">Usage</h2>
-<p>@stefanwimmer128/core can be used with CommonJS, AMD and in the Browser.</p>
+<p><a href="https://npm.runkit.com/@stefanwimmer128/core">Try @stefanwimmer128/core</a></p>
+<p>@stefanwimmer128/core can be used with ES6-style import, CommonJS, AMD and in the Browser.</p>
+<pre><code class="javascript">/* ES6-style import */
+import core from &quot;@stefanwimmer128/core&quot;;
+</code></pre>
+
 <pre><code class="javascript">/* CommonJS */
-var core = require(&quot;@stefanwimmer128/core&quot;);
+var core = require(&quot;@stefanwimmer128/core&quot;).default;
 </code></pre>
 
 <pre><code class="javascript">/* AMD */
-require([ &quot;path/to/core.js&quot; ], function (core)
+require([ &quot;node_modules/@stefanwimmer128/core/dist/core.js&quot; ], function (core)
 {
     # use core here
 });
 </code></pre>
 
-<pre><code class="html">&lt;script src=&quot;path/to/core.js&quot;&gt;&lt;/script&gt;
+<pre><code class="html">&lt;!-- Browser --&gt;
+&lt;script src=&quot;node_modules/@stefanwimmer128/core/dist/core.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
-<p>The builds in the <code>dist/</code> folder are bundled with all major dependencies like <code>babel-runtime</code> and <code>flow-runtime</code>.</p>
-<p>It is possible to import single function by importing the respected file from the <code>js/</code> folder. Required dependency functions will be loaded using respected module loader.</p>
+<p>The builds in the <code>dist/</code> folder are bundled with all required dependencies.</p>
+<p>It is possible to import single functions by importing the required file from the <code>js/</code> folder. This is only possible in ES6-style import and CommonJS.</p>
+<pre><code class="javascript">/* ES6-style import */
+import chain from &quot;@stefanwimmer128/core/js/utils/chain&quot;;
+</code></pre>
+
 <pre><code class="javascript">/* CommonJS */
-var chain = require(&quot;core/js/utils/chain&quot;);
+var chain = require(&quot;@stefanwimmer128/core/js/utils/chain&quot;).default;
 </code></pre>
 
 <h2 id="api-documentation">API documentation</h2>
-<p><a href="https://npm.runkit.com/@stefanwimmer128/core">Try @stefanwimmer128/core</a></p>
 <p>@stefanwimmer128/core exports the following functions:</p>
 <ul>
 <li>Array operations<ul>
@@ -314,5 +323,5 @@ map([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, 4 ] */
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-07-23 23:48:21
+Build Date UTC : 2017-07-24 18:14:06
 -->
