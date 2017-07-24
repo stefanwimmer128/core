@@ -10,37 +10,48 @@ npm install @stefanwimmer128/core
 
 ## Usage
 
-@stefanwimmer128/core can be used with CommonJS, AMD and in the Browser.
+[Try @stefanwimmer128/core](https://npm.runkit.com/@stefanwimmer128/core)
+
+@stefanwimmer128/core can be used with ES6-style import, CommonJS, AMD and in the Browser.
+
+``` javascript
+/* ES6-style import */
+import core from "@stefanwimmer128/core";
+```
 
 ``` javascript
 /* CommonJS */
-var core = require("@stefanwimmer128/core");
+var core = require("@stefanwimmer128/core").default;
 ```
 
 ``` javascript
 /* AMD */
-require([ "path/to/core.js" ], function (core)
+require([ "node_modules/@stefanwimmer128/core/dist/core.js" ], function (core)
 {
     # use core here
 });
 ```
 
 ``` html
-<script src="path/to/core.js"></script>
+<!-- Browser -->
+<script src="node_modules/@stefanwimmer128/core/dist/core.js"></script>
 ```
 
-The builds in the `dist/` folder are bundled with all major dependencies like `babel-runtime` and `flow-runtime`.
+The builds in the `dist/` folder are bundled with all required dependencies.
 
-It is possible to import single function by importing the respected file from the `js/` folder. Required dependency functions will be loaded using respected module loader.
+It is possible to import single functions by importing the required file from the `js/` folder. This is only possible in ES6-style import and CommonJS.
+
+``` javascript
+/* ES6-style import */
+import chain from "@stefanwimmer128/core/js/utils/chain";
+```
 
 ``` javascript
 /* CommonJS */
-var chain = require("core/js/utils/chain");
+var chain = require("@stefanwimmer128/core/js/utils/chain").default;
 ```
 
 ## API documentation
-
-[Try @stefanwimmer128/core](https://npm.runkit.com/@stefanwimmer128/core)
 
 @stefanwimmer128/core exports the following functions:
 
