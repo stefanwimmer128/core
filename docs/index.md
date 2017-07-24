@@ -1,5 +1,7 @@
 # @stefanwimmer128/core
 
+stefanwimmer128 core
+
 ## Installation
 
 ``` bash
