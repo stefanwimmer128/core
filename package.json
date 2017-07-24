@@ -4,7 +4,6 @@
   "description": "stefanwimmer128 core",
   "main": "js/core.js",
   "scripts": {
-    "docs": "./update-docs.sh",
     "gulp": "babel-node \"$(which gulp)\""
   },
   "repository": {

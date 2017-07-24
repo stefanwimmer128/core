@@ -9,10 +9,14 @@ import uglify from "gulp-uglify";
 import webpack from "webpack";
 import webpackStream from "webpack-stream";
 
+import {
+    version,
+} from "./package.json";
+
 gulp.task("build", () =>
     gulp.src("src/**/*.js")
         .pipe(sourcemaps.init())
-        .pipe(replace("${VERSION}", require("./package.json").version))
+        .pipe(replace("${VERSION}", version))
         .pipe(babel({
             plugins: [
                 [
