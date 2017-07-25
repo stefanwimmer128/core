@@ -36,6 +36,7 @@ core.chain(0).tap(function (value)
 ## Chainable functions
 
 - Array operations
+    - [`#concat`](../array/concat.md)
     - [`#filter`](../array/filter.md)
     - [`#find`](../array/find.md)
     - [`#flatten`](../array/flatten.md)
@@ -43,11 +44,13 @@ core.chain(0).tap(function (value)
     - [`#mapKey`](../array/mapKey.md)
     - [`#reduce`](../array/reduce.md)
     - [`#reverse`](../array/reverse.md)
+    - [`#shift`](../array/shift.md)
 - Boolean operations
     - [`#invert`](../boolean/invert.md)
 - Math operations
     - [`#sum`](../math/sum.md) as `#add`
 - Object operations
     - [`#extend`](../object/extend.md)
+    - [`#withProperty`](../object/withProperty.md)
 - Function operations
     - [`#processors`](../function/processors.md)

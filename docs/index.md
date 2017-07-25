@@ -58,6 +58,7 @@ var chain = require("@stefanwimmer128/core/js/utils/chain").default;
 @stefanwimmer128/core exports the following functions:
 
 - Array operations
+    - [`#concat`](array/concat.md) -  Add value(s) to array
     - [`#each`](array/each.md) - Cycle through each element in an array
     - [`#filter`](array/filter.md) - Filter elements in array
     - [`#find`](array/find.md) - Find element in array
@@ -66,6 +67,7 @@ var chain = require("@stefanwimmer128/core/js/utils/chain").default;
     - [`#mapKey`](array/mapKey.md) - Map elements to key
     - [`#reduce`](array/reduce.md) - Process array
     - [`#reverse`](array/reverse.md) - Reverse array
+    - [`#shift`](array/shift.md) - Remove elements from head of array
 - Boolean operations
     - [`#invert`](boolean/invert.md) - Invert boolean value or wrap function to return inverted boolea value
 - Function operations
@@ -74,6 +76,7 @@ var chain = require("@stefanwimmer128/core/js/utils/chain").default;
     - [`#sum`](math/sum.md) - Sum up numbers
 - Object operations
     - [`#extend`](object/extend.md) - Extend object
+    - [`#withProperty`](object/withProperty.md) - Returns object with given key changed to given value
 - Utils
     - [`#chain`](utils/chain.md) - Allows to use above functions in a chained structure
 
