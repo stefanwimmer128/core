@@ -7,5 +7,5 @@ mkdocs build && \
     git push && \
     cd ../ && \
     git add docs/* site/ && \
-    git commit -m "Update docs" docs/* site/ mkdocs.yml && \
+    git commit -m "Update docs" docs/* site/ mkdocs.yml update-docs.sh && \
     git push
