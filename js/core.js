@@ -3,7 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.chain = exports.extend = exports.processors = exports.invert = exports.reverse = exports.reduce = exports.mapKey = exports.map = exports.flatten = exports.find = exports.filter = exports.VERSION = undefined;
+exports.chain = exports.withProperty = exports.extend = exports.processors = exports.invert = exports.shift = exports.reverse = exports.reduce = exports.mapKey = exports.map = exports.flatten = exports.find = exports.filter = exports.concat = exports.VERSION = undefined;
+
+var _concat2 = require("./array/concat");
+
+var _concat3 = _interopRequireDefault(_concat2);
 
 var _filter2 = require("./array/filter");
 
@@ -33,6 +37,10 @@ var _reverse2 = require("./array/reverse");
 
 var _reverse3 = _interopRequireDefault(_reverse2);
 
+var _shift2 = require("./array/shift");
+
+var _shift3 = _interopRequireDefault(_shift2);
+
 var _invert2 = require("./boolean/invert");
 
 var _invert3 = _interopRequireDefault(_invert2);
@@ -45,15 +53,20 @@ var _extend2 = require("./object/extend");
 
 var _extend3 = _interopRequireDefault(_extend2);
 
+var _withProperty2 = require("./object/withProperty");
+
+var _withProperty3 = _interopRequireDefault(_withProperty2);
+
 var _chain2 = require("./utils/chain");
 
 var _chain3 = _interopRequireDefault(_chain2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VERSION = exports.VERSION = "1.0.0-rc.12";
+var VERSION = exports.VERSION = "1.0.0-rc.13";
 
 /* array */
+exports.concat = _concat3.default;
 exports.filter = _filter3.default;
 exports.find = _find3.default;
 exports.flatten = _flatten3.default;
@@ -61,6 +74,7 @@ exports.map = _map3.default;
 exports.mapKey = _mapKey3.default;
 exports.reduce = _reduce3.default;
 exports.reverse = _reverse3.default;
+exports.shift = _shift3.default;
 
 /* boolean */
 
@@ -73,6 +87,7 @@ exports.processors = _processors3.default;
 /* object */
 
 exports.extend = _extend3.default;
+exports.withProperty = _withProperty3.default;
 
 /* utils */
 

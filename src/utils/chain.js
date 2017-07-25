@@ -1,6 +1,7 @@
 /* @flow */
 
 /* array */
+import concat from "../array/concat";
 import filter from "../array/filter";
 import find from "../array/find";
 import flatten from "../array/flatten";
@@ -8,6 +9,7 @@ import map from "../array/map";
 import mapKey from "../array/mapKey";
 import reduce from "../array/reduce";
 import reverse from "../array/reverse";
+import shift from "../array/shift";
 
 /* boolean */
 import invert from "../boolean/invert";
@@ -20,9 +22,11 @@ import sum from "../math/sum";
 
 /* object */
 import extend from "../object/extend";
+import withProperty from "../object/withProperty";
 
 const CHAINABLE = {
     /* array */
+    concat,
     filter,
     find,
     flatten: () => flatten,
@@ -30,6 +34,7 @@ const CHAINABLE = {
     mapKey,
     reduce,
     reverse: () => reverse,
+    shift,
     
     /* boolean */
     invert: () => invert,
@@ -43,6 +48,7 @@ const CHAINABLE = {
     
     /* object */
     extend,
+    withProperty,
 };
 
 class Chain

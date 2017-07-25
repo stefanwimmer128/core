@@ -22,6 +22,10 @@ var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
 exports.default = chain;
 
+var _concat = require("../array/concat");
+
+var _concat2 = _interopRequireDefault(_concat);
+
 var _filter = require("../array/filter");
 
 var _filter2 = _interopRequireDefault(_filter);
@@ -50,6 +54,10 @@ var _reverse2 = require("../array/reverse");
 
 var _reverse3 = _interopRequireDefault(_reverse2);
 
+var _shift = require("../array/shift");
+
+var _shift2 = _interopRequireDefault(_shift);
+
 var _invert2 = require("../boolean/invert");
 
 var _invert3 = _interopRequireDefault(_invert2);
@@ -66,21 +74,23 @@ var _extend = require("../object/extend");
 
 var _extend2 = _interopRequireDefault(_extend);
 
+var _withProperty = require("../object/withProperty");
+
+var _withProperty2 = _interopRequireDefault(_withProperty);
+
 var _flowRuntime = require("flow-runtime");
 
 var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/* object */
+/* math */
 
 
-/* function */
-
-
-/* array */
+/* boolean */
 var CHAINABLE = {
     /* array */
+    concat: _concat2.default,
     filter: _filter2.default,
     find: _find2.default,
     flatten: function flatten() {
@@ -92,6 +102,7 @@ var CHAINABLE = {
     reverse: function reverse() {
         return _reverse3.default;
     },
+    shift: _shift2.default,
 
     /* boolean */
     invert: function invert() {
@@ -115,13 +126,17 @@ var CHAINABLE = {
     }, _flowRuntime2.default.function(_flowRuntime2.default.rest("numbers", _flowRuntime2.default.array(_flowRuntime2.default.number())))),
 
     /* object */
-    extend: _extend2.default
+    extend: _extend2.default,
+    withProperty: _withProperty2.default
 };
 
-/* math */
+/* object */
 
 
-/* boolean */
+/* function */
+
+
+/* array */
 
 var Chain = function () {
     function Chain(initialValue) {
