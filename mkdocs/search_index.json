@@ -26,6 +26,26 @@
             "title": "API documentation"
         }, 
         {
+            "location": "/array/concat/", 
+            "text": "#concat\n API documentation\n\n\nSyntax\n\n\ncore.concat(concat)(array);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nconcat\n\n\nany / any[]\n\n\nValue or array of values to concat to array\n\n\n\n\n\n\narray\n\n\nany[]\n\n\nArray to concat to\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.concat\n. Add value(s) to array.\n\n\ncore.concat([ 2, 3, ])([ 0, 1, ]); /* [ 0, 1, 2, 3, ] */", 
+            "title": "#concat"
+        }, 
+        {
+            "location": "/array/concat/#concat-api-documentation", 
+            "text": "", 
+            "title": "#concat API documentation"
+        }, 
+        {
+            "location": "/array/concat/#syntax", 
+            "text": "core.concat(concat)(array);     Parameter  Type  Description      concat  any / any[]  Value or array of values to concat to array    array  any[]  Array to concat to", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/concat/#usage", 
+            "text": "See  Array.prototype.concat . Add value(s) to array.  core.concat([ 2, 3, ])([ 0, 1, ]); /* [ 0, 1, 2, 3, ] */", 
+            "title": "Usage"
+        }, 
+        {
             "location": "/array/each/", 
             "text": "#each\n API documentation\n\n\nSyntax\n\n\ncore.each(function (t, i, tArray) {})(tArray);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, tArray) {}\n\n\n-\n\n\nFunction to execute for each element in array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.each\n. Cycle through each element in an array.\n\n\ncore.each(function (t, i, tArray)\n{\n    console.log(\n[\n + i + \n] \n + t);\n})([ 0, 1, 2, 3 ]);", 
             "title": "#each"
@@ -186,6 +206,26 @@
             "title": "Usage"
         }, 
         {
+            "location": "/array/shift/", 
+            "text": "#shift\n API documentation\n\n\nSyntax\n\n\ncore.shift(shift)(araay);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nshift = 1\n\n\nnumber?\n\n\nNumber of elements to be removed from head of array\n\n\n\n\n\n\narray\n\n\nany[]\n\n\nArray to remove elements from\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.shift\n. Remove elements from head of array.\n\n\ncore.shift()([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, ] */\n\ncore.shift(2)([ 0, 1, 2, 3, ]); /* [ 2, 3, ] */", 
+            "title": "#shift"
+        }, 
+        {
+            "location": "/array/shift/#shift-api-documentation", 
+            "text": "", 
+            "title": "#shift API documentation"
+        }, 
+        {
+            "location": "/array/shift/#syntax", 
+            "text": "core.shift(shift)(araay);     Parameter  Type  Description      shift = 1  number?  Number of elements to be removed from head of array    array  any[]  Array to remove elements from", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/array/shift/#usage", 
+            "text": "See  Array.prototype.shift . Remove elements from head of array.  core.shift()([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, ] */\n\ncore.shift(2)([ 0, 1, 2, 3, ]); /* [ 2, 3, ] */", 
+            "title": "Usage"
+        }, 
+        {
             "location": "/boolean/invert/", 
             "text": "#invert\n API documentation\n\n\nSyntax\n\n\ncore.invert(boolean);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nboolean\n\n\nboolean\n\n\nBoolean to invert\n\n\n\n\n\n\nboolean\n\n\nfunction\n\n\nFunction to wrap to invert return value\n\n\n\n\n\n\n\n\nUsage\n\n\nInvert boolean value or wrap function to return inverted boolea value.\n\n\ncore.invert(true); /* false */\n\ncore.invert(function ()\n{\n    return false;\n})(); /* true */", 
             "title": "#invert"
@@ -268,6 +308,26 @@
         {
             "location": "/object/extend/#usage", 
             "text": "See  Object.assign . Extend object:  source     target .  core.extend({\n    a: 0,\n    b: null,\n    c: 2,\n})({\n    b: 1,\n    d: 3,\n}); /* {\n    a: 0,\n    b: 1,\n    c: 2,\n    d: 3,\n} */", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/object/withProperty/", 
+            "text": "#withProperty\n API documentation\n\n\nSyntax\n\n\ncore.withProperty(keys, value)(obj);\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nkeys\n\n\nstring / (number\n\n\nstring)[]\n\n\n\n\n\n\nvalue\n\n\nany\n\n\nValue to set key to\n\n\n\n\n\n\nobj\n\n\nObject\n\n\nObject to change key in\n\n\n\n\n\n\n\n\nUsage\n\n\nReturns object with given key changed to given value.\n\n\ncore.withProperty([ \nsomthing\n, 0, ], true)({\n    something: [ false, ],\n}); /* {\n    something: [ true, ],\n} */\n\ncore.withProperty(\nsomething.0\n, true)({\n    something: [ false, ],\n}); /* {\n    something: [ true, ],\n} */", 
+            "title": "#withProperty"
+        }, 
+        {
+            "location": "/object/withProperty/#withproperty-api-documentation", 
+            "text": "", 
+            "title": "#withProperty API documentation"
+        }, 
+        {
+            "location": "/object/withProperty/#syntax", 
+            "text": "core.withProperty(keys, value)(obj);     Parameter  Type  Description      keys  string / (number  string)[]    value  any  Value to set key to    obj  Object  Object to change key in", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/object/withProperty/#usage", 
+            "text": "Returns object with given key changed to given value.  core.withProperty([  somthing , 0, ], true)({\n    something: [ false, ],\n}); /* {\n    something: [ true, ],\n} */\n\ncore.withProperty( something.0 , true)({\n    something: [ false, ],\n}); /* {\n    something: [ true, ],\n} */", 
             "title": "Usage"
         }, 
         {
