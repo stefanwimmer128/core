@@ -61,4 +61,5 @@ repo_url: https://github.com/stefanwimmer128/core
 site_description: A functional programmers dream
 site_author: stefanwimmer128
 site_name: "@stefanwimmer128/core"
+site_url: https://stefanwimmer128.github.io/core
 theme: material
