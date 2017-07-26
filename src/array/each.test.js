@@ -1,3 +1,5 @@
+/* @flow */
+
 import "chai/register-should";
 
 import each from "./each";
