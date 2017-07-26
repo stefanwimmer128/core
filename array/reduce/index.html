@@ -734,7 +734,7 @@
                 
                 <h1 id="reduce-api-documentation"><code class="codehilite">#reduce</code> API documentation<a class="headerlink" href="#reduce-api-documentation" title="Permanent link">&para;</a></h1>
 <h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">core</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">tArray</span><span class="p">)</span> <span class="p">{},</span> <span class="nx">start</span><span class="p">)(</span><span class="nx">tArray</span><span class="p">,</span> <span class="nx">start</span><span class="p">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">core</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span> <span class="p">{},</span> <span class="nx">start</span><span class="p">)(</span><span class="nx">array</span><span class="p">,</span> <span class="nx">start</span><span class="p">);</span>
 </pre></div>
 </td></tr></table>
 
@@ -748,7 +748,7 @@
 </thead>
 <tbody>
 <tr>
-<td>function (r, t, i, tArray) </td>
+<td>function (r, t, i, array) </td>
 <td>boolean</td>
 <td>Function to process array with</td>
 </tr>
@@ -768,7 +768,7 @@
 <td>Index of element</td>
 </tr>
 <tr>
-<td>tArray</td>
+<td>array</td>
 <td>any[]</td>
 <td>Original array</td>
 </tr>
@@ -784,7 +784,7 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">core</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">tArray</span><span class="p">)</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">core</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="nx">r</span> <span class="o">+</span> <span class="nx">t</span><span class="p">;</span>
 <span class="p">},</span> <span class="mi">0</span><span class="p">)([</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span> <span class="p">]);</span> <span class="cm">/* 10 */</span>

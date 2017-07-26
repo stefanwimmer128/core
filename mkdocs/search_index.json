@@ -47,7 +47,7 @@
         }, 
         {
             "location": "/array/each/", 
-            "text": "#each\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\neach\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \ntArray\n)\n \n{})(\ntArray\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, tArray) \n\n\n-\n\n\nFunction to execute for each element in array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.each\n. Cycle through each element in an array.\n\n\n1\n2\n3\n4\ncore\n.\neach\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \ntArray\n)\n\n\n{\n\n    \nconsole\n.\nlog\n(\n[\n \n+\n \ni\n \n+\n \n] \n \n+\n \nt\n);\n\n\n})([\n \n0\n,\n \n1\n,\n \n2\n,\n \n3\n \n]);", 
+            "text": "#each\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\neach\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \narray\n)\n \n{})(\narray\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, array) \n\n\n-\n\n\nFunction to execute for each element in array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\narray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.each\n. Cycle through each element in an array.\n\n\n1\n2\n3\n4\ncore\n.\neach\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \narray\n)\n\n\n{\n\n    \nconsole\n.\nlog\n(\n[\n \n+\n \ni\n \n+\n \n] \n \n+\n \nt\n);\n\n\n})([\n \n0\n,\n \n1\n,\n \n2\n,\n \n3\n \n]);", 
             "title": "#each"
         }, 
         {
@@ -57,17 +57,17 @@
         }, 
         {
             "location": "/array/each/#syntax", 
-            "text": "1 core . each ( function   ( t ,   i ,   tArray )   {})( tArray );       Parameter  Type  Description      function (t, i, tArray)   -  Function to execute for each element in array    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array", 
+            "text": "1 core . each ( function   ( t ,   i ,   array )   {})( array );       Parameter  Type  Description      function (t, i, array)   -  Function to execute for each element in array    t  any  Element in array    i  number  Index of element    array  any[]  Original array", 
             "title": "Syntax"
         }, 
         {
             "location": "/array/each/#usage", 
-            "text": "See  Array.prototype.each . Cycle through each element in an array.  1\n2\n3\n4 core . each ( function   ( t ,   i ,   tArray )  { \n     console . log ( [   +   i   +   ]    +   t );  })([   0 ,   1 ,   2 ,   3   ]);", 
+            "text": "See  Array.prototype.each . Cycle through each element in an array.  1\n2\n3\n4 core . each ( function   ( t ,   i ,   array )  { \n     console . log ( [   +   i   +   ]    +   t );  })([   0 ,   1 ,   2 ,   3   ]);", 
             "title": "Usage"
         }, 
         {
             "location": "/array/filter/", 
-            "text": "#filter\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\nfilter\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \ntArray\n)\n \n{})(\ntArray\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, tArray) \n\n\nboolean\n\n\nFunction to filter elements of array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.filter\n. Filter elements in array.\n\n\n1\n2\n3\n4\ncore\n.\nfilter\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \ntArray\n)\n\n\n{\n\n    \nreturn\n \nt\n \n \n1\n;\n\n\n})([\n \n0\n,\n \n1\n,\n \n2\n,\n \n3\n \n]);\n \n/* [ 2, 3 ] */", 
+            "text": "#filter\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\nfilter\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \narray\n)\n \n{})(\narray\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, array) \n\n\nboolean\n\n\nFunction to filter elements of array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\narray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.filter\n. Filter elements in array.\n\n\n1\n2\n3\n4\ncore\n.\nfilter\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \narray\n)\n\n\n{\n\n    \nreturn\n \nt\n \n \n1\n;\n\n\n})([\n \n0\n,\n \n1\n,\n \n2\n,\n \n3\n \n]);\n \n/* [ 2, 3 ] */", 
             "title": "#filter"
         }, 
         {
@@ -77,17 +77,17 @@
         }, 
         {
             "location": "/array/filter/#syntax", 
-            "text": "1 core . filter ( function   ( t ,   i ,   tArray )   {})( tArray );       Parameter  Type  Description      function (t, i, tArray)   boolean  Function to filter elements of array    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array", 
+            "text": "1 core . filter ( function   ( t ,   i ,   array )   {})( array );       Parameter  Type  Description      function (t, i, array)   boolean  Function to filter elements of array    t  any  Element in array    i  number  Index of element    array  any[]  Original array", 
             "title": "Syntax"
         }, 
         {
             "location": "/array/filter/#usage", 
-            "text": "See  Array.prototype.filter . Filter elements in array.  1\n2\n3\n4 core . filter ( function   ( t ,   i ,   tArray )  { \n     return   t     1 ;  })([   0 ,   1 ,   2 ,   3   ]);   /* [ 2, 3 ] */", 
+            "text": "See  Array.prototype.filter . Filter elements in array.  1\n2\n3\n4 core . filter ( function   ( t ,   i ,   array )  { \n     return   t     1 ;  })([   0 ,   1 ,   2 ,   3   ]);   /* [ 2, 3 ] */", 
             "title": "Usage"
         }, 
         {
             "location": "/array/find/", 
-            "text": "#find\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\nfind\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \ntArray\n)\n \n{})(\ntArray\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, tArray) \n\n\nboolean\n\n\nFunction to find element of array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.find\n. Find element in array.\n\n\n1\n2\n3\n4\ncore\n.\nfind\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \ntArray\n)\n\n\n{\n\n    \nreturn\n \nt\n \n \n1\n;\n\n\n})([\n \n0\n,\n \n1\n,\n \n2\n,\n \n3\n \n]);\n \n/* 2 */", 
+            "text": "#find\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\nfind\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \narray\n)\n \n{})(\narray\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, array) \n\n\nboolean\n\n\nFunction to find element of array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\narray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.find\n. Find element in array.\n\n\n1\n2\n3\n4\ncore\n.\nfind\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \narray\n)\n\n\n{\n\n    \nreturn\n \nt\n \n \n1\n;\n\n\n})([\n \n0\n,\n \n1\n,\n \n2\n,\n \n3\n \n]);\n \n/* 2 */", 
             "title": "#find"
         }, 
         {
@@ -97,12 +97,12 @@
         }, 
         {
             "location": "/array/find/#syntax", 
-            "text": "1 core . find ( function   ( t ,   i ,   tArray )   {})( tArray );       Parameter  Type  Description      function (t, i, tArray)   boolean  Function to find element of array    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array", 
+            "text": "1 core . find ( function   ( t ,   i ,   array )   {})( array );       Parameter  Type  Description      function (t, i, array)   boolean  Function to find element of array    t  any  Element in array    i  number  Index of element    array  any[]  Original array", 
             "title": "Syntax"
         }, 
         {
             "location": "/array/find/#usage", 
-            "text": "See  Array.prototype.find . Find element in array.  1\n2\n3\n4 core . find ( function   ( t ,   i ,   tArray )  { \n     return   t     1 ;  })([   0 ,   1 ,   2 ,   3   ]);   /* 2 */", 
+            "text": "See  Array.prototype.find . Find element in array.  1\n2\n3\n4 core . find ( function   ( t ,   i ,   array )  { \n     return   t     1 ;  })([   0 ,   1 ,   2 ,   3   ]);   /* 2 */", 
             "title": "Usage"
         }, 
         {
@@ -127,7 +127,7 @@
         }, 
         {
             "location": "/array/map/", 
-            "text": "#map\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\nmap\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \ntArray\n)\n \n{})(\ntArray\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, tArray) \n\n\nboolean\n\n\nFunction to map elements of array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.map\n. Map through elements in array.\n\n\n1\n2\n3\n4\ncore\n.\neach\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \ntArray\n)\n\n\n{\n\n    \nreturn\n \nt\n \n+\n \n1\n;\n\n\n})([\n \n0\n,\n \n1\n,\n \n2\n,\n \n3\n \n]);\n \n/* [ 1, 2, 3, 4 ] */", 
+            "text": "#map\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\nmap\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \narray\n)\n \n{})(\narray\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (t, i, array) \n\n\nboolean\n\n\nFunction to map elements of array\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\narray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.map\n. Map through elements in array.\n\n\n1\n2\n3\n4\ncore\n.\neach\n(\nfunction\n \n(\nt\n,\n \ni\n,\n \narray\n)\n\n\n{\n\n    \nreturn\n \nt\n \n+\n \n1\n;\n\n\n})([\n \n0\n,\n \n1\n,\n \n2\n,\n \n3\n \n]);\n \n/* [ 1, 2, 3, 4 ] */", 
             "title": "#map"
         }, 
         {
@@ -137,12 +137,12 @@
         }, 
         {
             "location": "/array/map/#syntax", 
-            "text": "1 core . map ( function   ( t ,   i ,   tArray )   {})( tArray );       Parameter  Type  Description      function (t, i, tArray)   boolean  Function to map elements of array    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array", 
+            "text": "1 core . map ( function   ( t ,   i ,   array )   {})( array );       Parameter  Type  Description      function (t, i, array)   boolean  Function to map elements of array    t  any  Element in array    i  number  Index of element    array  any[]  Original array", 
             "title": "Syntax"
         }, 
         {
             "location": "/array/map/#usage", 
-            "text": "See  Array.prototype.map . Map through elements in array.  1\n2\n3\n4 core . each ( function   ( t ,   i ,   tArray )  { \n     return   t   +   1 ;  })([   0 ,   1 ,   2 ,   3   ]);   /* [ 1, 2, 3, 4 ] */", 
+            "text": "See  Array.prototype.map . Map through elements in array.  1\n2\n3\n4 core . each ( function   ( t ,   i ,   array )  { \n     return   t   +   1 ;  })([   0 ,   1 ,   2 ,   3   ]);   /* [ 1, 2, 3, 4 ] */", 
             "title": "Usage"
         }, 
         {
@@ -167,7 +167,7 @@
         }, 
         {
             "location": "/array/reduce/", 
-            "text": "#reduce\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\nreduce\n(\nfunction\n \n(\nr\n,\n \nt\n,\n \ni\n,\n \ntArray\n)\n \n{},\n \nstart\n)(\ntArray\n,\n \nstart\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (r, t, i, tArray) \n\n\nboolean\n\n\nFunction to process array with\n\n\n\n\n\n\nr\n\n\nany\n\n\nProcessing value\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\ntArray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\nstart\n\n\nany?\n\n\nStarting value\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.reduce\n. Process array.\n\n\n1\n2\n3\n4\ncore\n.\nreduce\n(\nfunction\n \n(\nr\n,\n \nt\n,\n \ni\n,\n \ntArray\n)\n\n\n{\n\n    \nreturn\n \nr\n \n+\n \nt\n;\n\n\n},\n \n0\n)([\n \n1\n,\n \n2\n,\n \n3\n,\n \n4\n \n]);\n \n/* 10 */", 
+            "text": "#reduce\n API documentation\n\n\nSyntax\n\n\n1\ncore\n.\nreduce\n(\nfunction\n \n(\nr\n,\n \nt\n,\n \ni\n,\n \narray\n)\n \n{},\n \nstart\n)(\narray\n,\n \nstart\n);\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfunction (r, t, i, array) \n\n\nboolean\n\n\nFunction to process array with\n\n\n\n\n\n\nr\n\n\nany\n\n\nProcessing value\n\n\n\n\n\n\nt\n\n\nany\n\n\nElement in array\n\n\n\n\n\n\ni\n\n\nnumber\n\n\nIndex of element\n\n\n\n\n\n\narray\n\n\nany[]\n\n\nOriginal array\n\n\n\n\n\n\nstart\n\n\nany?\n\n\nStarting value\n\n\n\n\n\n\n\n\nUsage\n\n\nSee \nArray.prototype.reduce\n. Process array.\n\n\n1\n2\n3\n4\ncore\n.\nreduce\n(\nfunction\n \n(\nr\n,\n \nt\n,\n \ni\n,\n \narray\n)\n\n\n{\n\n    \nreturn\n \nr\n \n+\n \nt\n;\n\n\n},\n \n0\n)([\n \n1\n,\n \n2\n,\n \n3\n,\n \n4\n \n]);\n \n/* 10 */", 
             "title": "#reduce"
         }, 
         {
@@ -177,12 +177,12 @@
         }, 
         {
             "location": "/array/reduce/#syntax", 
-            "text": "1 core . reduce ( function   ( r ,   t ,   i ,   tArray )   {},   start )( tArray ,   start );       Parameter  Type  Description      function (r, t, i, tArray)   boolean  Function to process array with    r  any  Processing value    t  any  Element in array    i  number  Index of element    tArray  any[]  Original array    start  any?  Starting value", 
+            "text": "1 core . reduce ( function   ( r ,   t ,   i ,   array )   {},   start )( array ,   start );       Parameter  Type  Description      function (r, t, i, array)   boolean  Function to process array with    r  any  Processing value    t  any  Element in array    i  number  Index of element    array  any[]  Original array    start  any?  Starting value", 
             "title": "Syntax"
         }, 
         {
             "location": "/array/reduce/#usage", 
-            "text": "See  Array.prototype.reduce . Process array.  1\n2\n3\n4 core . reduce ( function   ( r ,   t ,   i ,   tArray )  { \n     return   r   +   t ;  },   0 )([   1 ,   2 ,   3 ,   4   ]);   /* 10 */", 
+            "text": "See  Array.prototype.reduce . Process array.  1\n2\n3\n4 core . reduce ( function   ( r ,   t ,   i ,   array )  { \n     return   r   +   t ;  },   0 )([   1 ,   2 ,   3 ,   4   ]);   /* 10 */", 
             "title": "Usage"
         }, 
         {
