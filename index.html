@@ -742,7 +742,7 @@
 <p>A functional programmers dream</p>
 <div class="admonition warning">
 <p class="admonition-title">Pre-release only</p>
-<p>This module only offers pre-release versions. Be careful.</p>
+<p>This module only offers pre-release versions that may be unstable or contain bugs.</p>
 </div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -799,7 +799,7 @@ npm install @stefanwimmer128/core
 </td></tr></table>
 
 <p>The builds in the <code class="codehilite">dist/</code> folder are bundled with all required dependencies.</p>
-<p>It is possible to import single functions by importing the required file from the <code class="codehilite">js/</code> folder. This is only possible in ES6-style import and CommonJS.</p>
+<p>It is possible to import single functions by importing the required file from the <code class="codehilite">js/</code> folder. The dependency <code class="codehilite">flow-runtime</code> must be present.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/* ES6-style import */</span>
 <span class="kr">import</span> <span class="nx">chain</span> <span class="nx">from</span> <span class="s2">&quot;@stefanwimmer128/core/js/utils/chain&quot;</span><span class="p">;</span>
@@ -809,6 +809,18 @@ npm install @stefanwimmer128/core
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/* CommonJS */</span>
 <span class="kd">var</span> <span class="nx">chain</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;@stefanwimmer128/core/js/utils/chain&quot;</span><span class="p">).</span><span class="k">default</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/* AMD */</span>
+<span class="nx">require</span><span class="p">([</span> <span class="s2">&quot;node_modules/@stefanwimmer128/core/js/utils/chain&quot;</span> <span class="p">],</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">chain</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="cm">/* use chain in here */</span>
+<span class="p">});</span>
 </pre></div>
 </td></tr></table>
 
