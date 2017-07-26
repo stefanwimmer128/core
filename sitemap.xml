@@ -3,8 +3,8 @@
 
     
     <url>
-     <loc>/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,72 +12,62 @@
     
         
     <url>
-     <loc>/array/concat/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/concat/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/array/each/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/each/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/array/filter/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/filter/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/array/find/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/find/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/array/flatten/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/flatten/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/array/map/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/map/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/array/mapKey/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/mapKey/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/array/reduce/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/reduce/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/array/reverse/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/reverse/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/array/shift/</loc>
-     <lastmod>2017-07-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>/boolean/invert/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/array/shift/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -86,8 +76,8 @@
     
         
     <url>
-     <loc>/function/processors/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/boolean/invert/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -96,8 +86,8 @@
     
         
     <url>
-     <loc>/math/sum/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/function/processors/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -106,14 +96,8 @@
     
         
     <url>
-     <loc>/object/extend/</loc>
-     <lastmod>2017-07-26</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/object/withProperty/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/math/sum/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -122,8 +106,24 @@
     
         
     <url>
-     <loc>/utils/chain/</loc>
-     <lastmod>2017-07-26</lastmod>
+     <loc>https://stefanwimmer128.github.io/core/object/extend/</loc>
+     <lastmod>2017-07-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://stefanwimmer128.github.io/core/object/withProperty/</loc>
+     <lastmod>2017-07-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://stefanwimmer128.github.io/core/utils/chain/</loc>
+     <lastmod>2017-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
