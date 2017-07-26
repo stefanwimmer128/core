@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,61 +13,61 @@
         
     <url>
      <loc>/array/concat/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/array/each/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/array/filter/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/array/find/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/array/flatten/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/array/map/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/array/mapKey/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/array/reduce/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/array/reverse/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/array/shift/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -77,7 +77,7 @@
         
     <url>
      <loc>/boolean/invert/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -87,7 +87,7 @@
         
     <url>
      <loc>/function/processors/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -97,7 +97,7 @@
         
     <url>
      <loc>/math/sum/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -107,13 +107,13 @@
         
     <url>
      <loc>/object/extend/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/object/withProperty/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -123,7 +123,7 @@
         
     <url>
      <loc>/utils/chain/</loc>
-     <lastmod>2017-07-25</lastmod>
+     <lastmod>2017-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

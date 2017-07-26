@@ -221,11 +221,15 @@ npm install @stefanwimmer128/core
 <p><a href="https://npm.runkit.com/@stefanwimmer128/core">Try @stefanwimmer128/core</a></p>
 <p>@stefanwimmer128/core can be used with ES6-style import, CommonJS, AMD and in the Browser.</p>
 <pre><code class="javascript">/* ES6-style import */
-import core from &quot;@stefanwimmer128/core&quot;;
+import * as core from &quot;@stefanwimmer128/core&quot;;
+
+import {
+    chain, /* import just some functions (see below for more) */
+} from &quot;@stefanwimmer128/core&quot;;
 </code></pre>
 
 <pre><code class="javascript">/* CommonJS */
-var core = require(&quot;@stefanwimmer128/core&quot;).default;
+var core = require(&quot;@stefanwimmer128/core&quot;);
 </code></pre>
 
 <pre><code class="javascript">/* AMD */
@@ -339,5 +343,5 @@ map([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, 4 ] */
 
 <!--
 MkDocs version : 0.16.3
-Build Date UTC : 2017-07-25 19:18:21
+Build Date UTC : 2017-07-26 19:32:38
 -->
