@@ -20,8 +20,9 @@ npm install @stefanwimmer128/core
 /* ES6-style import */
 import * as core from "@stefanwimmer128/core";
 
+/* import just some functions (see below for more) */
 import {
-    chain, /* import just some functions (see below for more) */
+    chain,
 } from "@stefanwimmer128/core";
 ```
 
