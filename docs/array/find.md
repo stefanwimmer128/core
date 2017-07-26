@@ -3,22 +3,22 @@
 ## Syntax
 
 ``` js
-core.find(function (t, i, tArray) {})(tArray);
+core.find(function (t, i, array) {})(array);
 ```
 
 | Parameter | Type | Description |
 |--|--|--|
-| function (t, i, tArray) {} | boolean | Function to find element of array |
+| function (t, i, array) {} | boolean | Function to find element of array |
 | t | any | Element in array |
 | i | number | Index of element |
-| tArray | any[] | Original array |
+| array | any[] | Original array |
 
 ## Usage
 
 See `Array.prototype.find`. Find element in array.
 
 ``` js
-core.find(function (t, i, tArray)
+core.find(function (t, i, array)
 {
     return t > 1;
 })([ 0, 1, 2, 3 ]); /* 2 */

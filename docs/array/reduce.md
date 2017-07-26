@@ -3,16 +3,16 @@
 ## Syntax
 
 ``` js
-core.reduce(function (r, t, i, tArray) {}, start)(tArray, start);
+core.reduce(function (r, t, i, array) {}, start)(array, start);
 ```
 
 | Parameter | Type | Description |
 |--|--|--|
-| function (r, t, i, tArray) {} | boolean | Function to process array with |
+| function (r, t, i, array) {} | boolean | Function to process array with |
 | r | any | Processing value |
 | t | any | Element in array |
 | i | number | Index of element |
-| tArray | any[] | Original array |
+| array | any[] | Original array |
 | start | any? | Starting value |
 
 ## Usage
@@ -20,7 +20,7 @@ core.reduce(function (r, t, i, tArray) {}, start)(tArray, start);
 See `Array.prototype.reduce`. Process array.
 
 ``` js
-core.reduce(function (r, t, i, tArray)
+core.reduce(function (r, t, i, array)
 {
     return r + t;
 }, 0)([ 1, 2, 3, 4 ]); /* 10 */
