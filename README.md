@@ -1,6 +1,6 @@
 # @stefanwimmer128/core
 
-stefanwimmer128 core - A functional programmers dream
+A functional programmers dream
 
 ``` bash
 yarn add @stefanwimmer128/core
