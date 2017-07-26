@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.chain(initialValue);
 ```
 
@@ -14,7 +14,7 @@ core.chain(initialValue);
 
 Allows to use above functions in a chained structure. Chain functions together to process `initialValue` in order. Execution only on `#value` call.
 
-``` javascript
+``` js
 core.chain([ 0, 1, 2, 3, ]).map(function (t)
 {
     return t + 1;
@@ -26,7 +26,7 @@ core.chain([ 0, 1, 2, 3, ]).map(function (t)
 
 To manually tap into the chain use the `#tap` function.
 
-``` javascript
+``` js
 core.chain(0).tap(function (value)
 {
     return value + 1;

@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.withProperty(keys, value)(obj);
 ```
 
@@ -16,7 +16,7 @@ core.withProperty(keys, value)(obj);
 
 Returns object with given key changed to given value.
 
-``` javascript
+``` js
 core.withProperty([ "somthing", 0, ], true)({
     something: [ false, ],
 }); /* {

@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.map(function (t, i, tArray) {})(tArray);
 ```
 
@@ -17,7 +17,7 @@ core.map(function (t, i, tArray) {})(tArray);
 
 See `Array.prototype.map`. Map through elements in array.
 
-``` javascript
+``` js
 core.each(function (t, i, tArray)
 {
     return t + 1;

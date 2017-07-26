@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.each(function (t, i, tArray) {})(tArray);
 ```
 
@@ -17,7 +17,7 @@ core.each(function (t, i, tArray) {})(tArray);
 
 See `Array.prototype.each`. Cycle through each element in an array.
 
-``` javascript
+``` js
 core.each(function (t, i, tArray)
 {
     console.log("[" + i + "] " + t);

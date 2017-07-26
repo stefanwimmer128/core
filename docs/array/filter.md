@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.filter(function (t, i, tArray) {})(tArray);
 ```
 
@@ -17,7 +17,7 @@ core.filter(function (t, i, tArray) {})(tArray);
 
 See `Array.prototype.filter`. Filter elements in array.
 
-``` javascript
+``` js
 core.filter(function (t, i, tArray)
 {
     return t > 1;

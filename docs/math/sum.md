@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.sum(...numbers);
 ```
 
@@ -14,7 +14,7 @@ core.sum(...numbers);
 
 Sum up numbers.
 
-``` javascript
+``` js
 core.sum(1, 2, 3, 4); /* 10 */
 ```
 
@@ -22,6 +22,6 @@ core.sum(1, 2, 3, 4); /* 10 */
 
 In `#chain` this function is called `#add`.
 
-``` javascript
+``` js
 core.chain(1).add(2, 3).add(4).value(); /* 10 */
 ```

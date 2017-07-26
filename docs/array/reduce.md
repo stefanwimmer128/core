@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.reduce(function (r, t, i, tArray) {}, start)(tArray, start);
 ```
 
@@ -19,7 +19,7 @@ core.reduce(function (r, t, i, tArray) {}, start)(tArray, start);
 
 See `Array.prototype.reduce`. Process array.
 
-``` javascript
+``` js
 core.reduce(function (r, t, i, tArray)
 {
     return r + t;

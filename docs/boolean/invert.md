@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.invert(boolean);
 ```
 
@@ -15,7 +15,7 @@ core.invert(boolean);
 
 Invert boolean value or wrap function to return inverted boolea value.
 
-``` javascript
+``` js
 core.invert(true); /* false */
 
 core.invert(function ()

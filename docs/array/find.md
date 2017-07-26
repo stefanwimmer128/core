@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.find(function (t, i, tArray) {})(tArray);
 ```
 
@@ -17,7 +17,7 @@ core.find(function (t, i, tArray) {})(tArray);
 
 See `Array.prototype.find`. Find element in array.
 
-``` javascript
+``` js
 core.find(function (t, i, tArray)
 {
     return t > 1;

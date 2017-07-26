@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.processors(function (args)
 {
     return args;
@@ -24,7 +24,7 @@ core.processors(function (args)
 
 Wrap function to preprocess arguments and postprocess return value.
 
-``` javascript
+``` js
 core.processors(core.map(function (t)
 {
     return t + 1; /* Adds 1 to every argument */

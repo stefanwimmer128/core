@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.flatten(array);
 ```
 
@@ -14,6 +14,6 @@ core.flatten(array);
 
 Flatten array.
 
-``` javascript
+``` js
 core.flatten([ 0, 1, [ 2, 3 ], [ [ 4, 5 ], [ 6, 7 ] ] ]); /* [ 0, 1, 2, 3, [ 4, 5 ], [ 6, 7] ] */
 ```

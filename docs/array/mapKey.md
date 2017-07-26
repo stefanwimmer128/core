@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.mapKey(key)(objArray);
 ```
 
@@ -15,7 +15,7 @@ core.mapKey(key)(objArray);
 
 See [`#map`](map.md). Map elements to key.
 
-``` javascript
+``` js
 core.mapKey("id")([
     { id: 0 },
     { id: 1 },

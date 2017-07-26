@@ -1,6 +1,6 @@
 # @stefanwimmer128/core
 
-stefanwimmer128 core
+stefanwimmer128  core
 
 ## Installation
 
@@ -12,11 +12,11 @@ npm install @stefanwimmer128/core
 
 ## Usage
 
-[Try @stefanwimmer128/core](https://npm.runkit.com/@stefanwimmer128/core)
+!!! tip "[Try @stefanwimmer128/core](https://npm.runkit.com/@stefanwimmer128/core)"
 
 @stefanwimmer128/core can be used with ES6-style import, CommonJS, AMD and in the Browser.
 
-``` javascript
+``` js
 /* ES6-style import */
 import * as core from "@stefanwimmer128/core";
 
@@ -26,16 +26,16 @@ import {
 } from "@stefanwimmer128/core";
 ```
 
-``` javascript
+``` js
 /* CommonJS */
 var core = require("@stefanwimmer128/core");
 ```
 
-``` javascript
+``` js
 /* AMD */
 require([ "node_modules/@stefanwimmer128/core/dist/core.js" ], function (core)
 {
-    # use core here
+    /* use core here */
 });
 ```
 
@@ -48,12 +48,12 @@ The builds in the `dist/` folder are bundled with all required dependencies.
 
 It is possible to import single functions by importing the required file from the `js/` folder. This is only possible in ES6-style import and CommonJS.
 
-``` javascript
+``` js
 /* ES6-style import */
 import chain from "@stefanwimmer128/core/js/utils/chain";
 ```
 
-``` javascript
+``` js
 /* CommonJS */
 var chain = require("@stefanwimmer128/core/js/utils/chain").default;
 ```
@@ -87,7 +87,7 @@ var chain = require("@stefanwimmer128/core/js/utils/chain").default;
 
 These functions are curried, so usage looks like this:
 
-``` javascript
+``` js
 const map = core.map(t => t + 1);
 map([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, 4 ] */
 ```

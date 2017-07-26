@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.extend(source)(target);
 ```
 
@@ -15,7 +15,7 @@ core.extend(source)(target);
 
 See `Object.assign`. Extend object: `source` &rarr; `target`.
 
-``` javascript
+``` js
 core.extend({
     a: 0,
     b: null,

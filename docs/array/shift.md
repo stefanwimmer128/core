@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.shift(shift)(araay);
 ```
 
@@ -15,7 +15,7 @@ core.shift(shift)(araay);
 
 See `Array.prototype.shift`. Remove elements from head of array.
 
-``` javascript
+``` js
 core.shift()([ 0, 1, 2, 3 ]); /* [ 1, 2, 3, ] */
 
 core.shift(2)([ 0, 1, 2, 3, ]); /* [ 2, 3, ] */

@@ -2,7 +2,7 @@
 
 ## Syntax
 
-``` javascript
+``` js
 core.concat(concat)(array);
 ```
 
@@ -15,6 +15,6 @@ core.concat(concat)(array);
 
 See `Array.prototype.concat`. Add value(s) to array.
 
-``` javascript
+``` js
 core.concat([ 2, 3, ])([ 0, 1, ]); /* [ 0, 1, 2, 3, ] */
 ```
