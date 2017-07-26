@@ -1,6 +1,9 @@
 # @stefanwimmer128/core
 
-stefanwimmer128  core
+stefanwimmer128 core - A functional programmers dream
+
+!!! warning "Pre-release only"
+    This module only offers pre-release versions. Be careful.
 
 ## Installation
 
@@ -12,7 +15,7 @@ npm install @stefanwimmer128/core
 
 ## Usage
 
-!!! tip "[Try @stefanwimmer128/core](https://npm.runkit.com/@stefanwimmer128/core)"
+!!! tip "[Try @stefanwimmer128/core](https://npm.runkit.com/@stefanwimmer128/core){: target='_blank'}"
 
 @stefanwimmer128/core can be used with ES6-style import, CommonJS, AMD and in the Browser.
 

@@ -3,6 +3,7 @@ markdown_extensions:
     - admonition
     - codehilite:
         linenums: true
+    - extra
     - pymdownx.arithmatex
     - pymdownx.betterem:
         smart_enable: all
