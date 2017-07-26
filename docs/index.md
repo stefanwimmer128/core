@@ -22,11 +22,6 @@ npm install @stefanwimmer128/core
 ``` js
 /* ES6-style import */
 import * as core from "@stefanwimmer128/core";
-
-/* import just some functions (see below for more) */
-import {
-    chain,
-} from "@stefanwimmer128/core";
 ```
 
 ``` js
