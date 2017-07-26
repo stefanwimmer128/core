@@ -18,12 +18,16 @@ npm install @stefanwimmer128/core
 
 ``` javascript
 /* ES6-style import */
-import core from "@stefanwimmer128/core";
+import * as core from "@stefanwimmer128/core";
+
+import {
+    chain, /* import just some functions (see below for more) */
+} from "@stefanwimmer128/core";
 ```
 
 ``` javascript
 /* CommonJS */
-var core = require("@stefanwimmer128/core").default;
+var core = require("@stefanwimmer128/core");
 ```
 
 ``` javascript
