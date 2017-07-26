@@ -3,7 +3,7 @@
 A functional programmers dream
 
 !!! warning "Pre-release only"
-    This module only offers pre-release versions. Be careful.
+    This module only offers pre-release versions that may be unstable or contain bugs.
 
 ## Installation
 
@@ -49,7 +49,7 @@ require([ "node_modules/@stefanwimmer128/core/dist/core.js" ], function (core)
 
 The builds in the `dist/` folder are bundled with all required dependencies.
 
-It is possible to import single functions by importing the required file from the `js/` folder. This is only possible in ES6-style import and CommonJS.
+It is possible to import single functions by importing the required file from the `js/` folder. The dependency `flow-runtime` must be present.
 
 ``` js
 /* ES6-style import */
@@ -59,6 +59,14 @@ import chain from "@stefanwimmer128/core/js/utils/chain";
 ``` js
 /* CommonJS */
 var chain = require("@stefanwimmer128/core/js/utils/chain").default;
+```
+
+``` js
+/* AMD */
+require([ "node_modules/@stefanwimmer128/core/js/utils/chain" ], function (chain)
+{
+    /* use chain in here */
+});
 ```
 
 ## API documentation
