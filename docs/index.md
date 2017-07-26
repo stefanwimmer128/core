@@ -1,6 +1,6 @@
 # @stefanwimmer128/core
 
-stefanwimmer128 core - A functional programmers dream
+A functional programmers dream
 
 !!! warning "Pre-release only"
     This module only offers pre-release versions. Be careful.

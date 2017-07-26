@@ -1,4 +1,15 @@
 copyright: Copyright (c) 2017, Stefan Wimmer
+edit_uri: blob/master/docs/
+extra:
+    feature:
+        tabs: true
+    palette:
+        primary: light blue
+        accent: indigo
+    social:
+        -
+            type: github
+            link: https://github.com/stefanwimmer128
 markdown_extensions:
     - admonition
     - codehilite:
@@ -43,7 +54,9 @@ pages:
         - "#withProperty": object/withProperty.md
     - Utils:
         - "#chain": utils/chain.md
+repo_name: stefanwimmer128/core
 repo_url: https://github.com/stefanwimmer128/core
+site_description: A functional programmers dream
 site_author: stefanwimmer128
 site_name: "@stefanwimmer128/core"
 theme: material
