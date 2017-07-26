@@ -1,7 +1,7 @@
 {
   "name": "@stefanwimmer128/core",
   "version": "1.0.0-rc.13",
-  "description": "stefanwimmer128 core",
+  "description": "stefanwimmer128 core - A functional programmers dream",
   "main": "js/core.js",
   "scripts": {
     "gulp": "babel-node \"$(which gulp)\""
