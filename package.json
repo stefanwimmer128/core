@@ -1,6 +1,6 @@
 {
   "name": "@stefanwimmer128/core",
-  "version": "1.0.0-rc.13",
+  "version": "1.0.0-rc.14",
   "description": "A functional programmers dream",
   "main": "js/core.js",
   "scripts": {
@@ -19,8 +19,9 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-plugin-flow-runtime": "^0.11.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
     "chai": "^4.1.0",
@@ -38,7 +39,6 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.23.0",
     "flow-runtime": "^0.14.0"
   }
 }

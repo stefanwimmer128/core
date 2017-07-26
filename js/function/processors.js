@@ -1,59 +1,82 @@
-"use strict";
+(function (global, factory) {
+    if (typeof define === "function" && define.amd) {
+        define(["exports", "flow-runtime"], factory);
+    } else if (typeof exports !== "undefined") {
+        factory(exports, require("flow-runtime"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(mod.exports, global.flowRuntime);
+        global.processors = mod.exports;
+    }
+})(this, function (exports, _flowRuntime) {
+    "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _toConsumableArray2 = require("babel-runtime/helpers/toConsumableArray");
-
-var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
-
-exports.default = processors;
-
-var _flowRuntime = require("flow-runtime");
-
-var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function processors() {
-    var preProcessor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-    var postProcessor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-    var _preProcessorType = _flowRuntime2.default.union(_flowRuntime2.default.function(_flowRuntime2.default.param("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))), _flowRuntime2.default.null());
-
-    var _postProcessorType = _flowRuntime2.default.union(_flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())), _flowRuntime2.default.null());
-
-    var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.any())));
-
-    _flowRuntime2.default.param("preProcessor", _preProcessorType).assert(preProcessor);
-
-    _flowRuntime2.default.param("postProcessor", _postProcessorType).assert(postProcessor);
-
-    if (preProcessor === null) preProcessor = _preProcessorType.assert(function (args) {
-        return args;
+    Object.defineProperty(exports, "__esModule", {
+        value: true
     });
+    exports.default = processors;
 
-    if (postProcessor === null) postProcessor = _postProcessorType.assert(function (value) {
-        return value;
-    });
+    var _flowRuntime2 = _interopRequireDefault(_flowRuntime);
 
-    return _returnType.assert(_flowRuntime2.default.annotate(function (fn) {
-        var _fnType = _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()));
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
 
-        var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.any());
-
-        _flowRuntime2.default.param("fn", _fnType).assert(fn);
-
-        return _returnType2.assert(function () {
-            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                args[_key] = arguments[_key];
+    function _toConsumableArray(arr) {
+        if (Array.isArray(arr)) {
+            for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+                arr2[i] = arr[i];
             }
 
-            return postProcessor(fn.apply(undefined, (0, _toConsumableArray3.default)(preProcessor(args))));
-        });
-    }, _flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.any()))));
-}
+            return arr2;
+        } else {
+            return Array.from(arr);
+        }
+    }
 
-_flowRuntime2.default.annotate(processors, _flowRuntime2.default.function(_flowRuntime2.default.param("preProcessor", _flowRuntime2.default.union(_flowRuntime2.default.function(_flowRuntime2.default.param("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))), _flowRuntime2.default.null())), _flowRuntime2.default.param("postProcessor", _flowRuntime2.default.union(_flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())), _flowRuntime2.default.null())), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
+    function processors() {
+        var preProcessor = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+        var postProcessor = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+        var _preProcessorType = _flowRuntime2.default.union(_flowRuntime2.default.function(_flowRuntime2.default.param("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))), _flowRuntime2.default.null());
+
+        var _postProcessorType = _flowRuntime2.default.union(_flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())), _flowRuntime2.default.null());
+
+        var _returnType = _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.any())));
+
+        _flowRuntime2.default.param("preProcessor", _preProcessorType).assert(preProcessor);
+
+        _flowRuntime2.default.param("postProcessor", _postProcessorType).assert(postProcessor);
+
+        if (preProcessor === null) preProcessor = _preProcessorType.assert(function (args) {
+            return args;
+        });
+
+        if (postProcessor === null) postProcessor = _postProcessorType.assert(function (value) {
+            return value;
+        });
+
+        return _returnType.assert(_flowRuntime2.default.annotate(function (fn) {
+            var _fnType = _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()));
+
+            var _returnType2 = _flowRuntime2.default.return(_flowRuntime2.default.any());
+
+            _flowRuntime2.default.param("fn", _fnType).assert(fn);
+
+            return _returnType2.assert(function () {
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                    args[_key] = arguments[_key];
+                }
+
+                return postProcessor(fn.apply(undefined, _toConsumableArray(preProcessor(args))));
+            });
+        }, _flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.any()))));
+    }
+
+    _flowRuntime2.default.annotate(processors, _flowRuntime2.default.function(_flowRuntime2.default.param("preProcessor", _flowRuntime2.default.union(_flowRuntime2.default.function(_flowRuntime2.default.param("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.array(_flowRuntime2.default.any()))), _flowRuntime2.default.null())), _flowRuntime2.default.param("postProcessor", _flowRuntime2.default.union(_flowRuntime2.default.function(_flowRuntime2.default.param("value", _flowRuntime2.default.any()), _flowRuntime2.default.return(_flowRuntime2.default.any())), _flowRuntime2.default.null())), _flowRuntime2.default.return(_flowRuntime2.default.function(_flowRuntime2.default.param("fn", _flowRuntime2.default.function(_flowRuntime2.default.rest("args", _flowRuntime2.default.array(_flowRuntime2.default.any())), _flowRuntime2.default.return(_flowRuntime2.default.any()))), _flowRuntime2.default.return(_flowRuntime2.default.any())))));
+});
 //# sourceMappingURL=processors.js.map

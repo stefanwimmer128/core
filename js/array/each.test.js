@@ -1,32 +1,46 @@
-"use strict";
+(function (global, factory) {
+    if (typeof define === "function" && define.amd) {
+        define(["./each", "chai/register-should"], factory);
+    } else if (typeof exports !== "undefined") {
+        factory(require("./each"), require("chai/register-should"));
+    } else {
+        var mod = {
+            exports: {}
+        };
+        factory(global.each, global.registerShould);
+        global.eachTest = mod.exports;
+    }
+})(this, function (_each) {
+    "use strict";
 
-require("chai/register-should");
+    var _each2 = _interopRequireDefault(_each);
 
-var _each = require("./each");
+    function _interopRequireDefault(obj) {
+        return obj && obj.__esModule ? obj : {
+            default: obj
+        };
+    }
 
-var _each2 = _interopRequireDefault(_each);
+    describe("#each", function () {
+        var test = [0, 1, 2, 3];
+        var tested = [];
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+        (0, _each2.default)(function (t) {
+            return tested.push(t);
+        })(test);
 
-describe("#each", function () {
-    var test = [0, 1, 2, 3];
-    var tested = [];
+        it("each element executed", function () {
+            return tested.should.deep.equal(test);
+        });
 
-    (0, _each2.default)(function (t) {
-        return tested.push(t);
-    })(test);
+        tested = [];
+        (0, _each2.default)(function (t, i) {
+            return tested.push(i);
+        })(test);
 
-    it("each element executed", function () {
-        return tested.should.deep.equal(test);
-    });
-
-    tested = [];
-    (0, _each2.default)(function (t, i) {
-        return tested.push(i);
-    })(test);
-
-    it("right execution order", function () {
-        return tested.should.deep.equal(test);
+        it("right execution order", function () {
+            return tested.should.deep.equal(test);
+        });
     });
 });
 //# sourceMappingURL=each.test.js.map
