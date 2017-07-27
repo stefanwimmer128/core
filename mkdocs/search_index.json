@@ -21,7 +21,7 @@
             "title": "Usage"
         }, 
         {
-            "location": "/#api_documentation", 
+            "location": "/#api-documentation", 
             "text": "@stefanwimmer128/core exports the following functions:   Array operations  #concat  -  Add value(s) to array  #each  - Cycle through each element in an array  #filter  - Filter elements in array  #find  - Find element in array  #flatten  - Flatten array  #map  - Map through elements in array  #mapKey  - Map elements to key  #reduce  - Process array  #reverse  - Reverse array  #shift  - Remove elements from head of array    Boolean operations  #invert  - Invert boolean value or wrap function to return inverted boolea value    Function operations  #processors  - Wrap function to preprocess arguments and postprocess return value    Math operations  #sum  - Sum up numbers    Object operations  #extend  - Extend object  #withProperty  - Returns object with given key changed to given value    Utils  #chain  - Allows to use above functions in a chained structure     These functions are curried, so usage looks like this:  1\n2 const   map   =   core . map ( t   =   t   +   1 );  map ([   0 ,   1 ,   2 ,   3   ]);   /* [ 1, 2, 3, 4 ] */", 
             "title": "API documentation"
         }, 
@@ -31,7 +31,7 @@
             "title": "#concat"
         }, 
         {
-            "location": "/array/concat/#concat_api_documentation", 
+            "location": "/array/concat/#concat-api-documentation", 
             "text": "", 
             "title": "#concat API documentation"
         }, 
@@ -51,7 +51,7 @@
             "title": "#each"
         }, 
         {
-            "location": "/array/each/#each_api_documentation", 
+            "location": "/array/each/#each-api-documentation", 
             "text": "", 
             "title": "#each API documentation"
         }, 
@@ -71,7 +71,7 @@
             "title": "#filter"
         }, 
         {
-            "location": "/array/filter/#filter_api_documentation", 
+            "location": "/array/filter/#filter-api-documentation", 
             "text": "", 
             "title": "#filter API documentation"
         }, 
@@ -91,7 +91,7 @@
             "title": "#find"
         }, 
         {
-            "location": "/array/find/#find_api_documentation", 
+            "location": "/array/find/#find-api-documentation", 
             "text": "", 
             "title": "#find API documentation"
         }, 
@@ -111,7 +111,7 @@
             "title": "#flatten"
         }, 
         {
-            "location": "/array/flatten/#flatten_api_documentation", 
+            "location": "/array/flatten/#flatten-api-documentation", 
             "text": "", 
             "title": "#flatten API documentation"
         }, 
@@ -131,7 +131,7 @@
             "title": "#map"
         }, 
         {
-            "location": "/array/map/#map_api_documentation", 
+            "location": "/array/map/#map-api-documentation", 
             "text": "", 
             "title": "#map API documentation"
         }, 
@@ -151,7 +151,7 @@
             "title": "#mapKey"
         }, 
         {
-            "location": "/array/mapKey/#mapkey_api_documentation", 
+            "location": "/array/mapKey/#mapkey-api-documentation", 
             "text": "", 
             "title": "#mapKey API documentation"
         }, 
@@ -171,7 +171,7 @@
             "title": "#reduce"
         }, 
         {
-            "location": "/array/reduce/#reduce_api_documentation", 
+            "location": "/array/reduce/#reduce-api-documentation", 
             "text": "", 
             "title": "#reduce API documentation"
         }, 
@@ -191,7 +191,7 @@
             "title": "#reverse"
         }, 
         {
-            "location": "/array/reverse/#reverse_api_documentation", 
+            "location": "/array/reverse/#reverse-api-documentation", 
             "text": "", 
             "title": "#reverse API documentation"
         }, 
@@ -211,7 +211,7 @@
             "title": "#shift"
         }, 
         {
-            "location": "/array/shift/#shift_api_documentation", 
+            "location": "/array/shift/#shift-api-documentation", 
             "text": "", 
             "title": "#shift API documentation"
         }, 
@@ -231,7 +231,7 @@
             "title": "#invert"
         }, 
         {
-            "location": "/boolean/invert/#invert_api_documentation", 
+            "location": "/boolean/invert/#invert-api-documentation", 
             "text": "", 
             "title": "#invert API documentation"
         }, 
@@ -251,7 +251,7 @@
             "title": "#processors"
         }, 
         {
-            "location": "/function/processors/#processors_api_documentation", 
+            "location": "/function/processors/#processors-api-documentation", 
             "text": "", 
             "title": "#processors API documentation"
         }, 
@@ -271,7 +271,7 @@
             "title": "#sum"
         }, 
         {
-            "location": "/math/sum/#sum_api_documentation", 
+            "location": "/math/sum/#sum-api-documentation", 
             "text": "", 
             "title": "#sum API documentation"
         }, 
@@ -286,7 +286,7 @@
             "title": "Usage"
         }, 
         {
-            "location": "/math/sum/#using_chain", 
+            "location": "/math/sum/#using-chain", 
             "text": "In  #chain  this function is called  #add .  1 core . chain ( 1 ). add ( 2 ,   3 ). add ( 4 ). value ();   /* 10 */", 
             "title": "Using #chain"
         }, 
@@ -296,7 +296,7 @@
             "title": "#extend"
         }, 
         {
-            "location": "/object/extend/#extend_api_documentation", 
+            "location": "/object/extend/#extend-api-documentation", 
             "text": "", 
             "title": "#extend API documentation"
         }, 
@@ -316,7 +316,7 @@
             "title": "#withProperty"
         }, 
         {
-            "location": "/object/withProperty/#withproperty_api_documentation", 
+            "location": "/object/withProperty/#withproperty-api-documentation", 
             "text": "", 
             "title": "#withProperty API documentation"
         }, 
@@ -336,7 +336,7 @@
             "title": "#chain"
         }, 
         {
-            "location": "/utils/chain/#chain_api_documentation", 
+            "location": "/utils/chain/#chain-api-documentation", 
             "text": "", 
             "title": "#chain API Documentation"
         }, 
@@ -351,7 +351,7 @@
             "title": "Usage"
         }, 
         {
-            "location": "/utils/chain/#chainable_functions", 
+            "location": "/utils/chain/#chainable-functions", 
             "text": "Array operations  #concat  #filter  #find  #flatten  #map  #mapKey  #reduce  #reverse  #shift    Boolean operations  #invert    Math operations  #sum  as  #add    Object operations  #extend  #withProperty    Function operations  #processors", 
             "title": "Chainable functions"
         }
