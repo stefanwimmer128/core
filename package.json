@@ -4,7 +4,7 @@
   "description": "Complex features made easy",
   "main": "./cjs",
   "scripts": {
-    "gulp": "babel-node --no-babelrc --presets=@babel/preset-env \"$(which gulp)\""
+    "gulp": "babel-node --preset=@babel/preset-env \"$(which gulp)\""
   },
   "repository": {
     "type": "git",
