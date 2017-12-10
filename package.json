@@ -1,10 +1,10 @@
 {
   "name": "@stefanwimmer128/core",
-  "version": "1.0.0-rc.14",
-  "description": "A functional programmers dream",
-  "main": "js/core.js",
+  "version": "2.0.0-alpha.0",
+  "description": "Complex features made easy",
+  "main": "./cjs",
   "scripts": {
-    "gulp": "babel-node \"$(which gulp)\""
+    "gulp": "babel-node --no-babelrc --presets=@babel/preset-env \"$(which gulp)\""
   },
   "repository": {
     "type": "git",
@@ -17,28 +17,37 @@
   },
   "homepage": "https://stefanwimmer128.github.io/core",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-plugin-flow-runtime": "^0.11.1",
-    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-flow": "^6.23.0",
-    "chai": "^4.1.0",
+    "@babel/core": "^7.0.0-beta.34",
+    "@babel/node": "^7.0.0-beta.34",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.34",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.34",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0-beta.34",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.34",
+    "@babel/preset-env": "^7.0.0-beta.34",
+    "@babel/preset-flow": "^7.0.0-beta.34",
+    "@babel/register": "^7.0.0-beta.34",
+    "babel-plugin-flow-runtime": "^0.15.0",
+    "babel-plugin-lodash": "^3.3.2",
+    "chai": "^4.1.2",
     "del": "^3.0.0",
-    "flow-bin": "^0.51.0",
+    "flow-bin": "^0.61.0",
+    "friendly-errors-webpack-plugin": "^1.6.1",
     "gulp": "gulpjs/gulp#4.0",
-    "gulp-babel": "^6.1.2",
+    "gulp-babel": "^8.0.0-beta.0",
+    "gulp-cli": "^1.4.0",
     "gulp-mocha": "^4.3.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
-    "gulp-sourcemaps": "^2.6.0",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.4.1",
-    "webpack-stream": "^3.2.0"
+    "mocha": "^4.0.1",
+    "source-map-loader": "^0.2.3",
+    "webpack": "^3.10.0",
+    "webpack-promise": "^1.2.0"
   },
   "dependencies": {
-    "flow-runtime": "^0.14.0"
+    "core-js": "^2.5.2",
+    "flow-runtime": "^0.16.0",
+    "lodash": "^4.17.4"
   }
 }

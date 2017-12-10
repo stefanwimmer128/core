@@ -1,5 +1,23 @@
 {
+    plugins: [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-proposal-export-namespace-from",
+        [
+            "babel-plugin-flow-runtime",
+            {
+                assert: true,
+            },
+        ],
+        "babel-plugin-lodash",
+    ],
     presets: [
-        "env",
+        [
+            "@babel/preset-env",
+            {
+                shippedProposals: true,
+            },
+        ],
+        "@babel/preset-flow",
     ],
 }
