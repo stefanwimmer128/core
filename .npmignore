@@ -1,4 +1,5 @@
 /.idea/
+/docs/
 
 *-debug.log
 *-error.log

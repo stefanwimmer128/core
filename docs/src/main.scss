@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans");
+
+$font-family-monospace: Fira Mono, monospace;
+$font-family-sans-serif: Fira Sans, sans-serif;
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+$--font-path: "~element-theme-chalk/src/fonts";
+$--font-size-base: $font-size-base;
+$--font-size-large: $font-size-lg;
+$--font-size-small: $font-size-sm;
+$--size-base: $font-size-base;
+
+@import "~element-theme-chalk/src/index.scss";
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    margin: 0;
+}

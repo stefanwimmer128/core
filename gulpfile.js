@@ -44,7 +44,7 @@ gulp.task("clean", () =>
 gulp.task("build-es6", () =>
     gulp.src([
         "src/**/*.js",
-        "!*.test.js",
+        "!**/*.test.js",
     ])
         .pipe(sourcemaps.init())
         .pipe(replace("${VERSION}", version))
