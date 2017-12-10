@@ -8,7 +8,7 @@ import {
 
 import $ from "../polyfill";
 
-export default function createPrivate(name: any) {
+export default function createPrivate(name?: string = "") {
     const symbol = $.Symbol(name);
     
     function _private(object: Object, value?: any, _delete?: boolean = false) {
@@ -21,8 +21,16 @@ export default function createPrivate(name: any) {
     
     return extend(_private, {
         ref(object: any, _name?: string) {
-            object[`$${_name || name}`] = _private;
+            const __name = `$${_name || name}`;
+            
+            if (__name.length <= 1)
+                throw new TypeError("name must be non-empty string");
+            if (has(object, __name))
+                throw new TypeError(`object already has "${__name}"`);
+            
+            object[__name] = _private;
         },
+        
         get symbol() {
             return symbol;
         },
