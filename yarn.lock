@@ -191,24 +191,61 @@
     "@babel/helper-remap-async-to-generator" "7.0.0-beta.34"
     "@babel/plugin-syntax-async-generators" "7.0.0-beta.34"
 
-"@babel/plugin-proposal-class-properties@^7.0.0-beta.34":
+"@babel/plugin-proposal-class-properties@7.0.0-beta.34":
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.0.0-beta.34.tgz#3008cbe8d48f36a0610eebf78ef64dc3029a7f87"
   dependencies:
     "@babel/helper-function-name" "7.0.0-beta.34"
     "@babel/plugin-syntax-class-properties" "7.0.0-beta.34"
 
-"@babel/plugin-proposal-export-default-from@^7.0.0-beta.34":
+"@babel/plugin-proposal-decorators@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.0.0-beta.34.tgz#9498f6c33a39ff52762a0f35485bee1a2661fb5e"
+  dependencies:
+    "@babel/plugin-syntax-decorators" "7.0.0-beta.34"
+
+"@babel/plugin-proposal-do-expressions@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-do-expressions/-/plugin-proposal-do-expressions-7.0.0-beta.34.tgz#3a0b3fc97b9893feff417cb43bfaeab4a1fb9abe"
+  dependencies:
+    "@babel/plugin-syntax-do-expressions" "7.0.0-beta.34"
+
+"@babel/plugin-proposal-export-default-from@7.0.0-beta.34":
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-export-default-from/-/plugin-proposal-export-default-from-7.0.0-beta.34.tgz#66b9bc9d910f2c488d538c77bc732d511fce31f1"
   dependencies:
     "@babel/plugin-syntax-export-default-from" "7.0.0-beta.34"
 
-"@babel/plugin-proposal-export-namespace-from@^7.0.0-beta.34":
+"@babel/plugin-proposal-export-namespace-from@7.0.0-beta.34":
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-export-namespace-from/-/plugin-proposal-export-namespace-from-7.0.0-beta.34.tgz#37bfe39e26663f3a756ae9dc74fc718b4fc15119"
   dependencies:
     "@babel/plugin-syntax-export-namespace-from" "7.0.0-beta.34"
+
+"@babel/plugin-proposal-function-bind@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-function-bind/-/plugin-proposal-function-bind-7.0.0-beta.34.tgz#9040846ac5404280079bbc7bbb6a57851b6ce1a6"
+  dependencies:
+    "@babel/plugin-syntax-function-bind" "7.0.0-beta.34"
+
+"@babel/plugin-proposal-function-sent@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-function-sent/-/plugin-proposal-function-sent-7.0.0-beta.34.tgz#a92dcec52927e33e0794aa8ebc069fc90c75cec0"
+  dependencies:
+    "@babel/helper-wrap-function" "7.0.0-beta.34"
+    "@babel/plugin-syntax-function-sent" "7.0.0-beta.34"
+
+"@babel/plugin-proposal-nullish-coalescing-operator@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-nullish-coalescing-operator/-/plugin-proposal-nullish-coalescing-operator-7.0.0-beta.34.tgz#841fccb4c7d2fdda657ac88daa86888dae0fa366"
+  dependencies:
+    "@babel/plugin-syntax-nullish-coalescing-operator" "7.0.0-beta.34"
+
+"@babel/plugin-proposal-numeric-separator@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-numeric-separator/-/plugin-proposal-numeric-separator-7.0.0-beta.34.tgz#7b9feb3182a940a59a743ff9ae474dd0cc5fff1c"
+  dependencies:
+    "@babel/plugin-syntax-numeric-separator" "7.0.0-beta.34"
 
 "@babel/plugin-proposal-object-rest-spread@7.0.0-beta.34":
   version "7.0.0-beta.34"
@@ -221,6 +258,24 @@
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-catch-binding/-/plugin-proposal-optional-catch-binding-7.0.0-beta.34.tgz#c38835ef180116d05ed57e4a6db6e77c97177fdc"
   dependencies:
     "@babel/plugin-syntax-optional-catch-binding" "7.0.0-beta.34"
+
+"@babel/plugin-proposal-optional-chaining@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-optional-chaining/-/plugin-proposal-optional-chaining-7.0.0-beta.34.tgz#6513fc9c5bc94cfbf2f34d67d44d0774f193e5d3"
+  dependencies:
+    "@babel/plugin-syntax-optional-chaining" "7.0.0-beta.34"
+
+"@babel/plugin-proposal-pipeline-operator@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-pipeline-operator/-/plugin-proposal-pipeline-operator-7.0.0-beta.34.tgz#f12804358516166e2dea300827224a3ae27657ce"
+  dependencies:
+    "@babel/plugin-syntax-pipeline-operator" "7.0.0-beta.34"
+
+"@babel/plugin-proposal-throw-expressions@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-throw-expressions/-/plugin-proposal-throw-expressions-7.0.0-beta.34.tgz#3e0a176458a5612f4b8033d7a7fa4748a8b60e8c"
+  dependencies:
+    "@babel/plugin-syntax-throw-expressions" "7.0.0-beta.34"
 
 "@babel/plugin-proposal-unicode-property-regex@7.0.0-beta.34":
   version "7.0.0-beta.34"
@@ -237,6 +292,18 @@
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-class-properties/-/plugin-syntax-class-properties-7.0.0-beta.34.tgz#d345b262622ff9500d9ad039aa0b77a94b4b8dd5"
 
+"@babel/plugin-syntax-decorators@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-decorators/-/plugin-syntax-decorators-7.0.0-beta.34.tgz#c3036372e567fcc3aff0b7dc3fff8ac276c5fed5"
+
+"@babel/plugin-syntax-do-expressions@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-do-expressions/-/plugin-syntax-do-expressions-7.0.0-beta.34.tgz#33d1ad42436def654d0fe52adf93e38ca3ee91ca"
+
+"@babel/plugin-syntax-dynamic-import@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.0.0-beta.34.tgz#05b1e58e4c3f412edb28aa0346c14c5f13c41b46"
+
 "@babel/plugin-syntax-export-default-from@7.0.0-beta.34":
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-export-default-from/-/plugin-syntax-export-default-from-7.0.0-beta.34.tgz#ed832f9f60b7c2eb1318528bf96d0e29068d7fce"
@@ -249,6 +316,22 @@
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-flow/-/plugin-syntax-flow-7.0.0-beta.34.tgz#679373bd94f4d2df414ba26cb2fee27ece2efdc6"
 
+"@babel/plugin-syntax-function-bind@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-function-bind/-/plugin-syntax-function-bind-7.0.0-beta.34.tgz#a9d6e1e50e569cb3e7f180eee15eaf1a5b585a01"
+
+"@babel/plugin-syntax-function-sent@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-function-sent/-/plugin-syntax-function-sent-7.0.0-beta.34.tgz#f3c7995750536fdabafada15085f73f19f9115b4"
+
+"@babel/plugin-syntax-nullish-coalescing-operator@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-nullish-coalescing-operator/-/plugin-syntax-nullish-coalescing-operator-7.0.0-beta.34.tgz#db2c95fe440a984d9437556053c232c5116f69dc"
+
+"@babel/plugin-syntax-numeric-separator@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-numeric-separator/-/plugin-syntax-numeric-separator-7.0.0-beta.34.tgz#8f04c8efc9e6a9cdad7edc31d5b167c836dabc53"
+
 "@babel/plugin-syntax-object-rest-spread@7.0.0-beta.34":
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-object-rest-spread/-/plugin-syntax-object-rest-spread-7.0.0-beta.34.tgz#01883a3e6e29d842e88c54d146addd88eedbe0e8"
@@ -256,6 +339,18 @@
 "@babel/plugin-syntax-optional-catch-binding@7.0.0-beta.34":
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-optional-catch-binding/-/plugin-syntax-optional-catch-binding-7.0.0-beta.34.tgz#b677c0863cd2373b46fc57728277212f331d6c2e"
+
+"@babel/plugin-syntax-optional-chaining@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-optional-chaining/-/plugin-syntax-optional-chaining-7.0.0-beta.34.tgz#9fab733887cf2c8e4edc2218ffcdca6a2ab843f2"
+
+"@babel/plugin-syntax-pipeline-operator@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-pipeline-operator/-/plugin-syntax-pipeline-operator-7.0.0-beta.34.tgz#0c65c818a12ba56a7589ea3a44b4bc55f98a5923"
+
+"@babel/plugin-syntax-throw-expressions@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-throw-expressions/-/plugin-syntax-throw-expressions-7.0.0-beta.34.tgz#d1ccade0c16d88bee44eabf744ab04b09af8349f"
 
 "@babel/plugin-transform-arrow-functions@7.0.0-beta.34":
   version "7.0.0-beta.34"
@@ -459,6 +554,46 @@
   resolved "https://registry.yarnpkg.com/@babel/preset-flow/-/preset-flow-7.0.0-beta.34.tgz#4ec87fa9348a743359723a83fb3d249175ff9e2a"
   dependencies:
     "@babel/plugin-transform-flow-strip-types" "7.0.0-beta.34"
+
+"@babel/preset-stage-0@^7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/preset-stage-0/-/preset-stage-0-7.0.0-beta.34.tgz#6d8221209adc932099deca0502bd6c55d4341307"
+  dependencies:
+    "@babel/plugin-proposal-function-bind" "7.0.0-beta.34"
+    "@babel/preset-stage-1" "7.0.0-beta.34"
+
+"@babel/preset-stage-1@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/preset-stage-1/-/preset-stage-1-7.0.0-beta.34.tgz#889dd6a984bb546bdf7a11504c023fddd126a764"
+  dependencies:
+    "@babel/plugin-proposal-decorators" "7.0.0-beta.34"
+    "@babel/plugin-proposal-do-expressions" "7.0.0-beta.34"
+    "@babel/plugin-proposal-export-default-from" "7.0.0-beta.34"
+    "@babel/plugin-proposal-nullish-coalescing-operator" "7.0.0-beta.34"
+    "@babel/plugin-proposal-optional-chaining" "7.0.0-beta.34"
+    "@babel/plugin-proposal-pipeline-operator" "7.0.0-beta.34"
+    "@babel/preset-stage-2" "7.0.0-beta.34"
+
+"@babel/preset-stage-2@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/preset-stage-2/-/preset-stage-2-7.0.0-beta.34.tgz#df5715b4fcd057c94737dd21744491bdd5b5f115"
+  dependencies:
+    "@babel/plugin-proposal-export-namespace-from" "7.0.0-beta.34"
+    "@babel/plugin-proposal-function-sent" "7.0.0-beta.34"
+    "@babel/plugin-proposal-numeric-separator" "7.0.0-beta.34"
+    "@babel/plugin-proposal-throw-expressions" "7.0.0-beta.34"
+    "@babel/preset-stage-3" "7.0.0-beta.34"
+
+"@babel/preset-stage-3@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/preset-stage-3/-/preset-stage-3-7.0.0-beta.34.tgz#0de1c1833f337c29ab4e7547fbd1d0005b726fd1"
+  dependencies:
+    "@babel/plugin-proposal-async-generator-functions" "7.0.0-beta.34"
+    "@babel/plugin-proposal-class-properties" "7.0.0-beta.34"
+    "@babel/plugin-proposal-object-rest-spread" "7.0.0-beta.34"
+    "@babel/plugin-proposal-optional-catch-binding" "7.0.0-beta.34"
+    "@babel/plugin-proposal-unicode-property-regex" "7.0.0-beta.34"
+    "@babel/plugin-syntax-dynamic-import" "7.0.0-beta.34"
 
 "@babel/register@7.0.0-beta.34", "@babel/register@^7.0.0-beta.34":
   version "7.0.0-beta.34"

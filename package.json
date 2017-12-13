@@ -4,7 +4,7 @@
   "description": "Complex features made easy",
   "main": "./cjs",
   "scripts": {
-    "gulp": "babel-node --preset=@babel/preset-env \"$(which gulp)\""
+    "gulp": "babel-node \"$(which gulp)\""
   },
   "repository": {
     "type": "git",
@@ -16,15 +16,29 @@
     "url": "https://github.com/stefanwimmer128/core/issues"
   },
   "homepage": "https://stefanwimmer128.github.io/core",
+  "babel": {
+    "plugins": [
+      [
+        "babel-plugin-flow-runtime",
+        {
+          "assert": true
+        }
+      ],
+      "babel-plugin-lodash"
+    ],
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-flow",
+      "@babel/preset-stage-0"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.34",
     "@babel/node": "^7.0.0-beta.34",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.34",
-    "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.34",
-    "@babel/plugin-proposal-export-namespace-from": "^7.0.0-beta.34",
     "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.34",
     "@babel/preset-env": "^7.0.0-beta.34",
     "@babel/preset-flow": "^7.0.0-beta.34",
+    "@babel/preset-stage-0": "^7.0.0-beta.34",
     "@babel/register": "^7.0.0-beta.34",
     "babel-plugin-flow-runtime": "^0.15.0",
     "babel-plugin-lodash": "^3.3.2",

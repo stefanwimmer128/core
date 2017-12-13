@@ -10,6 +10,9 @@ import replace from "gulp-replace";
 import sourcemaps from "gulp-sourcemaps";
 import uglify from "gulp-uglify";
 import {
+    set,
+} from "lodash";
+import {
     join,
 } from "path";
 import {
@@ -18,6 +21,7 @@ import {
 import webpack from "webpack-promise";
 
 import {
+    babel as babelConfig,
     version,
 } from "./package.json";
 
@@ -48,31 +52,12 @@ gulp.task("build-es6", () =>
     ])
         .pipe(sourcemaps.init())
         .pipe(replace("${VERSION}", version))
-        .pipe(babel({
-            babelrc: false,
-            plugins: [
-                "@babel/plugin-proposal-class-properties",
-                "@babel/plugin-proposal-export-default-from",
-                "@babel/plugin-proposal-export-namespace-from",
-                [
-                    "babel-plugin-flow-runtime",
-                    {
-                        assert: true,
-                    },
-                ],
-                "babel-plugin-lodash",
-            ],
-            presets: [
-                [
-                    "@babel/preset-env",
-                    {
-                        modules: false,
-                        shippedProposals: true,
-                    },
-                ],
-                "@babel/preset-flow",
-            ],
-        }))
+        .pipe(babel(set(set(babelConfig, "babelrc", false), "presets[0]", [
+            "@babel/preset-env",
+            {
+                modules: false,
+            },
+        ])))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("es6/")),
 );
@@ -132,4 +117,4 @@ gulp.task("minify", () =>
         .pipe(gulp.dest("dist/")),
 );
 
-gulp.task("default", gulp.series("clean", "test", "build-es6", "build-js", "dist", "minify"));
+gulp.task("default", gulp.series("test", "clean", "build-es6", "build-js", "dist", "minify"));
