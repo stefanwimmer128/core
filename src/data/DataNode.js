@@ -59,6 +59,4 @@ export default class DataNode {
     }
 }
 
-
-
 $nodes.ref(DataNode);
