@@ -1,4 +1,3 @@
-import CleanWebpackPlugin from "clean-webpack-plugin";
 import ExtractTextWebpackPlugin from "extract-text-webpack-plugin";
 import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
@@ -29,9 +28,14 @@ const __babelLoader = {
                     shippedProposals: true,
                 },
             ],
+            "@babel/preset-stage-0",
         ],
     },
 };
+
+const __webpackDevServer = process.argv.some(arg =>
+    arg.includes("webpack-dev-server"),
+);
 
 function fileLoader(outputPath) {
     return {
@@ -116,20 +120,13 @@ export default {
         libraryTarget: "window",
     } : {}),
     plugins: [
-        new CleanWebpackPlugin([
-            "public/",
-        ], {
-            exclude: [
-                ".git",
-            ],
-        }),
         new EnvironmentPlugin([
             "NODE_ENV",
         ]),
         new FriendlyErrorsWebpackPlugin(),
         new HtmlWebpackPlugin({
             appMountId: "app",
-            baseHref: "/core/",
+            baseHref: __webpackDevServer ? "/" : "/core/",
             inject: false,
             meta: [
                 {
@@ -150,9 +147,7 @@ export default {
                 "default",
             ],
         }),
-        ...(process.argv.some(arg =>
-            arg.includes("webpack-dev-server"),
-        ) ? [
+        ...(__webpackDevServer ? [
             new ExtractTextWebpackPlugin({
                 disable: true,
             }),
@@ -166,9 +161,5 @@ export default {
         alias: {
             "vue$": "vue/dist/vue.esm.js",
         },
-        extensions: [
-            ".js",
-            ".vue",
-        ],
     },
 };
