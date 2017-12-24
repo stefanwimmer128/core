@@ -34,3 +34,5 @@ require([
 core.polyfill.Map = require("core-js/library/es6/map");
 core.polyfill.Symbol = require("core-js/library/es6/symbol");
 ```
+
+[Full documentation can be found here](https://stefanwimmer128.github.io/core)
