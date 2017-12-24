@@ -33,13 +33,13 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.34",
-    "@babel/node": "^7.0.0-beta.34",
-    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.34",
-    "@babel/preset-env": "^7.0.0-beta.34",
-    "@babel/preset-flow": "^7.0.0-beta.34",
-    "@babel/preset-stage-0": "^7.0.0-beta.34",
-    "@babel/register": "^7.0.0-beta.34",
+    "@babel/core": "^7.0.0-beta.35",
+    "@babel/node": "^7.0.0-beta.35",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.35",
+    "@babel/preset-env": "^7.0.0-beta.35",
+    "@babel/preset-flow": "^7.0.0-beta.35",
+    "@babel/preset-stage-0": "^7.0.0-beta.35",
+    "@babel/register": "^7.0.0-beta.35",
     "babel-plugin-flow-runtime": "^0.15.0",
     "babel-plugin-lodash": "^3.3.2",
     "chai": "^4.1.2",
@@ -48,11 +48,11 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-babel": "^8.0.0-beta.0",
-    "gulp-cli": "^1.4.0",
+    "gulp-cli": "^2.0.0",
     "gulp-mocha": "^4.3.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.2",
     "gulp-uglify": "^3.0.0",
     "mocha": "^4.0.1",
     "source-map-loader": "^0.2.3",
@@ -60,7 +60,7 @@
     "webpack-promise": "^1.2.0"
   },
   "dependencies": {
-    "core-js": "^2.5.2",
+    "core-js": "^2.5.3",
     "flow-runtime": "^0.16.0",
     "lodash": "^4.17.4"
   }

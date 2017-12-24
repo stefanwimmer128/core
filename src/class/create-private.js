@@ -20,7 +20,7 @@ export default function createPrivate(name: any) {
     }
     
     return extend(_private, {
-        ref(object: any, _name?: string) {
+        ref(object: Object, _name?: string) {
             object[`$${_name || name}`] = _private;
         },
         get symbol() {
