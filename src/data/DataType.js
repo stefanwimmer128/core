@@ -106,11 +106,10 @@ export default class DataType {
     }
     
     constructor(validator: ((...args: any[]) => any) | DataType, ...args: any[]) {
-        if (validator instanceof DataType)
+        if (typeof validator === "function")
+            $validator(this, callWhenArgs(validator, args));
+        else
             $validator(this, callWhenArgs($validator(validator), args));
-            
-        if (_.isFunction(validator))
-            $validator(this, callWhenArgs((validator: any), args));
     }
     
     validate(value?: any, ...args: any[]): boolean {

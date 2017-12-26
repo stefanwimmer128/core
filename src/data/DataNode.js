@@ -18,9 +18,6 @@ const $value = createPrivate("value");
 export default class DataNode {
     constructor(type?: DataType = DataType.ANY, value?: any) {
         $nodes(this, new $.Map());
-        
-        if (! type instanceof DataType)
-            throw new Error("type must be DataType");
         $type(this, type);
         
         this.value(value);
@@ -39,9 +36,6 @@ export default class DataNode {
     }
     
     setNode(key: string, node: DataNode): DataNode {
-        if (! (isString(key) && node instanceof DataNode))
-            throw new TypeError("key msut be string and node must be DataNode");
-        
         $nodes(this).set(key, node);
         
         return this;
@@ -51,12 +45,14 @@ export default class DataNode {
         return $nodes(this).size;
     }
     
-    value(value?: any, _delete?: boolean = false) {
-        if (! _delete && ! isUndefined(value)  && ! $type(this).validate(value))
-            throw new TypeError("value has does not conform with DataType");
+    value(value?: any, _delete?: boolean) {
+        if (! _delete && ! isUndefined(value) && ! $type(this).validate(value))
+            throw new TypeError("value does not conform with DataType");
         
         return $value(this, value, _delete);
     }
 }
 
 $nodes.ref(DataNode);
+$type.ref(DataNode);
+$value.ref(DataNode);

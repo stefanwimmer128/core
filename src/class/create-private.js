@@ -4,6 +4,7 @@ import {
     extend,
     has,
     isUndefined,
+    set,
 } from "lodash";
 
 import $ from "../polyfill";
@@ -20,8 +21,8 @@ export default function createPrivate(name: any) {
     }
     
     return extend(_private, {
-        ref(object: Object, _name?: string) {
-            object[`$${_name || name}`] = _private;
+        ref(object: any, path?: string = `$${name}`) {
+            return set(object, path, _private);
         },
         get symbol() {
             return symbol;
