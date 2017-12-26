@@ -21,21 +21,8 @@ import {
 import webpack from "webpack-promise";
 
 import {
-    babel as babelConfig,
     version,
 } from "./package.json";
-
-gulp.task("test", () =>
-    gulp.src("src/**/*.test.js", {
-        read: false,
-    })
-        .pipe(mocha({
-            require: "@babel/register",
-        }))
-        .on("error", () =>
-            process.exit(1),
-        ),
-);
 
 gulp.task("clean", () =>
     del([
@@ -46,18 +33,31 @@ gulp.task("clean", () =>
 );
 
 gulp.task("build-es6", () =>
-    gulp.src([
-        "src/**/*.js",
-        "!**/*.test.js",
-    ])
+    gulp.src("src/**/*.js")
         .pipe(sourcemaps.init())
         .pipe(replace("${VERSION}", version))
-        .pipe(babel(set(set(babelConfig, "babelrc", false), "presets[0]", [
-            "@babel/preset-env",
-            {
-                modules: false,
-            },
-        ])))
+        .pipe(babel({
+            babelrc: false,
+            plugins: [
+                [
+                    "babel-plugin-flow-runtime",
+                    {
+                        assert: true
+                    }
+                ],
+                "babel-plugin-lodash",
+            ],
+            presets: [
+                [
+                    "@babel/preset-env",
+                    {
+                        modules: false,
+                    }
+                ],
+                "@babel/preset-flow",
+                "@babel/preset-stage-0",
+            ],
+        }))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("es6/")),
 );
@@ -75,6 +75,16 @@ gulp.task("build-js", () =>
         }))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("cjs/")),
+);
+
+gulp.task("test", () =>
+    gulp.src("cjs/**/*.test.js", {
+        read: false,
+    })
+        .pipe(mocha())
+        .on("error", () =>
+            process.exit(1),
+        ),
 );
 
 gulp.task("dist", () =>
@@ -117,4 +127,4 @@ gulp.task("minify", () =>
         .pipe(gulp.dest("dist/")),
 );
 
-gulp.task("default", gulp.series("test", "clean", "build-es6", "build-js", "dist", "minify"));
+gulp.task("default", gulp.series("clean", "build-es6", "build-js", "test", "dist", "minify"));

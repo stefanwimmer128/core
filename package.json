@@ -16,22 +16,6 @@
     "url": "https://github.com/stefanwimmer128/core/issues"
   },
   "homepage": "https://stefanwimmer128.github.io/core",
-  "babel": {
-    "plugins": [
-      [
-        "babel-plugin-flow-runtime",
-        {
-          "assert": true
-        }
-      ],
-      "babel-plugin-lodash"
-    ],
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-flow",
-      "@babel/preset-stage-0"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.35",
     "@babel/node": "^7.0.0-beta.35",
