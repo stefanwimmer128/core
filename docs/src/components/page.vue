@@ -3,6 +3,6 @@
 </script>
 
 <template lang="pug">
-    div.container-fluid
+    el-main.p-2
         slot
 </template>

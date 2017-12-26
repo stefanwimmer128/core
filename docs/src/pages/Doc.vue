@@ -31,6 +31,8 @@
 <template lang="pug">
     docs
         component(:is="renderMarkdown(markdown)" v-if="markdown")
-        error404(v-else)
+        template(v-else)
+            h1 Error 404 Not Found
+            p Documentation for "{{this.$route.params.doc}}" not found!
 </template>
 

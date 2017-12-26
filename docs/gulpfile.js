@@ -38,7 +38,9 @@ gulp.task("docs", async () => {
         read(join(__dirname, "docs/", file)),
     ).map(file => extend(file, {
         path: basename(file.path, ".md"),
-    }));
+    })).sort((a, b) =>
+        a.path.toLowerCase() < b.path.toLowerCase() ? -1 : 1,
+    );
     await writeFile(join(__dirname, "src/docs.json"), JSON.stringify(data));
 });
 

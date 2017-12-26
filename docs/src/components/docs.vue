@@ -25,11 +25,11 @@
 
 <template lang="pug">
     el-container
-        el-aside.w-20
+        el-aside.w-20#sidebar
             el-input(clearable placeholder="Search" prefix-icon="el-icon-search" v-model="search_key")
             div.list-group
                 router-link(:key="fn" :to="url(fn)" v-for="fn in search(docs, search_key)").list-group-item.list-group-item-action {{fn}}
                 div(v-if="search(docs, search_key).length === 0").disabled.font-italic.list-group-item No matches found!
-        el-main
+        el-main.p-2
             slot
 </template>

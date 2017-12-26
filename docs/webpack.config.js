@@ -33,10 +33,6 @@ const __babelLoader = {
     },
 };
 
-const __webpackDevServer = process.argv.some(arg =>
-    arg.includes("webpack-dev-server"),
-);
-
 function fileLoader(outputPath) {
     return {
         loader: "file-loader",
@@ -126,7 +122,6 @@ export default {
         new FriendlyErrorsWebpackPlugin(),
         new HtmlWebpackPlugin({
             appMountId: "app",
-            baseHref: __webpackDevServer ? "/" : "/core/",
             inject: false,
             meta: [
                 {
@@ -147,7 +142,9 @@ export default {
                 "default",
             ],
         }),
-        ...(__webpackDevServer ? [
+        ...(process.argv.some(arg =>
+            arg.includes("webpack-dev-server"),
+        ) ? [
             new ExtractTextWebpackPlugin({
                 disable: true,
             }),
