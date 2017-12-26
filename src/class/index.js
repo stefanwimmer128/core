@@ -1,3 +1,3 @@
 /* @flow */
 
-export createPrivate from "./create-private";
+export createPrivate from "./createPrivate";

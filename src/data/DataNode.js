@@ -7,7 +7,7 @@ import {
 
 import $ from "../polyfill";
 
-import createPrivate from "../class/create-private";
+import createPrivate from "../class/createPrivate";
 
 import DataType from "./DataType";
 

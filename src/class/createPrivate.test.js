@@ -13,9 +13,9 @@ import {
     it,
 } from "mocha";
 
-import createPrivate from "./create-private";
+import createPrivate from "./createPrivate";
 
-describe("class/create-private.js", () => {
+describe("class/createPrivate.js", () => {
     const $private = createPrivate("private"),
         object = {};
     

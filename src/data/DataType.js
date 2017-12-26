@@ -2,7 +2,7 @@
 
 import _ from "lodash";
 
-import createPrivate from "../class/create-private";
+import createPrivate from "../class/createPrivate";
 
 const $validator = createPrivate("validator");
 
