@@ -54,8 +54,6 @@ function sourceMapLoader(loader, options) {
 
 export default {
     devServer: {
-        contentBase: join(__dirname, "public/"),
-        historyApiFallback: true,
         hot: true,
     },
     devtool: "source-map",
