@@ -14,7 +14,7 @@ import DataType from "@stefanwimmer128/core/es6/data/DataType";
 
 /* CommonJS require */
 var core = require("@stefanwimmer128/core");
-var DataType = require("@stefanwimmer128/core/js/data/DataType").default;
+var DataType = require("@stefanwimmer128/core/cjs/data/DataType").default;
 
 /* AMD require */
 require([
