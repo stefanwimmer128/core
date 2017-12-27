@@ -1,8 +1,7 @@
-import Error404 from "../../pages/Error404.vue";
-import Home from "../../pages/Home.vue";
-
 import Doc from "../../pages/Doc.vue";
 import Docs from "../../pages/Docs.vue";
+import Error404 from "../../pages/Error404.vue";
+import Home from "../../pages/Home.vue";
 
 export default [
     {
