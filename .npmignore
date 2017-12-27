@@ -1,7 +1,6 @@
-/.idea/
 /docs/
 
-/.gitmodules
+.git*
 
 *-debug.log
 *-error.log
