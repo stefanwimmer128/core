@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans");
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans);
 
 $font-family-monospace: Fira Mono, monospace;
 $font-family-sans-serif: Fira Sans, sans-serif;
@@ -17,5 +17,4 @@ html, body {
     font-family: $font-family-base;
     font-size: $font-size-base;
     height: 100%;
-    margin: 0;
 }

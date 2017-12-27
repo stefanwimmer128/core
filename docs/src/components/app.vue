@@ -4,7 +4,7 @@
 
 <template lang="pug">
     el-container.h-100#app
-        el-header.p-0(height="")
+        el-header.px-0(height="")
             nav.bg-primary.navbar.navbar-dark.navbar-expand.sticky-top
                 router-link(to="/").navbar-brand @stefanwimmer128/core
                 div.navbar-nav

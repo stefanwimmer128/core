@@ -1,9 +1,9 @@
 <script>
     import Remarkable from "remarkable";
     
-    import __docs from "../docs.json";
-    
     import docs from "../components/docs.vue";
+    
+    import __docs from "../docs.json";
     
     export default {
         components: {
