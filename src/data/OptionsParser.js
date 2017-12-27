@@ -25,6 +25,16 @@ export default class OptionsParser extends OptionParser {
         return this;
     }
     
+    addSubparser(opt: string) {
+        const subparser = new OptionsParser();
+        this.addOption(opt, subparser);
+        return subparser;
+    }
+    
+    createOption(opt: string, type?: DataType = DataType.ANY, _default?: any) {
+        return this.addOption(opt, new OptionParser(type, _default));
+    }
+    
     parse(options: any): any {
         const opts = super.parse(options),
             ret = {};

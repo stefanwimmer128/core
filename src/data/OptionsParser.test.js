@@ -14,52 +14,36 @@ import OptionsParser from "./OptionsParser";
 
 describe("data/OptionsParser.js", () => {
     it("string -> string", () => {
-        const opts = new OptionsParser();
-        opts.addOption("test", new OptionParser(DataType.STRING));
-        assert.strictEqual(opts.parse({
+        assert.strictEqual(new OptionsParser().createOption("test", DataType.STRING).parse({
             test: "",
         }).test, "");
     });
     
     it("number -> string", () => {
-        const opts = new OptionsParser();
-        opts.addOption("test", new OptionParser(DataType.STRING));
         assert.throws(() => {
-            opts.parse({
+            new OptionsParser().createOption("test", DataType.STRING).parse({
                 test: 0,
             });
         });
     });
     
     it("null -> string -> string", () => {
-        const opts = new OptionsParser();
-        opts.addOption("test", new OptionParser(DataType.STRING, ""));
-        assert.strictEqual(opts.parse({
+        assert.strictEqual(new OptionsParser().createOption("test", DataType.STRING, "").parse({
             test: null,
         }).test, "");
     });
     
     it("null -> number -> string", () => {
-        const opts = new OptionsParser();
-        opts.addOption("test", new OptionParser(DataType.STRING, 0));
         assert.throws(() => {
-            opts.parse({
+            new OptionsParser().createOption("test", DataType.STRING, 0).parse({
                 test: null,
             });
         });
     });
     
-    it("subparser: {}", () => {
-        const opts = new OptionsParser();
-        opts.addOption("subparser", new OptionsParser());
-        assert.deepEqual(opts.parse(), {
-            subparser: {},
-        });
-    });
-    
     it("subparser: string -> string", () => {
         const opts = new OptionsParser();
-        opts.addOption("subparser", new OptionsParser().addOption("test", new OptionParser(DataType.STRING)));
+        opts.addSubparser("subparser").createOption("test", DataType.STRING);
         assert.strictEqual(opts.parse({
             subparser: {
                 test: "",
@@ -69,7 +53,7 @@ describe("data/OptionsParser.js", () => {
     
     it("subparser: number -> string", () => {
         const opts = new OptionsParser();
-        opts.addOption("subparser", new OptionsParser().addOption("test", new OptionParser(DataType.STRING)));
+        opts.addSubparser("subparser").createOption("test", DataType.STRING);
         assert.throws(() => {
             opts.parse({
                 subparser: {
@@ -79,15 +63,15 @@ describe("data/OptionsParser.js", () => {
         });
     });
     
-    it("subparser: string -> string", () => {
+    it("subparser: null -> string -> string", () => {
         const opts = new OptionsParser();
-        opts.addOption("subparser", new OptionsParser().addOption("test", new OptionParser(DataType.STRING, "")));
+        opts.addSubparser("subparser").createOption("test", DataType.STRING, "");
         assert.strictEqual(opts.parse().subparser.test, "");
     });
     
-    it("subparser: number -> string", () => {
+    it("subparser: null -> number -> string", () => {
         const opts = new OptionsParser();
-        opts.addOption("subparser", new OptionsParser().addOption("test", new OptionParser(DataType.STRING, 0)));
+        opts.addSubparser("subparser").createOption("test", DataType.STRING, 0);
         assert.throws(() => {
             opts.parse();
         });
