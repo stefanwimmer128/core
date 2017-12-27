@@ -16997,7 +16997,12 @@ a.text-dark:focus, a.text-dark:hover {
 /* Break-point
 --------------------------*/
 .el-switch {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   font-size: 1rem;
   line-height: 20px;
@@ -21545,7 +21550,8 @@ a.text-dark:focus, a.text-dark:hover {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    text-align: left; }
+    text-align: left;
+    background-color: #fff; }
     .el-table th div {
       display: inline-block;
       padding-left: 10px;
@@ -21723,19 +21729,20 @@ a.text-dark:focus, a.text-dark:hover {
     overflow: initial;
     position: relative; }
   .el-table .sort-caret {
-    color: #c0c4cc;
-    width: 14px;
-    overflow: hidden;
-    font-size: 15px;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
     position: absolute; }
     .el-table .sort-caret.ascending {
+      border-bottom-color: #c0c4cc;
       top: 5px; }
     .el-table .sort-caret.descending {
+      border-top-color: #c0c4cc;
       bottom: 7px; }
   .el-table .ascending .sort-caret.ascending {
-    color: #409EFF; }
+    border-bottom-color: #409EFF; }
   .el-table .descending .sort-caret.descending {
-    color: #409EFF; }
+    border-top-color: #409EFF; }
   .el-table .hidden-columns {
     visibility: hidden;
     position: absolute;
@@ -24238,6 +24245,8 @@ a.text-dark:focus, a.text-dark:hover {
     width: 350px; }
   .el-date-editor--datetimerange.el-input, .el-date-editor--datetimerange.el-input__inner {
     width: 400px; }
+  .el-date-editor .el-icon-circle-close {
+    cursor: pointer; }
   .el-date-editor .el-range__icon {
     font-size: 14px;
     margin-left: -5px;
@@ -26955,6 +26964,8 @@ a.text-dark:focus, a.text-dark:hover {
     width: 350px; }
   .el-date-editor--datetimerange.el-input, .el-date-editor--datetimerange.el-input__inner {
     width: 400px; }
+  .el-date-editor .el-icon-circle-close {
+    cursor: pointer; }
   .el-date-editor .el-range__icon {
     font-size: 14px;
     margin-left: -5px;
@@ -28636,6 +28647,8 @@ a.text-dark:focus, a.text-dark:hover {
     width: 350px; }
   .el-date-editor--datetimerange.el-input, .el-date-editor--datetimerange.el-input__inner {
     width: 400px; }
+  .el-date-editor .el-icon-circle-close {
+    cursor: pointer; }
   .el-date-editor .el-range__icon {
     font-size: 14px;
     margin-left: -5px;
@@ -30716,7 +30729,6 @@ a.text-dark:focus, a.text-dark:hover {
   color: #606266;
   line-height: 1.4;
   text-align: justify;
-  word-break: break-all;
   font-size: 1rem;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); }
@@ -48236,7 +48248,6 @@ a.text-dark:focus, a.text-dark:hover {
 html, body {
   font-family: Fira Sans, sans-serif;
   font-size: 1rem;
-  height: 100%;
-  margin: 0; }
+  height: 100%; }
 
-/*# sourceMappingURL=style.css.map?7848637c8565515c8009*/
+/*# sourceMappingURL=style.css.map?40fa31a49f1f1a2e9344*/
