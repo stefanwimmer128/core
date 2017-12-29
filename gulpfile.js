@@ -6,7 +6,6 @@ import gulp from "gulp";
 import babel from "gulp-babel";
 import mocha from "gulp-mocha";
 import rename from "gulp-rename";
-import replace from "gulp-replace";
 import sourcemaps from "gulp-sourcemaps";
 import uglify from "gulp-uglify";
 import {
@@ -35,7 +34,6 @@ gulp.task("clean", () =>
 gulp.task("build-es6", () =>
     gulp.src("src/**/*.js")
         .pipe(sourcemaps.init())
-        .pipe(replace("${VERSION}", version))
         .pipe(babel({
             babelrc: false,
             plugins: [
