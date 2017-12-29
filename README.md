@@ -22,7 +22,7 @@ import OptionsParser from "@stefanwimmer128/core/es6/data/OptionsParser.js";
 import * as core from "@stefanwimmer128/core";
 
 /* import single feature: */
-import DataType from "@stefanwimmer128/core/data/DataType";
+import OptionsParser from "@stefanwimmer128/core/data/OptionsParser";
 ```
 
 For this you have to add the following configuration:
@@ -44,7 +44,7 @@ module.export = {
 var core = require("@stefanwimmer128/core");
 
 /* import single feature: */
-var DataType = require("@stefanwimmer128/core/cjs/data/DataType").default;
+var OptionsParser = require("@stefanwimmer128/core/cjs/data/OptionsParser").default;
 ```
 
 ## UMD bundle
