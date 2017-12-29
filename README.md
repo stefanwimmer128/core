@@ -7,32 +7,71 @@ $ yarn add [-D] @stefanwimmer128/core
 $ npm install [-S|-D] @stefanwimmer128/core
 ```
 
+## ES6 import
+
 ``` js
-/* ES6 import */
+import * as core from "@stefanwimmer128/core/es6";
+
+/* import single feature: */
+import OptionsParser from "@stefanwimmer128/core/es6/data/OptionsParser.js";
+```
+
+## Using [Webpack](https://webpack.js.org/)
+
+``` js
 import * as core from "@stefanwimmer128/core";
-import DataType from "@stefanwimmer128/core/es6/data/DataType";
 
-/* CommonJS require */
+/* import single feature: */
+import DataType from "@stefanwimmer128/core/data/DataType";
+```
+
+For this you have to add the following configuration:
+
+``` js
+module.export = {
+    /* ... */
+    resolve: {
+        alias: {
+            "@stefanwimmer128/core": "@stefanwimmer128/core/es6",
+        },
+    },
+}
+```
+
+## CommonJS require
+
+``` js
 var core = require("@stefanwimmer128/core");
-var DataType = require("@stefanwimmer128/core/cjs/data/DataType").default;
 
-/* AMD require */
+/* import single feature: */
+var DataType = require("@stefanwimmer128/core/cjs/data/DataType").default;
+```
+
+## UMD bundle
+
+`dist/core.js` and `dist/core.min.js` are UMD bundles.
+
+``` js
+/* Using AMD require */
 require([
-    "node_modules/@stefanwimmer128/core/dist/core",
+    "path/to/core.js",
 ], function (core) {
-    /* use core here */
+    /* ... */
 });
 ```
 
 ``` html
-<!-- UMD bundle -->
-<script src="node_modules/@stefanwimmer128/core/dist/core.js"></script>
+<!-- Using html <script>-tag -->
+<script src="path/to/core.js"></script>
 ```
 
+## Change used polyfills
+
+This module uses [`core-js`](https://github.com/zloirock/core-js) polyfills for ES6 features.
+
 ``` js
-/* default polyfills */
-core.polyfill.Map = require("core-js/library/es6/map");
-core.polyfill.Symbol = require("core-js/library/es6/symbol");
+core.polyfill.Map = require("your/map/polyfill");
+core.polyfill.Symbol = require("your/symbol/polyfill");
 ```
 
 [Full documentation can be found here](https://stefanwimmer128.github.io/core)

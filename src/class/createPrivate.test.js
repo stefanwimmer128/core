@@ -34,7 +34,24 @@ describe("class/createPrivate.js", () => {
     it("object.$private is equal to $private", () => {
         $private.ref(object);
         
-        assert.equal(object.$private, $private);
+        assert.strictEqual(object.$private, $private);
+    });
+    
+    it("object.custom is equal to $private", () => {
+        $private.ref(object, "custom");
+        
+        assert.strictEqual(object.custom, $private);
+    });
+    
+    it("object.custom[0] is equal to $private", () => {
+        object.custom = [];
+        
+        $private.ref(object, [
+            "custom",
+            0,
+        ]);
+        
+        assert.strictEqual(object.custom[0], $private);
     });
     
     it("object has $private", () => {
