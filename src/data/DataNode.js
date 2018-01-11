@@ -20,7 +20,12 @@ export default class DataNode {
         $nodes(this, new $.Map());
         $type(this, type);
         
-        this.value(value);
+        if (! isUndefined(value))
+            this.value(value);
+    }
+    
+    addNode(key: string, type?: DataType = DataType.ANY, value?: any): DataNode {
+        return this.setNode(key, new DataNode(type, value));
     }
     
     deleteNode(key: string): boolean {

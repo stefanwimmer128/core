@@ -67,4 +67,8 @@ describe("class/createPrivate.js", () => {
         assert.notOk(has(object, $private.symbol));
         assert.strictEqual($private(object), void 0);
     });
+    
+    it("$private uses default", () => {
+        assert.ok(createPrivate("test", true)(null));
+    });
 });

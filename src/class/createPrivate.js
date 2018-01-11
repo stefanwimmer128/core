@@ -2,21 +2,22 @@
 
 import {
     extend,
+    get,
     isUndefined,
     set,
 } from "lodash";
 
 import $ from "../polyfill";
 
-export default function createPrivate(name: string) {
+export default function createPrivate(name: string, _default: any) {
     const symbol = $.Symbol(name);
     
-    function _private(object: Object, value?: any, _delete?: boolean = false) {
+    function _private(object: any, value?: any, _delete?: boolean = false) {
         if (_delete)
             delete object[symbol];
         else if (! isUndefined(value))
-            object[symbol] = value;
-        return object[symbol];
+            set(object, symbol, value);
+        return get(object, symbol, _default);
     }
     
     return extend(_private, {
