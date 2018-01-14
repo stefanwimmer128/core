@@ -24,8 +24,6 @@ export default function createPrivate(name: string, _default: any) {
         ref(object: any, path?: number | string | (number | string)[] = `$${name}`) {
             return set(object, path, _private);
         },
-        get symbol() {
-            return symbol;
-        },
+        symbol,
     });
 }
