@@ -64,14 +64,3 @@ require([
 <!-- Using html <script>-tag -->
 <script src="path/to/core.js"></script>
 ```
-
-## Change used polyfills
-
-This module uses [`core-js`](https://github.com/zloirock/core-js) polyfills for ES6 features.
-
-``` js
-core.polyfill.Map = require("your/map/polyfill");
-core.polyfill.Symbol = require("your/symbol/polyfill");
-```
-
-[Full documentation can be found here](https://stefanwimmer128.github.io/core)

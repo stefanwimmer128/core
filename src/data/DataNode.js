@@ -1,11 +1,10 @@
 /* @flow */
 
+import Map from "core-js/library/es6/map";
 import {
     isString,
     isUndefined,
 } from "lodash";
-
-import $ from "../polyfill";
 
 import createPrivate from "../class/createPrivate";
 
@@ -17,7 +16,7 @@ const $value = createPrivate("value");
 
 export default class DataNode {
     constructor(type?: DataType = DataType.ANY, value?: any) {
-        $nodes(this, new $.Map());
+        $nodes(this, new Map());
         $type(this, type);
         
         if (! isUndefined(value))

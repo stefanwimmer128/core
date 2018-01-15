@@ -1,7 +1,7 @@
 /* @flow */
 
+import Map from "core-js/library/es6/map";
 import {
-    forEach,
     isObject,
 } from "lodash";
 
@@ -16,11 +16,11 @@ export default class OptionsParser extends OptionParser {
     constructor() {
         super(DataType.OBJECT, {});
         
-        $options(this, {});
+        $options(this, new Map());
     }
     
     addOption(opt: string, parser: OptionParser) {
-        $options(this)[opt] = parser;
+        $options(this).set(opt, parser);
         
         return this;
     }
@@ -39,13 +39,13 @@ export default class OptionsParser extends OptionParser {
         const opts = super.parse(options),
             ret = {};
         
-        forEach($options(this), (opt, key) => {
-            const value = opt.parse(opts[key]);
-            if (opt.check(value))
+        for (const [key, parser] of $options(this)) {
+            const value = parser.parse(opts[key]);
+            if (parser.check(value))
                 ret[key] = value;
             else
                 throw new TypeError(`Option ${key} does not conform with type`);
-        });
+        }
         
         return ret;
     }

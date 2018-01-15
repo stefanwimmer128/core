@@ -1,5 +1,6 @@
 /* @flow */
 
+import Symbol from "core-js/library/es6/symbol";
 import {
     extend,
     get,
@@ -7,10 +8,8 @@ import {
     set,
 } from "lodash";
 
-import $ from "../polyfill";
-
 export default function createPrivate(name: string, _default: any) {
-    const symbol = $.Symbol(name);
+    const symbol = Symbol(name);
     
     function _private(object: any, value?: any, _delete?: boolean = false) {
         if (_delete)
