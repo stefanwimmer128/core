@@ -15,6 +15,10 @@ const $type = createPrivate("type");
 const $value = createPrivate("value");
 
 export default class DataNode {
+    static $nodes = $nodes;
+    static $type = $type;
+    static $value = $value;
+    
     constructor(type?: DataType = DataType.ANY, value?: any) {
         $nodes(this, new Map());
         $type(this, type);
@@ -39,7 +43,7 @@ export default class DataNode {
         return $nodes(this).has(key);
     }
     
-    setNode(key: string, node: DataNode): DataNode {
+    setNode(key: string, node: DataNode): this {
         $nodes(this).set(key, node);
         
         return this;
@@ -56,7 +60,3 @@ export default class DataNode {
         return $value(this, value, _delete);
     }
 }
-
-$nodes.ref(DataNode);
-$type.ref(DataNode);
-$value.ref(DataNode);

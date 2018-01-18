@@ -13,25 +13,27 @@ import OptionParser from "./OptionParser";
 const $options = createPrivate("options");
 
 export default class OptionsParser extends OptionParser {
+    static $options = $options;
+    
     constructor() {
         super(DataType.OBJECT, {});
         
         $options(this, new Map());
     }
     
-    addOption(opt: string, parser: OptionParser) {
+    addOption(opt: string, parser: OptionParser): this {
         $options(this).set(opt, parser);
         
         return this;
     }
     
-    addSubparser(opt: string) {
+    addSubparser(opt: string): OptionsParser {
         const subparser = new OptionsParser();
         this.addOption(opt, subparser);
         return subparser;
     }
     
-    createOption(opt: string, type?: DataType = DataType.ANY, _default?: any) {
+    createOption(opt: string, type?: DataType, _default?: any): this {
         return this.addOption(opt, new OptionParser(type, _default));
     }
     
@@ -50,5 +52,3 @@ export default class OptionsParser extends OptionParser {
         return ret;
     }
 }
-
-$options.ref(OptionsParser);

@@ -38,6 +38,8 @@ let $ANY,
     $WEAK_SET;
 
 export default class DataType {
+    static $validator = $validator;
+    
     static get ANY(): DataType {
         return $ANY = $ANY || new DataType(_.stubTrue);
     }
@@ -143,5 +145,3 @@ export default class DataType {
         return callWhenArgs($validator(this), args)(value);
     }
 }
-
-$validator.ref(DataType);
