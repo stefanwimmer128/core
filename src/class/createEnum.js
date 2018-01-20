@@ -1,37 +1,60 @@
 /* @flow */
 
+import Symbol from "core-js/library/es6/symbol";
 import {
     concat,
+    extend,
     find,
+    isFunction,
     map,
-    reduce,
     tail,
 } from "lodash";
 
-export default function createEnum(values: (string | [string])[], constructor: () => any = function () {}) {
-    return reduce(values, (values, value) => {
-        const name = concat([], value)[0];
-        values[name] = {
+export default function createEnum(values: (string | [string])[], constructor: () => any = function () {}, prototype: any, _static: any) {
+    const _enum = extend({}, _static);
+    
+    for (const value of values) {
+        const args = concat([], value);
+        _enum[args[0]] = extend({
             getDeclaringEnum() {
-                return values;
+                return _enum;
             },
             name() {
-                return name;
+                return args[0];
+            },
+        }, prototype);
+        _enum[args[0]]::constructor(...tail(args));
+    }
+    
+    _enum.valueOf = function () {
+        const key = find(values, value =>
+            concat([], value)[0] === name,
+        );
+        return key ? _enum[concat([], key)[0]] : null;
+    };
+    
+    _enum.values = function () {
+        return map(values, value =>
+            _enum[concat([], value)[0]],
+        );
+    };
+    
+    _enum[Symbol.hasInstance] = function (instance) {
+        return isFunction(instance?.getDeclaringEnum) && isFunction(instance?.name) ? instance.getDeclaringEnum() === _enum && _enum[instance.name()] === instance : false;
+    };
+    
+    _enum[Symbol.iterator] = function () {
+        let i = 0;
+        return {
+            next() {
+                const cur = i++;
+                return {
+                    done: cur === _enum.values().length,
+                    value: _enum.values()[cur],
+                };
             },
         };
-        constructor.apply(values[name], tail(concat([], value)));
-        return values;
-    }, {
-        valueOf(name) {
-            const key = find(values, value =>
-                concat([], value)[0] === name,
-            );
-            return key ? this[concat([], key)[0]] : null;
-        },
-        values() {
-            return map(values, value =>
-                this[concat([], value)[0]],
-            );
-        },
-    });
+    };
+    
+    return _enum;
 }

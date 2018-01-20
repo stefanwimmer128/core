@@ -47,6 +47,7 @@
   "dependencies": {
     "core-js": "^2.5.3",
     "flow-runtime": "^0.16.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "regenerator-runtime": "^0.11.1"
   }
 }
