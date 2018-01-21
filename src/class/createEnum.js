@@ -5,42 +5,41 @@ import {
     concat,
     extend,
     find,
-    isFunction,
+    isUndefined,
     map,
     tail,
 } from "lodash";
 
-export default function createEnum(values: (string | [string])[], constructor: () => any = function () {}, prototype: any, _static: any) {
-    const _enum = extend({}, _static);
+export default function createEnum(_values: (string | [string])[], constructor: () => any = function () {}, prototype: any, _static: any) {
+    const _enum = extend({}, _static),
+        values = map(_values, value => {
+            const args = concat([], value),
+                val = _enum[args[0]] = extend({
+                    getDeclaringEnum() {
+                        return _enum;
+                    },
+                    name() {
+                        return args[0];
+                    },
+                }, prototype);
+            val::constructor(...tail(args));
+            return val;
+        });
     
-    for (const value of values) {
-        const args = concat([], value);
-        _enum[args[0]] = extend({
-            getDeclaringEnum() {
-                return _enum;
-            },
-            name() {
-                return args[0];
-            },
-        }, prototype);
-        _enum[args[0]]::constructor(...tail(args));
-    }
-    
-    _enum.valueOf = function () {
-        const key = find(values, value =>
-            concat([], value)[0] === name,
+    _enum.valueOf = function (name: string) {
+        return find(values, value =>
+            value.name() === name,
         );
-        return key ? _enum[concat([], key)[0]] : null;
     };
     
     _enum.values = function () {
-        return map(values, value =>
-            _enum[concat([], value)[0]],
-        );
+        return concat([], values);
     };
     
-    _enum[Symbol.hasInstance] = function (instance) {
-        return isFunction(instance?.getDeclaringEnum) && isFunction(instance?.name) ? instance.getDeclaringEnum() === _enum && _enum[instance.name()] === instance : false;
+    _enum[Symbol.hasInstance] = function (instance: any) {
+        return ! isUndefined(find(values, value =>
+            value === instance,
+        ));
     };
     
     _enum[Symbol.iterator] = function () {
@@ -49,8 +48,8 @@ export default function createEnum(values: (string | [string])[], constructor: (
             next() {
                 const cur = i++;
                 return {
-                    done: cur === _enum.values().length,
-                    value: _enum.values()[cur],
+                    done: cur === values.length,
+                    value: values[cur],
                 };
             },
         };
