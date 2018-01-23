@@ -26,7 +26,7 @@ import {
 gulp.task("clean", () =>
     del([
         "cjs/",
-        "dists/",
+        "dist/",
         "es6/",
     ]),
 );
@@ -88,7 +88,7 @@ gulp.task("test", () =>
 gulp.task("dist", () =>
     webpack({
         devtool: "source-map",
-        entry: `./${join("es6", process.env.ENTRY || "")}`,
+        entry: `./${join("es6", process.env.BUILD || "")}`,
         module: {
             rules: [
                 {
@@ -126,3 +126,6 @@ gulp.task("minify", () =>
 );
 
 gulp.task("default", gulp.series("clean", "build-es6", "build-js", "test", "dist", "minify"));
+
+gulp.task("prebuild", gulp.series("clean", "build-es6", "build-js"));
+gulp.task("build", gulp.series("dist", "minify"));

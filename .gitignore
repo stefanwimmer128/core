@@ -2,6 +2,7 @@
 
 /cjs/
 /dist/
+/dists/
 /es6/
 
 *-debug.log

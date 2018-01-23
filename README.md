@@ -64,3 +64,16 @@ require([
 <!-- Using html <script>-tag -->
 <script src="path/to/core.js"></script>
 ```
+
+## Build custom bundle
+
+Building custom builds requires bash environment.
+
+``` bash
+$ ./build.sh [filename]:[entry]
+
+# for example:
+$ ./build.sh options:data/OptionsParser
+```
+
+Results can be found in the `dists/` folder (for example: `dists/options.js`).
