@@ -11,7 +11,7 @@ import {
 import DataType from "./DataType";
 import OptionParser from "./OptionParser";
 
-describe("data/OptionParser.js", () => {
+describe("data/OptionParser", () => {
     it("sting -> string", () => {
         const opt = new OptionParser(DataType.STRING);
         assert.ok(opt.check(opt.parse("")));

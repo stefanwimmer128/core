@@ -15,7 +15,7 @@ import {
 
 import createPrivate from "./createPrivate";
 
-describe("class/createPrivate.js", () => {
+describe("class/createPrivate", () => {
     const $private = createPrivate("private"),
         object = {};
     

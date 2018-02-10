@@ -3,16 +3,20 @@
 import Symbol from "core-js/library/es6/symbol";
 import {
     concat,
-    extend,
     find,
     isUndefined,
     map,
     tail,
 } from "lodash";
 
+import Iterator from "../data/Iterator";
+
+import extend from "../utils/extend";
+import val from "../utils/val";
+
 export default function createEnum(_values: (string | [string])[], constructor: () => any = function () {}, prototype: any, _static: any) {
-    const _enum = extend({}, _static),
-        values = map(_values, value => {
+    return val(extend({}, _static), _enum => {
+        const values = map(_values, value => {
             const args = concat([], value),
                 val = _enum[args[0]] = extend({
                     getDeclaringEnum() {
@@ -25,35 +29,27 @@ export default function createEnum(_values: (string | [string])[], constructor: 
             val::constructor(...tail(args));
             return val;
         });
-    
-    _enum.valueOf = function (name: string) {
-        return find(values, value =>
-            value.name() === name,
-        );
-    };
-    
-    _enum.values = function () {
-        return concat([], values);
-    };
-    
-    _enum[Symbol.hasInstance] = function (instance: any) {
-        return ! isUndefined(find(values, value =>
-            value === instance,
-        ));
-    };
-    
-    _enum[Symbol.iterator] = function () {
-        let i = 0;
-        return {
-            next() {
-                const cur = i++;
-                return {
-                    done: cur === values.length,
-                    value: values[cur],
-                };
+        
+        return extend(_enum, {
+            valueOf(name: string) {
+                return find(values, value =>
+                    value.name() === name,
+                );
             },
-        };
-    };
-    
-    return _enum;
+            
+            values() {
+                return concat([], values);
+            },
+            
+            [Symbol.hasInstance](instance: any): boolean {
+                return ! isUndefined(find(values, value =>
+                    value === instance,
+                ));
+            },
+            
+            [Symbol.iterator](): Iterator {
+                return new Iterator(values);
+            },
+        });
+    });
 }

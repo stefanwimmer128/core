@@ -11,7 +11,7 @@ import {
 import DataNode from "./DataNode";
 import DataType from "./DataType";
 
-describe("data/DataNode.js", () => {
+describe("data/DataNode", () => {
     it("string -> string", () => {
         assert.strictEqual(new DataNode(DataType.STRING).value(""), "");
     });

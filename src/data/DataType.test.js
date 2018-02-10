@@ -10,7 +10,7 @@ import {
 
 import DataType from "./DataType";
 
-describe("data/DataType.js", () => {
+describe("data/DataType", () => {
     it("static lazy getters", () => {
         assert.strictEqual(DataType.STRING, DataType.STRING);
     });

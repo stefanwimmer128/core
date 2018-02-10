@@ -12,7 +12,7 @@ import DataType from "./DataType";
 import OptionParser from "./OptionParser";
 import OptionsParser from "./OptionsParser";
 
-describe("data/OptionsParser.js", () => {
+describe("data/OptionsParser", () => {
     it("string -> string", () => {
         assert.strictEqual(new OptionsParser().createOption("test", DataType.STRING).parse({
             test: "",
