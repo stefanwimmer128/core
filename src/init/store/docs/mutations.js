@@ -1,5 +1,5 @@
-export function docs(state, docs) {
-    state.docs = docs;
+export function value(state, value) {
+    state.value = value;
     state.pending = false;
 }
 

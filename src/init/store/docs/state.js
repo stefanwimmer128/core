@@ -1,5 +1,5 @@
 export default {
-    docs: null,
+    value: null,
     error: null,
     pending: false,
 };

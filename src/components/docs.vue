@@ -1,42 +1,53 @@
 <script>
+    import {
+        mapActions,
+        mapState,
+    } from "../init/store/docs";
+    
     import page from "./page.vue";
     
     export default {
-        beforeUpdate() {
-            this.reload();
-        },
         components: {
             page,
         },
         computed: {
+            ...mapState({
+                error: state =>
+                    state.error,
+                pending: state =>
+                    state.pending,
+                value: state =>
+                    state.value,
+            }),
             docs() {
-                return this.$store.state.docs.filter(doc =>
-                    doc.path.toLowerCase().includes(this.search),
-                );
+                return this.value ? this.value.filter(doc =>
+                    doc.path.toLowerCase().includes(this.search) && doc.path !== "index",
+                ) : [];
             },
         },
         data() {
             return {
-                error: this.$store.state.error,
-                pending: this.$store.state.pending,
                 search: "",
             };
         },
         methods: {
+            ...mapActions([
+                "load",
+            ]),
             reload() {
-                if (this.$store.state.docs === null && ! this.pending)
-                    this.$store.dispatch("docs");
-            },
+                this.$store.commit("docs/value", null);
+                this.load();
+            }
         },
         mounted() {
-            this.reload();
+            this.load();
         },
     };
 </script>
 
 <template lang="pug">
     el-container(v-loading="pending")
-        template(v-if="! error && ! pending")
+        template(v-if="value")
             el-aside(width="" style="min-width: 20%;")
                 el-input(clearable placeholder="Search" prefix-icon="el-icon-search" v-model="search")
                 nav.flex-column.nav.nav-pills

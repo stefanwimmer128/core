@@ -1,4 +1,8 @@
 <script>
+    import {
+        mapState,
+    } from "../init/store/docs";
+    
     import docs from "../components/docs.vue";
     import markdown from "../components/markdown.vue";
     
@@ -8,10 +12,17 @@
             markdown,
         },
         computed: {
+            ...mapState({
+                docs: state =>
+                    state.value,
+            }),
             doc() {
-                return this.$store.state.docs.find(doc =>
-                    doc.path !== "index" && doc.path === this.$route.params.doc,
-                );
+                return this.docs ? this.docs.find(doc =>
+                    doc.path === this.$route.params.doc && doc.path !== "index",
+                ) : {
+                    content: "",
+                    data: {},
+                };
             },
         },
     };
