@@ -1,7 +1,4 @@
 /dists/
-/docs/
-
-.git*
 
 *-debug.log
 *-error.log
