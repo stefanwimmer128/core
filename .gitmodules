@@ -1,4 +1,0 @@
-[submodule "docs/public"]
-	path = docs/public
-	url = git@github.com:stefanwimmer128/core.git
-	branch = gh-pages
