@@ -52,6 +52,12 @@
     };
 </script>
 
+<style lang="scss" scoped>
+    aside {
+        border-right: 1px solid #dcdfe6;
+    }
+</style>
+
 <template lang="pug">
     el-container(v-loading="pending")
         template(v-if="value")
