@@ -11,4 +11,5 @@ export function error(state, error) {
 export function pending(state, pending) {
     state.error = null;
     state.pending = true;
+    state.value = null;
 }

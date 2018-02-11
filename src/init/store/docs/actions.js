@@ -1,5 +1,5 @@
-export function load(store) {
-    if (store.state.value || store.state.pending)
+export function load(store, value = store.state.value) {
+    if (value || store.state.pending)
         return ;
     
     store.commit("pending");

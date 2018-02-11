@@ -1,6 +1,6 @@
 <script>
     import {
-        mapState,
+        mapGetters,
     } from "../init/store/docs";
     
     import docs from "../components/docs.vue";
@@ -11,21 +11,13 @@
             docs,
             markdown,
         },
-        computed: {
-            ...mapState({
-                docs: state =>
-                    state.value,
-            }),
-            doc() {
-                return this.docs ? this.docs.find(doc =>
-                    doc.path === "index",
-                ).content : "";
-            },
-        },
+        computed: mapGetters([
+            "data",
+        ]),
     };
 </script>
 
 <template lang="pug">
     docs
-        markdown(:markdown="doc")
+        markdown(:markdown="data.index.content" v-if="data.index.content")
 </template>

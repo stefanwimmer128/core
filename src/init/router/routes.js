@@ -14,7 +14,7 @@ export default [
     },
     {
         component: Doc,
-        path: "/docs/:doc",
+        path: "/docs/:group/:path",
     },
     {
         component: Error404,
