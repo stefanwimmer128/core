@@ -38,14 +38,9 @@
                 search: "",
             };
         },
-        methods: {
-            ...mapActions([
-                "load",
-            ]),
-            reload() {
-                this.load(null);
-            }
-        },
+        methods: mapActions([
+            "load",
+        ]),
         mounted() {
             this.load();
         },
@@ -73,5 +68,4 @@
         el-main(v-else)
             h1 Network error
             p Could not get API information.
-            el-button(@click="reload") Reload
 </template>
