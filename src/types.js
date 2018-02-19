@@ -6,4 +6,4 @@ export type EventArgument<A, D> = {
     stop: () => void,
 };
 
-export type EventListener<A, D> = (e: EventArgument<A, D>) => void;
+export type EventListener<A, D> = (e: EventArgument<A, D>) => any;

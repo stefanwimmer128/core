@@ -8,16 +8,20 @@ import {
     it,
 } from "mocha";
 
+import type {
+    EventArgument,
+} from "../types";
+
 import Event from "./Event";
 
 describe("event/Event", () => {
     const event = new Event();
     
-    event.on(e =>
+    event.on((e: EventArgument<any, any>) =>
         e.data.test = true,
     );
     
-    event.once(e =>
+    event.once((e: EventArgument<any, any>) =>
         e.data.test = false,
     );
     
