@@ -5,5 +5,4 @@
 /dists/
 /es6/
 
-*-debug.log
-*-error.log
+*.log

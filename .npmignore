@@ -1,4 +1,3 @@
 /dists/
 
-*-debug.log
-*-error.log
+*.log
