@@ -89,10 +89,11 @@ gulp.task("dist", () =>
     webpack({
         devtool: "source-map",
         entry: `./${join("es6", process.env.BUILD || "")}`,
+        mode: "production",
         module: {
             rules: [
                 {
-                    test: /\.js$/,
+                    test: /\.js(\?\S*)?$/,
                     use: [
                         "source-map-loader",
                     ],

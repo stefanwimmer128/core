@@ -22,7 +22,7 @@ export default class Iterator {
             $index(this, index + 1);
             
             return val($values(this), values => ({
-                done: index === values.length - 1,
+                done: index === values.length,
                 value: values[index],
             }));
         });

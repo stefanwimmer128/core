@@ -33,8 +33,15 @@ describe("data/Iterator", () => {
     
     it("next -> 2", () => {
         assert.deepEqual(itr.next(), {
-            done: true,
+            done: false,
             value: 2,
+        });
+    });
+    
+    it("next -> done", () => {
+        assert.deepEqual(itr.next(), {
+            done: true,
+            value: undefined,
         });
     });
 });
