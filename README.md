@@ -10,7 +10,7 @@ $ npm install [-S|-D] @stefanwimmer128/core
 ## ES6 import
 
 ``` js
-import * as core from "@stefanwimmer128/core/es6";
+import * as core from "@stefanwimmer128/core";
 
 /* import single feature */
 import OptionsParser from "@stefanwimmer128/core/es6/data/OptionsParser.js";
