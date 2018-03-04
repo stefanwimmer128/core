@@ -1,7 +1,6 @@
 /* @flow */
 
 import del from "del";
-import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
 import gulp from "gulp";
 import babel from "gulp-babel";
 import mocha from "gulp-mocha";
@@ -14,10 +13,8 @@ import {
 import {
     join,
 } from "path";
-import {
-    NoEmitOnErrorsPlugin,
-} from "webpack";
-import webpack from "webpack-promise";
+
+import webpack from "./build/webpack";
 
 import {
     version,
@@ -86,31 +83,7 @@ gulp.task("test", () =>
 );
 
 gulp.task("dist", () =>
-    webpack({
-        devtool: "source-map",
-        entry: `./${join("es6", process.env.BUILD || "")}`,
-        mode: "production",
-        module: {
-            rules: [
-                {
-                    test: /\.js(\?\S*)?$/,
-                    use: [
-                        "source-map-loader",
-                    ],
-                },
-            ],
-        },
-        output: {
-            filename: "core.js",
-            library: "core",
-            libraryTarget: "umd",
-            path: join(__dirname, "dist/"),
-        },
-        plugins: [
-            new FriendlyErrorsWebpackPlugin(),
-            new NoEmitOnErrorsPlugin(),
-        ],
-    }),
+    webpack(),
 );
 
 gulp.task("minify", () =>
@@ -127,6 +100,3 @@ gulp.task("minify", () =>
 );
 
 gulp.task("default", gulp.series("clean", "build-es6", "build-js", "test", "dist", "minify"));
-
-gulp.task("prebuild", gulp.series("clean", "build-es6", "build-js"));
-gulp.task("build", gulp.series("dist", "minify"));

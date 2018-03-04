@@ -7,6 +7,7 @@
   "unpkg": "./dist/core.js",
   "jsdelivr": "./dist/core.js",
   "scripts": {
+    "custom": "babel-node --presets=@babel/preset-env \"build/custom.js\"",
     "gulp": "babel-node --presets=@babel/preset-env \"$(which gulp)\""
   },
   "repository": {
@@ -42,7 +43,7 @@
     "mocha": "^5.0.1",
     "source-map-loader": "^0.2.3",
     "webpack": "^4.0.1",
-    "webpack-promise": "^1.2.0"
+    "yargs": "^11.0.0"
   },
   "dependencies": {
     "core-js": "^2.5.3",

@@ -2,7 +2,6 @@
 
 /cjs/
 /dist/
-/dists/
 /es6/
 
 *.log
