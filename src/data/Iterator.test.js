@@ -11,7 +11,7 @@ import {
 import Iterator from "./Iterator";
 
 describe("data/Iterator", () => {
-    const itr = new Iterator([
+    const itr = Iterator.fromArray([
         0,
         1,
         2,

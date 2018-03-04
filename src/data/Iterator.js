@@ -4,28 +4,40 @@ import Symbol from "core-js/library/es6/symbol";
 
 import createPrivate from "../class/createPrivate";
 
-import val from "../utils/val";
-
 const $index = createPrivate("index");
-const $values = createPrivate("values");
+const $resolver = createPrivate("resolver");
 
 export default class Iterator {
-    static $values = $values;
+    static $resolver = $resolver;
     
-    constructor(values: any[]) {
-        $index(this, 0);
-        $values(this, values);
+    static fromArray(array: any[]): Iterator {
+        return new Iterator({
+            get(i) {
+                return array[i];
+            },
+            size() {
+                return array.length;
+            }
+        });
     }
     
-    next() {
-        return val($index(this), index => {
-            $index(this, index + 1);
-            
-            return val($values(this), values => ({
-                done: index === values.length,
-                value: values[index],
-            }));
-        });
+    constructor(resolver: {
+        get(i: number): number,
+        size(): number,
+    }) {
+        $resolver(this, resolver);
+    }
+    
+    next(): {
+        done: boolean,
+        value: any,
+    } {
+        $index(this, ($index(this) || 0) + 1);
+        
+        return {
+            done: $resolver(this).size() < $index(this),
+            value: $resolver(this).get($index(this) - 1),
+        };
     }
     
     [Symbol.iterator](): this {
