@@ -12,7 +12,7 @@ $ npm install [-S|-D] @stefanwimmer128/core
 ``` js
 import * as core from "@stefanwimmer128/core/es6";
 
-/* import single feature: */
+/* import single feature */
 import OptionsParser from "@stefanwimmer128/core/es6/data/OptionsParser.js";
 ```
 
@@ -25,7 +25,7 @@ import * as core from "@stefanwimmer128/core";
 import OptionsParser from "@stefanwimmer128/core/data/OptionsParser";
 ```
 
-For this you have to add the following configuration:
+For this you have to add the following configuration to `webpack.config.js`:
 
 ``` js
 module.export = {
