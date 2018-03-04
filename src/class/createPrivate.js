@@ -19,12 +19,12 @@ export default function createPrivate(name: string, _default: any) {
         else if (! isUndefined(value))
             set(object, symbol, value);
         return get(object, symbol, _default);
-    }, _private => {
-        return extend(_private, {
+    }, _private =>
+        extend(_private, {
             ref(object: any, path?: number | string | (number | string)[] = `$${name}`): any {
                 return set(object, path, _private);
             },
             symbol,
-        });
-    });
+        }),
+    );
 }
