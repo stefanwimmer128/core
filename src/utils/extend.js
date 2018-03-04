@@ -1,13 +1,13 @@
 /* @flow */
 
 import {
-    extend as _extend,
+    extend,
     isFunction,
     isObject,
 } from "lodash";
 
-export default function extend(target: any, ...sources: any[]): any {
-    _extend(target, ...sources);
+export default function (target: any, ...sources: any[]): any {
+    extend(target, ...sources);
     if (isFunction(Object.getOwnPropertySymbols))
         for (const source of sources)
             if (isObject(source))
