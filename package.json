@@ -1,6 +1,6 @@
 {
   "name": "@stefanwimmer128/core",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Complex features made easy",
   "main": "./cjs",
   "module": "./es6",
