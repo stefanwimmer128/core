@@ -1,8 +1,13 @@
 /* @flow */
 
 import Symbol from "core-js/library/es6/symbol";
+import {
+    isFunction,
+} from "lodash";
 
 import createPrivate from "../class/createPrivate";
+
+import val from "../utils/val";
 
 const $index = createPrivate("index");
 const $resolver = createPrivate("resolver");
@@ -22,8 +27,8 @@ export default class Iterator {
     }
     
     constructor(resolver: {
-        get(i: number): number,
-        size(): number,
+        get(i: number): any,
+        size: number | () => number,
     }) {
         $resolver(this, resolver);
     }
@@ -35,7 +40,7 @@ export default class Iterator {
         $index(this, ($index(this) || 0) + 1);
         
         return {
-            done: $resolver(this).size() < $index(this),
+            done: $index(this) > val($resolver(this).size, size => isFunction(size) ? size() : size),
             value: $resolver(this).get($index(this) - 1),
         };
     }

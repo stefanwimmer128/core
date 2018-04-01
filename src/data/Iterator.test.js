@@ -11,37 +11,59 @@ import {
 import Iterator from "./Iterator";
 
 describe("data/Iterator", () => {
-    const itr = Iterator.fromArray([
-        0,
-        1,
-        2,
-    ]);
-    
-    it("next -> 0", () => {
-        assert.deepEqual(itr.next(), {
-            done: false,
-            value: 0,
+    describe("array", () => {
+        const itr = Iterator.fromArray([
+            0,
+            1,
+        ]);
+        
+        it("array: next -> 0", () => {
+            assert.deepEqual(itr.next(), {
+                done: false,
+                value: 0,
+            });
+        });
+        
+        it("array: next -> 1", () => {
+            assert.deepEqual(itr.next(), {
+                done: false,
+                value: 1,
+            });
+        });
+        
+        it("array: next -> done", () => {
+            assert.deepEqual(itr.next(), {
+                done: true,
+                value: undefined,
+            });
         });
     });
     
-    it("next -> 1", () => {
-        assert.deepEqual(itr.next(), {
-            done: false,
-            value: 1,
+    describe("map", () => {
+        const map = new Map();
+        map.set(0, 0);
+        map.set(1, 1);
+        const itr = new Iterator(map);
+        
+        it("map: next -> 0", () => {
+            assert.deepEqual(itr.next(), {
+                done: false,
+                value: 0,
+            });
         });
-    });
-    
-    it("next -> 2", () => {
-        assert.deepEqual(itr.next(), {
-            done: false,
-            value: 2,
+        
+        it("map: next -> 1", () => {
+            assert.deepEqual(itr.next(), {
+                done: false,
+                value: 1,
+            });
         });
-    });
-    
-    it("next -> done", () => {
-        assert.deepEqual(itr.next(), {
-            done: true,
-            value: undefined,
+        
+        it("map: next -> done", () => {
+            assert.deepEqual(itr.next(), {
+                done: true,
+                value: undefined,
+            });
         });
     });
 });
