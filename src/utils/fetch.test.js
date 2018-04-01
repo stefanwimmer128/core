@@ -11,13 +11,13 @@ import {
 import fetch from "./fetch";
 
 describe("utils/fecth", () => {
-    it("non jsonp", () => {
+    it("json", () => {
         global.fetch = url =>
             new Promise(resolve =>
                 ({
                     json() {
                         return new Promise(resolve =>
-                            resolve(url),
+                            resolve(`{ "url": "${url}" }`),
                         );
                     },
                 }),
@@ -27,8 +27,8 @@ describe("utils/fecth", () => {
             .then(body =>
                 body.json(),
             )
-            .then(url =>
-                assert(url, "http://example.com/"),
+            .then(data =>
+                assert(data.url, "http://example.com/"),
             );
         
         delete global.fetch;
@@ -40,7 +40,7 @@ describe("utils/fecth", () => {
                 ({
                     text() {
                         return new Promise(resove =>
-                            resolve(`${init.jsonp}(${url})`),
+                            resolve(`${init.jsonp}({ url: "${url}" })`),
                         );
                     },
                 }),
@@ -49,8 +49,8 @@ describe("utils/fecth", () => {
         fetch("http://example.com/", {
             jsonp: "ExampleData",
         })
-            .then(url =>
-                assert(url, "http://example.com/"),
+            .then(data =>
+                assert(data.url, "http://example.com/"),
             );
         
         delete global.fetch;

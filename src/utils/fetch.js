@@ -1,5 +1,6 @@
 /* @flow */
 
+import Promise from "core-js/library/es6/promise";
 import _fetch from "node-fetch";
 
 import val from "./val";
