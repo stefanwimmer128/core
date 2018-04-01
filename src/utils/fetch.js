@@ -5,18 +5,20 @@ import _fetch from "node-fetch";
 
 import val from "./val";
 
-export default function (input: string, init?: {
-    jsonp?: string,
-} = {}) {
-    return val((fetch || _fetch)(input, init), promise =>
-        ! init.jsonp ? promise : promise
-            .then(body =>
-                body.text(),
-            )
-            .then(jsonp =>
-                new Promise(resolve =>
-                    new Function(init.jsonp, jsonp)(resolve),
-                ),
-            ),
+export default function (...args: any[]) {
+    return (fetch || _fetch)(...args).then(response =>
+        Object.assign(response, {
+            jsonp(callback) {
+                return this.text().then(body =>
+                    new Promise((resolve, reject) => {
+                        try {
+                            new Function(callback, body)(resolve);
+                        } catch (e) {
+                            reject(e);
+                        }
+                    }),
+                );
+            },
+        }),
     );
 }

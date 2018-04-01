@@ -10,7 +10,9 @@ import {
 
 import fetch from "./fetch";
 
-describe("utils/fecth", () => {
+describe("utils/fetch", () => {
+    const url = "https://stefanwimmer128.eu/";
+    
     it("json", () => {
         global.fetch = url =>
             new Promise(resolve =>
@@ -23,12 +25,12 @@ describe("utils/fecth", () => {
                 }),
             );
         
-        fetch("http://example.com/")
+        fetch(url)
             .then(body =>
                 body.json(),
             )
             .then(data =>
-                assert(data.url, "http://example.com/"),
+                assert(data.url, url),
             );
         
         delete global.fetch;
@@ -40,17 +42,18 @@ describe("utils/fecth", () => {
                 ({
                     text() {
                         return new Promise(resove =>
-                            resolve(`${init.jsonp}({ url: "${url}" })`),
+                            resolve(`ExampleData({ url: "${url}" })`),
                         );
                     },
                 }),
             );
         
-        fetch("http://example.com/", {
-            jsonp: "ExampleData",
-        })
+        fetch(url)
+            .then(body =>
+                body.jsonp("ExampleData"),
+            )
             .then(data =>
-                assert(data.url, "http://example.com/"),
+                assert(data.url, url),
             );
         
         delete global.fetch;
