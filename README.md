@@ -54,7 +54,7 @@ var OptionsParser = require("@stefanwimmer128/core/cjs/data/OptionsParser").defa
 ``` js
 /* Using AMD require */
 require([
-    "https://unpkg.com/@stefanwimmer128/core@2.2.1/dist/core.js",
+    "https://unpkg.com/@stefanwimmer128/core/dist/core.js",
 ], function (core) {
     /* ... */
 });
@@ -62,7 +62,7 @@ require([
 
 ``` html
 <!-- Using html <script>-tag -->
-<script src="https://unpkg.com/@stefanwimmer128/core@2.2.1/dist/core.js"></script>
+<script src="https://unpkg.com/@stefanwimmer128/core/dist/core.js"></script>
 ```
 
 ## Build custom bundle
