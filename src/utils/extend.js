@@ -1,16 +1,14 @@
 /* @flow */
 
 import {
-    forEach,
-    isFunction,
     isObject,
+    reduce,
 } from "lodash";
 
 export default function (target: any, ...sources: any[]): any {
-    forEach(sources, source => {
+    return reduce(sources, (target, source) => {
         if (isObject(source))
-            for (var key in source)
+            for(var key in source)
                 target[key] = source[key];
-    });
-    return target;
+    }, target);
 }
