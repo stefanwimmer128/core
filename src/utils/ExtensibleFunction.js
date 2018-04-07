@@ -1,7 +1,6 @@
 /* @flow */
 
 import {
-    every,
     isFunction,
 } from "lodash";
 
