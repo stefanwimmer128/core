@@ -13,7 +13,12 @@ const $index = createPrivate("index");
 const $resolver = createPrivate("resolver");
 
 export default class Iterator {
-    static $resolver = $resolver;
+    constructor(resolver: {
+        get(i: number): any,
+        size: number | () => number,
+    }) {
+        $resolver(this, resolver);
+    }
     
     static fromArray(array: any[]): Iterator {
         return new Iterator({
@@ -24,13 +29,6 @@ export default class Iterator {
                 return array.length;
             }
         });
-    }
-    
-    constructor(resolver: {
-        get(i: number): any,
-        size: number | () => number,
-    }) {
-        $resolver(this, resolver);
     }
     
     next(): {

@@ -7,32 +7,21 @@ import mocha from "gulp-mocha";
 import rename from "gulp-rename";
 import sourcemaps from "gulp-sourcemaps";
 import uglify from "gulp-uglify";
-import {
-    set,
-} from "lodash";
-import {
-    join,
-} from "path";
 
 import webpack from "./build/webpack";
-
-import {
-    version,
-} from "./package.json";
 
 gulp.task("clean", () =>
     del([
         "cjs/",
         "dist/",
-        "es6/",
+        "esm/",
     ]),
 );
 
-gulp.task("build-es6", () =>
+gulp.task("build:esm", () =>
     gulp.src("src/**/*.js")
         .pipe(sourcemaps.init())
         .pipe(babel({
-            babelrc: false,
             plugins: [
                 [
                     "babel-plugin-flow-runtime",
@@ -54,16 +43,15 @@ gulp.task("build-es6", () =>
             ],
         }))
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("es6/")),
+        .pipe(gulp.dest("esm/")),
 );
 
-gulp.task("build-js", () =>
-    gulp.src("es6/**/*.js")
+gulp.task("build:cjs", () =>
+    gulp.src("esm/**/*.js")
         .pipe(sourcemaps.init({
             loadMaps: true,
         }))
         .pipe(babel({
-            babelrc: false,
             plugins: [
                 "@babel/plugin-transform-modules-commonjs",
             ],
@@ -82,21 +70,12 @@ gulp.task("test", () =>
         ),
 );
 
-gulp.task("dist", () =>
-    webpack(),
+gulp.task("dist:development", () =>
+    webpack("", "core.js", "development"),
 );
 
-gulp.task("minify", () =>
-    gulp.src("dist/core.js")
-        .pipe(sourcemaps.init({
-            loadMaps: true,
-        }))
-        .pipe(rename({
-            suffix: ".min",
-        }))
-        .pipe(uglify())
-        .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("dist/")),
+gulp.task("dist:production", () =>
+    webpack("", "core.min.js", "production"),
 );
 
-gulp.task("default", gulp.series("clean", "build-es6", "build-js", "test", "dist", "minify"));
+gulp.task("default", gulp.series("clean", "build:esm", "build:cjs", "test", "dist:development", "dist:production"));

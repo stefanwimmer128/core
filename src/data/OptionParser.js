@@ -12,9 +12,6 @@ const $default = createPrivate("default");
 const $type = createPrivate("type");
 
 export default class OptionParser {
-    static $default = $default;
-    static $type = $type;
-    
     constructor(type?: DataType = DataType.ANY, _default?: any) {
         $default(this, _default);
         $type(this, type);

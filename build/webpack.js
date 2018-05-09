@@ -2,14 +2,16 @@ import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
 import {
     join,
 } from "path";
-import webpack from "webpack";
+import webpack, {
+    DefinePlugin,
+} from "webpack";
 
-export default function (entry = "", output = "core.js") {
+export default function (entry, output, mode) {
     return new Promise((resolve, reject) =>
         webpack({
             devtool: "source-map",
-            entry: `./${join("es6", entry)}`,
-            mode: "development",
+            entry: `./${join("esm", entry)}`,
+            mode,
             module: {
                 rules: [
                     {
@@ -27,6 +29,9 @@ export default function (entry = "", output = "core.js") {
                 path: join(__dirname, "../dist"),
             },
             plugins: [
+                new DefinePlugin({
+                    "process.env.NODE_ENV": mode,
+                }),
                 new FriendlyErrorsWebpackPlugin(),
             ],
         }, (err, stats) => {

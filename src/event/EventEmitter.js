@@ -15,8 +15,6 @@ import type {
 const $events = createPrivate("events");
 
 export default class EventEmitter {
-    static $events = $events;
-    
     constructor() {
         $events(this, new Map());
     }

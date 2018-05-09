@@ -13,8 +13,6 @@ import type {
 const $listeners = createPrivate("listeners");
 
 export default class Event {
-    static $listeners = $listeners;
-    
     constructor() {
         $listeners(this, new Set());
     }

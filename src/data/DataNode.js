@@ -15,10 +15,6 @@ const $type = createPrivate("type");
 const $value = createPrivate("value");
 
 export default class DataNode {
-    static $nodes = $nodes;
-    static $type = $type;
-    static $value = $value;
-    
     constructor(type?: DataType = DataType.ANY, value?: any) {
         $nodes(this, new Map());
         $type(this, type);

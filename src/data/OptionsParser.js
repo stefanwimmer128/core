@@ -13,8 +13,6 @@ import OptionParser from "./OptionParser";
 const $options = createPrivate("options");
 
 export default class OptionsParser extends OptionParser {
-    static $options = $options;
-    
     constructor() {
         super(DataType.OBJECT, {});
         

@@ -8,33 +8,42 @@ import {
     it,
 } from "mocha";
 
-import createEnum from "./createEnum";
+import Enum from "./Enum";
 
-describe("class/createEnum", () => {
-    const Color = createEnum([
-        "BLACK",
-        [ "RED", 1, 0, 0 ],
-        [ "GREEN", 0, 1, 0 ],
-        [ "BLUE", 0, 0, 1 ],
-    ], function (r = 0, g = 0, b = 0) {
-        this._r = r;
-        this._g = g;
-        this._b = b;
-    }, {
+describe("class/Enum", () => {
+    class Color extends Enum {
+        constructor(name, r = 0, g = 0, b = 0) {
+            super(name);
+            
+            this.__r__ = r;
+            this.__g__ = g;
+            this.__b__ = b;
+        }
+        
         getR() {
-            return this._r;
-        },
+            return this.__r__;
+        }
+        
         getG() {
-            return this._g;
-        },
+            return this.__g__;
+        }
+        
         getB() {
-            return this._b;
-        },
-    });
+            return this.__b__;
+        }
+    }
+    
+    new Color("BLACK");
+    new Color("RED", 1, 0, 0);
+    new Color("GREEN", 0, 1, 0);
+    new Color("BLUE", 0, 0, 1);
     
     it("test for default enum usages", () => {
         assert.strictEqual(Color.BLACK, Color.BLACK);
         assert.notStrictEqual(Color.BLACK, Color.RED);
+        
+        assert.instanceOf(Color.BLACK, Color);
+        assert.instanceOf(Color.BLACK, Enum);
     });
     
     it("properties available", () => {

@@ -6,9 +6,6 @@ const $parent = createPrivate("parent");
 const $transformer = createPrivate("transformer");
 
 export default class Stream {
-    static $parent = $parent;
-    static $transformer = $transformer;
-    
     constructor(parent?: Stream) {
         $parent(this, parent);
         

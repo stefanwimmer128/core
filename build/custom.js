@@ -22,6 +22,10 @@ yargs.usage("$0 [build...]", "Build custom bundle",
             default: [],
             type: "string",
         })
+        .option("mode", {
+            default: "development",
+            type: "string",
+        })
         .example("$0 event", "Bundle ./es6/event/index.js to dist/event.js")
         .example("$0 class/createPrivate:private", "Bundle ./class/createPrivate.js to dist/private.js")
         .epilog("More information: https://yarn.pm/@stefanwimmer128/core"),
@@ -42,7 +46,7 @@ yargs.usage("$0 [build...]", "Build custom bundle",
                         
                         console.log(`${entry} -> ${output}`);
                         
-                        await webpack(entry, output);
+                        await webpack(entry, output, argv.mode);
                         
                         await new Promise(resolve =>
                             gulp.src(join("dist", output))
