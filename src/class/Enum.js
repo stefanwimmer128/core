@@ -13,6 +13,9 @@ export default class Enum {
         if (this.constructor === Enum)
             throw new RuntimeError("Enum can't be initialized directly");
         
+        if (name in this.constructor)
+            throw new RuntimeError("`name` already exists on enum");
+        
         $name(this, name);
         
         this.constructor[name] = this;
@@ -24,8 +27,8 @@ export default class Enum {
     }
     
     static valueOf(name: string): ?Enum {
-        return val($values(this), values => {
-            for (let i = 0; i < (values || []).length; i++)
+        return val(this.values(), values => {
+            for (let i = 0; i < values.length; i++)
                 if (values[i].name() === name)
                     return values[i];
             return null;
