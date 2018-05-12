@@ -1,6 +1,6 @@
 {
   "name": "@stefanwimmer128/core",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Complex features made easy",
   "main": "./cjs",
   "module": "./esm",
@@ -31,7 +31,7 @@
     "babel-plugin-lodash": "^3.3.2",
     "chai": "^4.1.2",
     "del": "^3.0.0",
-    "flow-bin": "^0.71.0",
+    "flow-bin": "^0.72.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0-beta.2",
@@ -42,7 +42,7 @@
     "gulp-uglify": "^3.0.0",
     "mocha": "^5.1.1",
     "source-map-loader": "^0.2.3",
-    "webpack": "^4.8.1",
+    "webpack": "^4.8.2",
     "yargs": "^11.1.0"
   },
   "dependencies": {

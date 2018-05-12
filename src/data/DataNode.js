@@ -1,10 +1,6 @@
 /* @flow */
 
 import Map from "core-js/library/es6/map";
-import {
-    isString,
-    isUndefined,
-} from "lodash";
 
 import createPrivate from "../class/createPrivate";
 
@@ -19,7 +15,7 @@ export default class DataNode {
         $nodes(this, new Map());
         $type(this, type);
         
-        if (! isUndefined(value))
+        if (1 in arguments)
             this.value(value);
     }
     
@@ -49,10 +45,13 @@ export default class DataNode {
         return $nodes(this).size;
     }
     
-    value(value?: any, _delete?: boolean) {
-        if (! _delete && ! isUndefined(value) && ! $type(this).validate(value))
-            throw new TypeError("value does not conform with DataType");
+    value(value?: any) {
+        if (0 in arguments)
+            if (! $type(this).validate(value))
+                throw new TypeError("value does not conform with DataType");
+            else
+                $value(this, value)
         
-        return $value(this, value, _delete);
+        return $value(this);
     }
 }
