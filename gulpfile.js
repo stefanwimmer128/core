@@ -7,6 +7,7 @@ const mocha = require("gulp-mocha");
 const rename = require("gulp-rename");
 const sourcemaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify");
+const path = require("path");
 const rollup = require("rollup-stream");
 const rollupCommonjs = require("rollup-plugin-commonjs");
 const rollupReplace = require("rollup-plugin-replace");
@@ -100,6 +101,10 @@ function rollupConfig(env) {
     };
 }
 
+function mapSources(src, file) {
+    return `./${path.join(path.basename(file.path), "src", src)}`;
+}
+
 gulp.task("bundle:development", () =>
     rollup(rollupConfig("development"))
     .pipe(source("index.js", "./esm"))
@@ -108,7 +113,7 @@ gulp.task("bundle:development", () =>
         loadMaps: true,
     }))
     .pipe(rename("core.js"))
-    .pipe(sourcemaps.mapSources(path => `./core/src/${path}`))
+    .pipe(sourcemaps.mapSources(mapSources))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("dist/")),
 );
@@ -122,7 +127,7 @@ gulp.task("bundle:production", () =>
     }))
     .pipe(uglify())
     .pipe(rename("core.min.js"))
-    .pipe(sourcemaps.mapSources(path => `./core/src/${path}`))
+    .pipe(sourcemaps.mapSources(mapSources))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("dist/")),
 );
