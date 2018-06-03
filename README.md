@@ -3,9 +3,9 @@
 Complex features made easy
 
 ``` bash
-$ yarn add [-D] @stefanwimmer128/core
+$ yarn add [-D] @stefanwimmer128/core@next
 # or
-$ npm i -D @stefanwimmer128/core
+$ npm i -D @stefanwimmer128/core@next
 ```
 
 ## ES6 import
