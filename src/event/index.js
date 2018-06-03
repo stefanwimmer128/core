@@ -1,4 +1,4 @@
 /* @flow */
 
-export Event from "./Event";
-export EventEmitter from "./EventEmitter";
+export { default as Event } from "./Event";
+export { default as EventEmitter } from "./EventEmitter";

@@ -10,6 +10,7 @@ export default function createPrivate(name: string) {
             object[symbol] = value;
         return object[symbol];
     }, $private =>
+        // $FlowFixMe
         Object.defineProperty($private, "symbol", {
             configurable: true,
             enumerable: true,

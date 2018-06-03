@@ -43,6 +43,7 @@ describe("data/Iterator", () => {
         const map = new Map();
         map.set(0, 0);
         map.set(1, 1);
+        // $FlowFixMe
         const itr = new Iterator(map);
         
         it("map: next -> 0", () => {

@@ -26,7 +26,7 @@ export default class Iterator {
             },
             size() {
                 return array.length;
-            }
+            },
         });
     }
     
@@ -42,6 +42,7 @@ export default class Iterator {
         };
     }
     
+    // $FlowFixMe
     [Symbol.iterator](): this {
         return this;
     }

@@ -1,4 +1,4 @@
 /* @flow */
 
-export createPrivate from "./createPrivate";
-export Enum from "./Enum";
+export { default as createPrivate } from "./createPrivate";
+export { default as Enum } from "./Enum";

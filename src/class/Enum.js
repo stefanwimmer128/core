@@ -12,8 +12,8 @@ export default class Enum {
         if (this.constructor === Enum)
             throw new TypeError("Invalid constructor Enum");
         
-        if (name in this.constructor)
-            throw new TypeError("`name` already exists on constructor");
+        if (this.constructor.valueOf(name))
+            throw new TypeError(`Enum "${name}" already exists`);
         
         $name(this, name);
         

@@ -1,5 +1,5 @@
 /* @flow */
 
-export extend from "./extend";
-export jsonp from "./jsonp";
-export val from "./val";
+export { default as extend } from "./extend";
+export { default as jsonp } from "./jsonp";
+export { default as val } from "./val";

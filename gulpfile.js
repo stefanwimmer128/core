@@ -43,7 +43,12 @@ gulp.task("build:esm", () => gulp
                 },
             ],
             "@babel/preset-flow",
-            "@babel/preset-stage-0",
+            [
+                "@babel/preset-stage-0",
+                {
+                    loose: true,
+                },
+            ],
         ],
     }))
     .pipe(sourcemaps.write("."))

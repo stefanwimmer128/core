@@ -1,6 +1,6 @@
 /* @flow */
 
-export DataNode from "./DataNode";
-export DataType from "./DataType";
-export OptionParser from "./OptionParser";
-export OptionsParser from "./OptionsParser";
+export { default as DataNode } from "./DataNode";
+export { default as DataType } from "./DataType";
+export { default as OptionParser } from "./OptionParser";
+export { default as OptionsParser } from "./OptionsParser";

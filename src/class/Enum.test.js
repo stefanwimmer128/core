@@ -12,6 +12,15 @@ import Enum from "./Enum";
 
 describe("class/Enum", () => {
     class Color extends Enum {
+        static BLACK: Color;
+        static RED: Color;
+        static GREEN: Color;
+        static BLUE: Color;
+        
+        __r__: number;
+        __g__: number;
+        __b__: number;
+        
         constructor(name, r = 0, g = 0, b = 0) {
             super(name);
             
@@ -20,15 +29,15 @@ describe("class/Enum", () => {
             this.__b__ = b;
         }
         
-        getR() {
+        getR(): number {
             return this.__r__;
         }
         
-        getG() {
+        getG(): number {
             return this.__g__;
         }
         
-        getB() {
+        getB(): number {
             return this.__b__;
         }
     }
