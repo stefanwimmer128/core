@@ -77,9 +77,7 @@ gulp.task("test", () => gulp
 function rollupConfig(env) {
     return {
         cache: rollupConfig.cache,
-        format: "umd",
         input: "./esm/index.js",
-        name: "core",
         plugins: [
             rollupSourcemaps(),
             rollupReplace({
@@ -90,6 +88,9 @@ function rollupConfig(env) {
                 browser: true,
             }),
         ],
+        
+        format: "umd",
+        name: "core",
         sourcemap: true,
     };
 }
