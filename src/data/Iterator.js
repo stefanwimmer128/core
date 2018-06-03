@@ -1,6 +1,5 @@
 /* @flow */
 
-import Symbol from "core-js/library/es6/symbol";
 import {
     isFunction,
 } from "lodash";
@@ -9,8 +8,8 @@ import createPrivate from "../class/createPrivate";
 
 import val from "../utils/val";
 
-const $index = createPrivate("index");
-const $resolver = createPrivate("resolver");
+const $index = createPrivate("index"),
+    $resolver = createPrivate("resolver");
 
 export default class Iterator {
     constructor(resolver: {

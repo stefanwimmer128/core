@@ -1,8 +1,5 @@
 /* @flow */
 
-import Symbol from "core-js/library/es6/symbol";
-
-import extend from "../utils/extend";
 import val from "../utils/val";
 
 export default function createPrivate(name: string) {

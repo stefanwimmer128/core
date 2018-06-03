@@ -2,8 +2,8 @@
 
 import createPrivate from "../class/createPrivate";
 
-const $parent = createPrivate("parent");
-const $transformer = createPrivate("transformer");
+const $parent = createPrivate("parent"),
+    $transformer = createPrivate("transformer");
 
 export default class Stream {
     constructor(parent?: Stream) {

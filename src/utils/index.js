@@ -1,6 +1,5 @@
 /* @flow */
 
 export extend from "./extend";
-export ExtensibleFunction from "./ExtensibleFunction";
-export fetch from "./fetch";
+export jsonp from "./jsonp";
 export val from "./val";

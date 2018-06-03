@@ -8,8 +8,8 @@ import createPrivate from "../class/createPrivate";
 
 import DataType from "./DataType";
 
-const $default = createPrivate("default");
-const $type = createPrivate("type");
+const $default = createPrivate("default"),
+    $type = createPrivate("type");
 
 export default class OptionParser {
     constructor(type?: DataType = DataType.ANY, _default?: any) {

@@ -1,14 +1,12 @@
 /* @flow */
 
-import Map from "core-js/library/es6/map";
-
 import createPrivate from "../class/createPrivate";
 
 import DataType from "./DataType";
 
-const $nodes = createPrivate("nodes");
-const $type = createPrivate("type");
-const $value = createPrivate("value");
+const $nodes = createPrivate("nodes"),
+    $type = createPrivate("type"),
+    $value = createPrivate("value");
 
 export default class DataNode {
     constructor(type?: DataType = DataType.ANY, value?: any) {

@@ -1,7 +1,5 @@
 /* @flow */
 
-import Set from "core-js/library/es6/set";
-
 import createPrivate from "../class/createPrivate";
 
 import val from "../utils/val";

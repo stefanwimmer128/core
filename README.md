@@ -4,7 +4,8 @@ Complex features made easy
 
 ``` bash
 $ yarn add [-D] @stefanwimmer128/core
-$ npm install [-S|-D] @stefanwimmer128/core
+# or
+$ npm i -D @stefanwimmer128/core
 ```
 
 ## ES6 import
@@ -13,29 +14,7 @@ $ npm install [-S|-D] @stefanwimmer128/core
 import * as core from "@stefanwimmer128/core";
 
 /* import single feature */
-import OptionsParser from "@stefanwimmer128/core/es6/data/OptionsParser.js";
-```
-
-## Using [Webpack](https://webpack.js.org/)
-
-``` js
-import * as core from "@stefanwimmer128/core";
-
-/* import single feature: */
-import OptionsParser from "@stefanwimmer128/core/data/OptionsParser";
-```
-
-For this you have to add the following configuration to `webpack.config.js`:
-
-``` js
-module.export = {
-    /* ... */
-    resolve: {
-        alias: {
-            "@stefanwimmer128/core": "@stefanwimmer128/core/es6",
-        },
-    },
-}
+import OptionsParser from "@stefanwimmer128/core/esm/data/OptionsParser.js";
 ```
 
 ## CommonJS require
@@ -63,11 +42,4 @@ require([
 ``` html
 <!-- Using html <script>-tag -->
 <script src="https://unpkg.com/@stefanwimmer128/core/dist/core.js"></script>
-```
-
-## Build custom bundle
-
-``` bash
-$ yarn custom -h
-$ npm run custom -- -h
 ```
