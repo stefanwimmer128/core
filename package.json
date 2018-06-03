@@ -4,8 +4,7 @@
   "description": "Complex features made easy",
   "main": "./cjs",
   "module": "./esm",
-  "unpkg": "./dist/core.js",
-  "jsdelivr": "./dist/core.js",
+  "browser": "./dist/core.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stefanwimmer128/core.git"
