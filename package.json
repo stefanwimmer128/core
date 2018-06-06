@@ -5,6 +5,9 @@
   "main": "./cjs",
   "module": "./esm",
   "browser": "./dist/core.js",
+  "scripts": {
+    "custom": "./build/custom.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stefanwimmer128/core.git"
@@ -41,7 +44,8 @@
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-stream": "^1.24.1",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "vinyl-source-stream": "^2.0.0",
+    "yargs": "^11.0.0"
   },
   "dependencies": {
     "@babel/runtime": "7.0.0-beta.44",
