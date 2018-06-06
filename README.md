@@ -43,3 +43,29 @@ require([
 <!-- Using html <script>-tag -->
 <script src="https://unpkg.com/@stefanwimmer128/core@next/dist/core.js"></script>
 ```
+
+## Custom bundles
+
+``` bash
+$ yarn run custom [-h|--help] [-v|--version] [-e|--env]
+```
+
+`-e` or `--env` will set the build environment (default: `process.env.NODE_ENV` or `development`, `production` will minify build).
+
+``` bash
+$ yarn run custom ./utils/jsonp.js
+```
+
+Bundle ./esm/event/index.js to ./dist/jsonp.js, Exposed globaly as `jsonp`
+
+``` bash
+$ yarn run custom ./class/createPrivate:private
+```
+
+Bundle ./esm/class/createPrivate.js to ./dist/private.js, Exposed globaly as `private`
+
+``` bash
+$ yarn run ./class/index.js:./class.js:\$class
+```
+
+Bundle ./esm/class/index.js to ./dist/class.js, Exposed globaly `$class`

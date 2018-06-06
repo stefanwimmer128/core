@@ -29,7 +29,7 @@ yargs.usage("$0 [build...]", "Build custom bundle",
         })
         .example("$0 ./utils/jsonp.js", "Bundle ./esm/event/index.js to ./dist/jsonp.js, Exposed globaly as `jsonp`")
         .example("$0 ./class/createPrivate:private", "Bundle ./esm/class/createPrivate.js to ./dist/private.js, Exposed globaly as `private`")
-        .example("$0 ./class/index.js:./class.js:$class", "Bundle ./esm/class/index.js to ./dist/class.js, Exposed globaly `$class`")
+        .example("$0 ./class/index.js:./class.js:\$class", "Bundle ./esm/class/index.js to ./dist/class.js, Exposed globaly `$class`")
         .epilog("More information: https://yarn.pm/@stefanwimmer128/core"),
     argv => {
         if (argv.build.length > 0) {
