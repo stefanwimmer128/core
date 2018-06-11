@@ -59,13 +59,13 @@ $ yarn run custom ./utils/jsonp.js
 Bundle `./esm/event/index.js` to `./dist/jsonp.js`, Exposed globaly as `jsonp`
 
 ``` bash
-$ yarn run custom ./class/createPrivate:private
+$ yarn run custom ./class/createPrivate.js:private.js
 ```
 
 Bundle `./esm/class/createPrivate.js` to `./dist/private.js`, Exposed globaly as `private`
 
 ``` bash
-$ yarn run ./class/index.js:./class.js:\$class
+$ yarn run ./class/index.js:class.js:\$class
 ```
 
 Bundle `./esm/class/index.js` to `./dist/class.js`, Exposed globaly `$class`
