@@ -23,6 +23,7 @@ gulp.task("build:esm", () =>
         .pipe(sourcemaps.init())
         .pipe(babel({
             plugins: [
+                "@babel/plugin-proposal-export-namespace-from",
                 "@babel/plugin-transform-runtime",
                 [
                     "babel-plugin-flow-runtime",
@@ -40,12 +41,6 @@ gulp.task("build:esm", () =>
                     },
                 ],
                 "@babel/preset-flow",
-                [
-                    "@babel/preset-stage-0",
-                    {
-                        loose: true,
-                    },
-                ],
             ],
         }))
         .pipe(sourcemaps.write("."))
