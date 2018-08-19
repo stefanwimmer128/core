@@ -29,6 +29,7 @@ module.exports = function _rollup(input, output, env, name) {
         format: "umd",
         name,
         sourcemap: true,
+        sourcemapFile: path.basename(output),
     })
         .pipe(source(path.basename(input), `./${path.dirname(input)}`))
         .pipe(buffer())
@@ -40,13 +41,6 @@ module.exports = function _rollup(input, output, env, name) {
         stream = stream.pipe(uglify());
     
     return stream.pipe(rename(path.basename(output)))
-        .pipe(sourcemaps.mapSources((src, file) => {
-            if (! /node_modules/.test(src) && path.dirname(src) !== ".")
-                for (let i = 0; i < path.dirname(src).split("/").length / 2; i++)
-                    src = path.join(path.dirname(src), "..", path.basename(src));
-            
-            return `./${path.join(path.basename(file.path), "src", src)}`;
-        }))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest(path.dirname(output)));
 };

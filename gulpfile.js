@@ -56,6 +56,7 @@ gulp.task("build:cjs", () =>
         .pipe(babel({
             plugins: [
                 "@babel/plugin-transform-modules-commonjs",
+                "@babel/plugin-transform-runtime",
             ],
         }))
         .pipe(sourcemaps.write("."))
