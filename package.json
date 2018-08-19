@@ -1,6 +1,6 @@
 {
   "name": "@stefanwimmer128/core",
-  "version": "3.0.0-beta.1",
+  "version": "3.0.0-rc.1",
   "description": "Complex features made easy",
   "main": "./cjs",
   "module": "./esm",
