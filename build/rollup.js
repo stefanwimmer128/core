@@ -4,6 +4,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const uglify = require("gulp-uglify");
 const path = require("path");
 const rollup = require("rollup-stream");
+const rollupAlias = require("rollup-plugin-alias");
 const rollupCommonjs = require("rollup-plugin-commonjs");
 const rollupReplace = require("rollup-plugin-replace");
 const rollupResolve = require("rollup-plugin-node-resolve");
@@ -20,10 +21,11 @@ module.exports = function _rollup(input, output, env, name) {
             rollupReplace({
                 "process.env.NODE_ENV": JSON.stringify(env),
             }),
-            rollupCommonjs(),
-            rollupResolve({
-                browser: true,
+            rollupAlias({
+                "flow-runtime": require.resolve("flow-runtime/dist/flow-runtime.umd.js"),
             }),
+            rollupResolve(),
+            rollupCommonjs(),
         ],
         
         format: "umd",
