@@ -25,7 +25,14 @@ module.exports = function _rollup(input, output, env, name) {
                 "flow-runtime": require.resolve("flow-runtime/dist/flow-runtime.umd.js"),
             }),
             rollupResolve(),
-            rollupCommonjs(),
+            rollupCommonjs({
+                namedExports: {
+                    "node_modules/flow-runtime/dist/flow-runtime.umd.js": [
+                        "reify",
+                        "Type",
+                    ],
+                },
+            }),
         ],
         
         format: "umd",
