@@ -1,5 +1,5 @@
 /* @flow */
 
-export default function val(val: any, fn: (val: any) => any): any {
-    return fn(val);
+export default function val(...args: any[]): any {
+    return args[args.length - 1](...args.slice(0, -1));
 }
