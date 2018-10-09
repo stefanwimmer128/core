@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@stefanwimmer128/core-builder",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "./lib",
   "dependencies": {
     "@babel/core": "^7.1.2",
