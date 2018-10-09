@@ -29,5 +29,9 @@
     "@stefanwimmer128/core-class": "^3.0.0",
     "@stefanwimmer128/core-utils": "^3.0.0",
     "flow-runtime": "^0.17.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "7aedbe181ec40819f45dc2b7686c3e407f999372"
 }

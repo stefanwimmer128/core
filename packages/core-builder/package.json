@@ -40,5 +40,8 @@
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-cli": "^2.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
