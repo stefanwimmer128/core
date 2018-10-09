@@ -1,71 +1,29 @@
-# @stefanwimmer128/core
+# core
 
 Complex features made easy
 
-``` bash
-$ yarn add [-D] @stefanwimmer128/core@next
-# or
-$ npm i -D @stefanwimmer128/core@next
-```
+## Packages
 
-## ES6 import
+Published packages:
 
-``` js
-import * as core from "@stefanwimmer128/core";
+- [@stefanwimmer128/core](packages/core/)
+- [@stefanwimmer128/core-class](packages/core-class/)
+- [@stefanwimmer128/core-data](packages/core-data/)
+- [@stefanwimmer128/core-event](packages/core-event/)
+- [@stefanwimmer128/core-types](packages/core-types/)
+- [@stefanwimmer128/core-utils](packages/core-utils/)
 
-/* import single feature */
-import OptionsParser from "@stefanwimmer128/core/esm/data/OptionsParser.js";
-```
+Private packages
 
-## CommonJS require
+- [@stefanwimmer128/core-builder](packages/core-builder/)
 
-``` js
-var core = require("@stefanwimmer128/core");
+## How to contribute?
 
-/* import single feature: */
-var OptionsParser = require("@stefanwimmer128/core/cjs/data/OptionsParser").default;
-```
+To contribute you need [Yarn](https://yarnpkg.com/).
 
-## UMD bundle
-
-`dist/core.js` and `dist/core.min.js` are UMD bundles.
-
-``` js
-/* Using AMD require */
-require([
-    "https://unpkg.com/@stefanwimmer128/core@next/dist/core.js",
-], function (core) {
-    /* ... */
-});
-```
-
-``` html
-<!-- Using html <script>-tag -->
-<script src="https://unpkg.com/@stefanwimmer128/core@next/dist/core.js"></script>
-```
-
-## Custom bundles
-
-``` bash
-$ yarn run custom [-h|--help] [-v|--version] [-e|--env]
-```
-
-`-e` or `--env` will set the build environment (default: `process.env.NODE_ENV` or `development`, `production` will minify build).
-
-``` bash
-$ yarn run custom ./utils/jsonp.js
-```
-
-Bundle `./esm/event/index.js` to `./dist/jsonp.js`, Exposed globaly as `jsonp`
-
-``` bash
-$ yarn run custom ./class/createPrivate.js:private.js
-```
-
-Bundle `./esm/class/createPrivate.js` to `./dist/private.js`, Exposed globaly as `private`
-
-``` bash
-$ yarn run ./class/index.js:class.js:\$class
-```
-
-Bundle `./esm/class/index.js` to `./dist/class.js`, Exposed globaly `$class`
+1. Fork and/or clone this repository
+2. Install dependencies: `$ yarn`
+3. Make changes to the source code in `packages/*/src`
+4. Build changes:
+    - For single package: `$ yarn workspace {package} gulp`
+    - For entire repository: `$ ./build.sh`

@@ -1,0 +1,36 @@
+{
+  "name": "@stefanwimmer128/core",
+  "version": "3.0.0-rc.3",
+  "description": "Complex features made easy - Meta Package",
+  "main": "./cjs",
+  "module": "./esm",
+  "browser": "./dist/core.js",
+  "unpkg": "./dist/core.js",
+  "jsdelivr": "./dist/core.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanwimmer128/core.git"
+  },
+  "author": "Stefan Wimmer <info@stefanwimmer128.eu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefanwimmer128/core/issues"
+  },
+  "homepage": "https://github.com/stefanwimmer128/core/tree/master/packages/core",
+  "devDependencies": {
+    "@stefanwimmer128/core-builder": "^3.0.0-rc.3",
+    "gulp-cli": "^2.0.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.1.2",
+    "@stefanwimmer128/core-class": "^3.0.0-rc.3",
+    "@stefanwimmer128/core-data": "^3.0.0-rc.3",
+    "@stefanwimmer128/core-event": "^3.0.0-rc.3",
+    "@stefanwimmer128/core-types": "^3.0.0-rc.3",
+    "@stefanwimmer128/core-utils": "^3.0.0-rc.3",
+    "flow-runtime": "^0.17.0"
+  }
+}
