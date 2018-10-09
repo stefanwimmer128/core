@@ -2,10 +2,7 @@
   "private": true,
   "name": "@stefanwimmer128/core-builder",
   "version": "3.0.0",
-  "main": "./build",
-  "scripts": {
-    "build": "gulp"
-  },
+  "main": "./lib",
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
@@ -22,24 +19,14 @@
     "gulp-replace": "^1.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "mocha": "^5.2.0",
-    "rollup": "^0.66.4",
+    "rollup": "^0.66.5",
     "rollup-plugin-alias": "^1.4.0",
-    "rollup-plugin-commonjs": "8.4.1",
+    "rollup-plugin-commonjs": "9.1.8",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-uglify": "^6.0.0",
     "source-map-support": "^0.5.9"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "babel-plugin-add-module-exports": "^1.0.0",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-cli": "^2.0.1"
   },
   "publishConfig": {
     "access": "public"

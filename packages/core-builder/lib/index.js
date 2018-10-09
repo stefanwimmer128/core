@@ -1,16 +1,16 @@
-/* @flow*/
+/* @flow */
 
-import del from "del";
-import gulp from "gulp";
-import babel from "gulp-babel";
-import replace from "gulp-replace";
-import sourcemaps from "gulp-sourcemaps";
+const del = require("del");
+const gulp = require("gulp");
+const babel = require("gulp-babel");
+const replace = require("gulp-replace");
+const sourcemaps = require("gulp-sourcemaps");
 
-import mocha from "./mocha";
-import rollup from "./rollup";
+const mocha = require("./mocha");
+const rollup = require("./rollup");
 
 // $FlowFixMe
-export default function (options) {
+module.exports = function (options) {
     gulp.task("clean", () =>
         del([
             "esm/",
@@ -22,7 +22,7 @@ export default function (options) {
     gulp.task("build:esm", () =>
         gulp.src("src/**/*.js")
             .pipe(sourcemaps.init())
-            .pipe(replace(/@stefanwimmer128\/.*\/src/g, match =>
+            .pipe(replace(/@stefanwimmer128\/.+\/src/g, match =>
                 match.replace("/src", "/esm"),
             ))
             .pipe(babel({
@@ -56,7 +56,7 @@ export default function (options) {
             .pipe(sourcemaps.init({
                 loadMaps: true,
             }))
-            .pipe(replace(/@stefanwimmer128\/.*\/esm/g, match =>
+            .pipe(replace(/@stefanwimmer128\/.+\/esm/g, match =>
                 match.replace("/esm", "/cjs"),
             ))
             .pipe(babel({
@@ -81,12 +81,12 @@ export default function (options) {
         rollup(options.bundle, "production"),
     );
     
-    gulp.task("default", gulp.series(...[
+    gulp.task("default", gulp.series(...([
         "clean",
         "build:esm",
         "build:cjs",
         ...(options.test === false ? [] : ["test"]),
         "bundle:development",
         "bundle:production",
-    ]));
+    ])));
 };

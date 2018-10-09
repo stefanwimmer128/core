@@ -5,7 +5,7 @@ import val from "@stefanwimmer128/core-utils/src/val";
 
 import type {
     EventListener,
-} from "@stefanwimmer128/core-types";
+} from "@stefanwimmer128/core-types/src";
 
 import Event from "./Event";
 

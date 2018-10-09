@@ -1,20 +1,20 @@
 /* @flow */
 
-import {
+const {
     spawn,
-} from "child_process";
-import _glob from "glob";
-import {
+} = require("child_process");
+const _glob = require("glob");
+const {
     dirname,
     join,
-} from "path";
-import {
+} = require("path");
+const {
     promisify,
-} from "util";
+} = require("util");
 
 const glob = promisify(_glob);
 
-export default async function _mocha() {
+module.exports = async function _mocha() {
     await new Promise(async (resolve, reject) =>
         spawn(join(dirname(require.resolve("mocha")), "bin/mocha"), [
             "--require", "source-map-support/register",
@@ -27,4 +27,4 @@ export default async function _mocha() {
             ),
         ),
     );
-}
+};

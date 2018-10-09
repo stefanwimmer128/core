@@ -1,23 +1,19 @@
-/* @flow*/
+/* @flow */
 
-import {
-    join,
-    relative,
-} from "path";
-import {
+const {
     rollup,
-} from "rollup";
-import alias from "rollup-plugin-alias";
-import commonjs from "rollup-plugin-commonjs";
-import replace from "rollup-plugin-replace";
-import resolve from "rollup-plugin-node-resolve";
-import sourcemaps from "rollup-plugin-sourcemaps";
-import {
+} = require("rollup");
+const alias = require("rollup-plugin-alias");
+const commonjs = require("rollup-plugin-commonjs");
+const replace = require("rollup-plugin-replace");
+const resolve = require("rollup-plugin-node-resolve");
+const sourcemaps = require("rollup-plugin-sourcemaps");
+const {
     uglify,
-} from "rollup-plugin-uglify";
+} = require("rollup-plugin-uglify");
 
 // $FlowFixMe
-export default async function _rollup(options, env) {
+module.exports = async function _rollup(options, env) {
     const filename = options.basename + (env === "development" ? ".js" : ".min.js");
     
     await (await rollup({

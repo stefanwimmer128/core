@@ -8,5 +8,7 @@
 
 [options]
 esproposal.export_star_as=enable
+experimental.const_params=true
+module.use_strict=true
 
-[strict]
+[version]

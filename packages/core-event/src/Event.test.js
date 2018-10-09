@@ -10,7 +10,7 @@ import {
 
 import type {
     EventArgument,
-} from "@stefanwimmer128/core-types";
+} from "@stefanwimmer128/core-types/src";
 
 import Event from "./Event";
 
