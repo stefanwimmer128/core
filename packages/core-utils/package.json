@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "@stefanwimmer128/core-types": "^3.0.0",
     "flow-runtime": "^0.17.0",
     "lodash": "^4.17.11"
   },
