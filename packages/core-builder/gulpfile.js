@@ -7,7 +7,7 @@ const babel = require("gulp-babel");
 gulp.task("clean", () =>
     del([
         "build/",
-    ])
+    ]),
 );
 
 gulp.task("build", () =>

@@ -40,7 +40,7 @@ export default async function _rollup(options, env) {
                     ],
                 },
             }),
-            ...(env === "production" ? [uglify()] : []),
+            ...(env === _rollup.PRODUCTION ? [uglify()] : []),
         ],
     })).write({
         format: "umd",
@@ -50,3 +50,7 @@ export default async function _rollup(options, env) {
         sourcemap: true,
     });
 };
+
+// $FlowFixMe
+_rollup.DEVELOPMENT = "development";
+_rollup.PRODUCTION = "production";

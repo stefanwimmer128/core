@@ -74,11 +74,11 @@ export default function (options) {
     );
     
     gulp.task("bundle:development", () =>
-        rollup(options.bundle, "development"),
+        rollup(options.bundle, rollup.DEVELOPMENT),
     );
     
     gulp.task("bundle:production", () =>
-        rollup(options.bundle, "production"),
+        rollup(options.bundle, rollup.PRODUCTION),
     );
     
     gulp.task("default", gulp.series(...[
