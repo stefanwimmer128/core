@@ -21,12 +21,12 @@
   },
   "homepage": "https://stefanwimmer128.github.io/core",
   "devDependencies": {
-    "@stefanwimmer128/core-builder": "^3.1.0",
-    "gulp-cli": "^2.0.1"
+    "@stefanwimmer128/core-builder": "3.1.0",
+    "gulp-cli": "2.0.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.2",
-    "flow-runtime": "^0.17.0"
+    "@babel/runtime": "7.1.5",
+    "flow-runtime": "0.17.0"
   },
   "publishConfig": {
     "access": "public"

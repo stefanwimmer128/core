@@ -21,17 +21,17 @@
   },
   "homepage": "https://github.com/stefanwimmer128/core/tree/master/packages/core",
   "devDependencies": {
-    "@stefanwimmer128/core-builder": "^3.1.0",
-    "gulp-cli": "^2.0.1"
+    "@stefanwimmer128/core-builder": "3.1.0",
+    "gulp-cli": "2.0.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.2",
-    "@stefanwimmer128/core-class": "^3.1.0",
-    "@stefanwimmer128/core-data": "^3.1.0",
-    "@stefanwimmer128/core-event": "^3.1.0",
-    "@stefanwimmer128/core-types": "^3.1.0",
-    "@stefanwimmer128/core-utils": "^3.1.0",
-    "flow-runtime": "^0.17.0"
+    "@babel/runtime": "7.1.5",
+    "@stefanwimmer128/core-class": "3.1.0",
+    "@stefanwimmer128/core-data": "3.1.0",
+    "@stefanwimmer128/core-event": "3.1.0",
+    "@stefanwimmer128/core-types": "3.1.0",
+    "@stefanwimmer128/core-utils": "3.1.0",
+    "flow-runtime": "0.17.0"
   },
   "publishConfig": {
     "access": "public"

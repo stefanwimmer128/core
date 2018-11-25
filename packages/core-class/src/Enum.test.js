@@ -21,7 +21,7 @@ describe("class/Enum", () => {
         __g__: number;
         __b__: number;
         
-        constructor(name, r = 0, g = 0, b = 0) {
+        constructor(name: string, r: number = 0, g: number = 0, b: number = 0) {
             super(name);
             
             this.__r__ = r;
@@ -46,6 +46,19 @@ describe("class/Enum", () => {
     new Color("RED", 1, 0, 0);
     new Color("GREEN", 0, 1, 0);
     new Color("BLUE", 0, 0, 1);
+    
+    it("test for duplicate definition", () => {
+        assert.throws(() => {
+            new Color("BLACK");
+        }, Error, "´BLACK´ already defined on ´Color´");
+    });
+    
+    it("test for seal", () => {
+        Color.seal();
+        assert.throws(() => {
+            new Color("");
+        }, Error, "´Color´ is sealed");
+    });
     
     it("test for default enum usages", () => {
         assert.strictEqual(Color.BLACK, Color.BLACK);

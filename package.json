@@ -7,7 +7,7 @@
     "build": "lerna run --sort --stream build"
   },
   "devDependencies": {
-    "flow-bin": "^0.82.0",
-    "lerna": "^3.4.1"
+    "flow-bin": "0.86.0",
+    "lerna": "3.4.3"
   }
 }
