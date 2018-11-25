@@ -1,6 +1,6 @@
 {
   "name": "@stefanwimmer128/core-class",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Complex features made easy - Class Package",
   "main": "./cjs",
   "module": "./esm",
@@ -21,12 +21,12 @@
   },
   "homepage": "https://stefanwimmer128.github.io/core",
   "devDependencies": {
-    "@stefanwimmer128/core-builder": "3.1.0",
+    "@stefanwimmer128/core-builder": "3.2.0",
     "gulp-cli": "2.0.1"
   },
   "dependencies": {
     "@babel/runtime": "7.1.5",
-    "@stefanwimmer128/core-utils": "3.1.0",
+    "@stefanwimmer128/core-utils": "3.2.0",
     "flow-runtime": "0.17.0",
     "lodash": "4.17.11"
   },
